@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Olbra Finance - Poland's first złoty stablecoin issuer. Building European financial sovereignty with PLNY, EURY, and USDY stablecoins.">
-  <title>Olbra Finance - Poland's Digital Currency Infrastructure</title>
+  <meta name="description" content="Olbra Finance - pierwszy w Polsce emitent stablecoinów złotówkowych. Budujemy europejską suwerenność finansową z PLNY, EURY i USDY.">
+  <title>Olbra Finance - Polska Infrastruktura Cyfrowej Waluty</title>
   <link rel="icon" type="image/png" href="/fav.png">
+  <!-- Preconnect to font services for faster loading -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/src/style.css">
   <!-- Hreflang for language versions -->
   <link rel="alternate" hreflang="en" href="https://olbra.org/">
@@ -24,28 +28,28 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center gap-8">
-          <a href="/pl/stablecoins.html" class="nav-link">Stablecoins</a>
+          <a href="/pl/stablecoins.html" class="nav-link">Stablecoiny</a>
           <a href="/pl/token.html" class="nav-link">Token</a>
-          <a href="/pl/services.html" class="nav-link">Services</a>
-          <a href="/pl/payments.html" class="nav-link">Payments</a>
+          <a href="/pl/services.html" class="nav-link">Usługi</a>
+          <a href="/pl/payments.html" class="nav-link">Płatności</a>
           <a href="/pl/faq.html" class="nav-link">FAQ</a>
           <a href="/pl/blog.html" class="nav-link">Blog</a>
         </div>
 
         <!-- CTA -->
         <div class="hidden lg:flex items-center gap-4">
-          <a href="/pl/docs.html" class="nav-link">Docs</a>
+          <a href="/pl/docs.html" class="nav-link">Dokumentacja</a>
           <!-- Language Switcher -->
           <div class="flex items-center gap-1 border-l border-olbra-gray-200 pl-4">
             <a href="/" class="lang-switch" data-lang="en" aria-label="English">EN</a>
             <span class="text-olbra-gray-300">|</span>
             <a href="/pl/" class="lang-switch active" data-lang="pl" aria-label="Polski">PL</a>
           </div>
-          <a href="#" class="btn-primary">Get Started</a>
+          <a href="#" class="btn-primary">Rozpocznij</a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 -mr-2" aria-label="Otwórz menu">
           <svg class="w-6 h-6 text-olbra-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -61,20 +65,20 @@
         <a href="/pl/" class="flex items-center">
           <img src="/olbra-logo-horizontal.svg" alt="Olbra" class="h-7">
         </a>
-        <button id="mobile-menu-close" class="p-2 -mr-2" aria-label="Close menu">
+        <button id="mobile-menu-close" class="p-2 -mr-2" aria-label="Zamknij menu">
           <svg class="w-6 h-6 text-olbra-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
       <nav class="flex flex-col gap-2 p-6">
-        <a href="/pl/stablecoins.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Stablecoins</a>
+        <a href="/pl/stablecoins.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Stablecoiny</a>
         <a href="/pl/token.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Token</a>
-        <a href="/pl/services.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Services</a>
-        <a href="/pl/payments.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Payments</a>
+        <a href="/pl/services.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Usługi</a>
+        <a href="/pl/payments.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Płatności</a>
         <a href="/pl/faq.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">FAQ</a>
         <a href="/pl/blog.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Blog</a>
-        <a href="/pl/docs.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Docs</a>
+        <a href="/pl/docs.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Dokumentacja</a>
       </nav>
       <!-- Language Switcher Mobile -->
       <div class="flex items-center justify-center gap-4 py-4 border-t border-olbra-gray-100 mx-6">
@@ -83,52 +87,84 @@
         <a href="/pl/" class="lang-switch-mobile active" data-lang="pl">Polski</a>
       </div>
       <div class="mt-auto p-6">
-        <a href="#" class="btn-primary w-full text-center block">Get Started</a>
+        <a href="#" class="btn-primary w-full text-center block">Rozpocznij</a>
       </div>
     </div>
   </div>
 
+  <!-- SVG Filter Definitions (kept for potential future use) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <!-- Glass Specular Highlight Filter -->
+      <filter id="glass-specular" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" result="surfaceNoise"/>
+        <feSpecularLighting in="surfaceNoise" surfaceScale="2" specularConstant="0.8" specularExponent="20" lighting-color="#ffffff" result="specular">
+          <fePointLight id="glass-light" x="400" y="300" z="200"/>
+        </feSpecularLighting>
+        <feComposite in="specular" in2="SourceGraphic" operator="arithmetic" k1="0" k2="0.2" k3="1" k4="0"/>
+      </filter>
+    </defs>
+  </svg>
+
   <main>
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      <!-- Background Elements -->
-      <div class="absolute inset-0 bg-hero-gradient"></div>
-      <div class="absolute inset-0 hero-grid"></div>
+      <!-- Gooey Blob Background -->
+      <div class="hero-goo-container" aria-hidden="true">
+        <!-- Base gradient layer -->
+        <div class="hero-glass-gradient"></div>
 
-      <!-- Floating Blobs -->
-      <div class="hero-blob w-[600px] h-[600px] bg-olbra-blue/20 -top-48 -right-48 animate-float" data-parallax="0.2"></div>
-      <div class="hero-blob w-[400px] h-[400px] bg-olbra-accent/20 bottom-0 -left-32 animate-float" style="animation-delay: -3s;" data-parallax="0.3"></div>
-      <div class="hero-blob w-[300px] h-[300px] bg-olbra-blue-bright/20 top-1/3 left-1/4 animate-float" style="animation-delay: -1.5s;" data-parallax="0.15"></div>
+        <!-- Gooey blobs with SVG filter -->
+        <div class="hero-goo-wrapper">
+          <div class="hero-goo-blob hero-goo-blob-1"></div>
+          <div class="hero-goo-blob hero-goo-blob-2"></div>
+          <div class="hero-goo-blob hero-goo-blob-3"></div>
+          <div class="hero-goo-blob hero-goo-blob-4"></div>
+          <div class="hero-goo-blob hero-goo-blob-5"></div>
+        </div>
+
+        <!-- Glass distortion overlay -->
+        <div class="hero-glass-distortion"></div>
+
+        <!-- Rainbow caustic layer -->
+        <div class="hero-glass-caustics"></div>
+
+        <!-- Specular highlight layer -->
+        <div class="hero-glass-specular"></div>
+
+        <!-- Mouse-responsive ambient light -->
+        <div class="hero-glass-ambient"></div>
+      </div>
 
       <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center">
           <!-- Badge -->
           <div class="reveal pill mb-8">
             <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span>Sub-second Settlement</span>
+            <span>Rozliczenie w ułamku sekundy</span>
           </div>
 
           <!-- Headline -->
           <h1 class="reveal reveal-delay-1 heading-xl text-olbra-dark mb-6">
-            Fast. Stable.<br>
-            <span class="text-gradient">Sovereign.</span>
+            Szybko. Stabilnie.<br>
+            <span class="text-gradient">Suwerennie.</span>
           </h1>
 
           <!-- Subheadline -->
           <p class="reveal reveal-delay-2 text-lg md:text-xl text-olbra-muted max-w-2xl mx-auto mb-10 text-pretty">
-            Europe's regulated stablecoin infrastructure. Move money at internet speed with PLNY, EURY, and USDY.
+            Regulowana europejska infrastruktura stablecoinów. Przesyłaj pieniądze z prędkością internetu dzięki PLNY, EURY i USDY.
           </p>
 
           <!-- CTAs -->
           <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="#" class="btn-primary">
-              Launch App
+              Uruchom Aplikację
               <svg class="inline-block w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="/pl/docs.html" class="btn-outline">
-              Read Documentation
+              Przeczytaj Dokumentację
             </a>
           </div>
 
@@ -136,15 +172,15 @@
           <div class="reveal reveal-delay-4 mt-16 grid grid-cols-3 gap-8 max-w-xl mx-auto">
             <div class="text-center">
               <div class="text-2xl md:text-3xl font-display font-bold text-olbra-dark">&lt;1s</div>
-              <div class="text-sm text-olbra-muted mt-1">Settlement</div>
+              <div class="text-sm text-olbra-muted mt-1">Rozliczenie</div>
             </div>
             <div class="text-center">
               <div class="text-2xl md:text-3xl font-display font-bold text-olbra-dark" data-counter="100" data-suffix="%">0</div>
-              <div class="text-sm text-olbra-muted mt-1">Backed</div>
+              <div class="text-sm text-olbra-muted mt-1">Zabezpieczone</div>
             </div>
             <div class="text-center">
               <div class="text-2xl md:text-3xl font-display font-bold text-olbra-blue">3</div>
-              <div class="text-sm text-olbra-muted mt-1">Licenses</div>
+              <div class="text-sm text-olbra-muted mt-1">Licencje</div>
             </div>
           </div>
         </div>
@@ -163,12 +199,12 @@
       <div class="container-custom">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="reveal pill mb-4">Backed. Audited. Fast.</span>
+          <span class="reveal pill mb-4">Zabezpieczone. Audytowane. Szybkie.</span>
           <h2 class="reveal reveal-delay-1 heading-lg text-olbra-dark mb-4">
-            Three Stablecoins,<br>One Ecosystem
+            Trzy Stablecoiny,<br>Jeden Ekosystem
           </h2>
           <p class="reveal reveal-delay-2 text-lg text-olbra-muted">
-            PLN, EUR, and USD on-chain. 100% reserve-backed, instantly redeemable, fully licensed.
+            PLN, EUR i USD on-chain. 100% zabezpieczone rezerwami, natychmiastowy wykup, pełna licencja.
           </p>
         </div>
 
@@ -180,34 +216,34 @@
               <img src="/plny-svg-color.svg" alt="PLNY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
               <div>
                 <h3 class="font-display font-bold text-2xl text-olbra-dark">PLNY</h3>
-                <p class="text-olbra-muted text-sm">Digital Złoty</p>
+                <p class="text-olbra-muted text-sm">Cyfrowy Złoty</p>
               </div>
             </div>
             <p class="text-olbra-muted mb-5 text-sm">
-              The digital złoty. 1:1 backed, instantly redeemable.
+              Cyfrowy złoty. Zabezpieczony 1:1, natychmiastowy wykup.
             </p>
             <ul class="space-y-2 mb-5">
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                1:1 PLN Reserves
+                Rezerwy 1:1 w PLN
               </li>
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                Monthly Audits
+                Miesięczne Audyty
               </li>
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                Instant Redemption
+                Natychmiastowy Wykup
               </li>
             </ul>
             <a href="/pl/stablecoins.html" class="inline-flex items-center text-olbra-blue font-medium text-sm group-hover:gap-2 gap-1 transition-all">
-              Get PLNY
+              Kup PLNY
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -220,34 +256,34 @@
               <img src="/eury-svg-color.svg" alt="EURY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
               <div>
                 <h3 class="font-display font-bold text-2xl text-olbra-dark">EURY</h3>
-                <p class="text-olbra-muted text-sm">Digital Euro</p>
+                <p class="text-olbra-muted text-sm">Cyfrowe Euro</p>
               </div>
             </div>
             <p class="text-olbra-muted mb-5 text-sm">
-              Euro, everywhere. Cross-border in seconds.
+              Euro wszędzie. Transakcje transgraniczne w sekundach.
             </p>
             <ul class="space-y-2 mb-5">
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                1:1 EUR Reserves
+                Rezerwy 1:1 w EUR
               </li>
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                27 EU Countries
+                27 Krajów UE
               </li>
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                Sub-second Settlement
+                Rozliczenie w ułamku sekundy
               </li>
             </ul>
             <a href="/pl/stablecoins.html" class="inline-flex items-center text-olbra-blue font-medium text-sm group-hover:gap-2 gap-1 transition-all">
-              Get EURY
+              Kup EURY
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -260,34 +296,34 @@
               <img src="/usdy-svg-color.svg" alt="USDY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
               <div>
                 <h3 class="font-display font-bold text-2xl text-olbra-dark">USDY</h3>
-                <p class="text-olbra-muted text-sm">Digital Dollar</p>
+                <p class="text-olbra-muted text-sm">Cyfrowy Dolar</p>
               </div>
             </div>
             <p class="text-olbra-muted mb-5 text-sm">
-              Dollar liquidity, European rails.
+              Płynność dolarowa, europejskie tory.
             </p>
             <ul class="space-y-2 mb-5">
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                1:1 USD Reserves
+                Rezerwy 1:1 w USD
               </li>
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                Global Liquidity
+                Globalna Płynność
               </li>
               <li class="flex items-center gap-2 text-sm text-olbra-gray-800">
                 <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                 </svg>
-                DeFi Ready
+                Gotowy na DeFi
               </li>
             </ul>
             <a href="/pl/stablecoins.html" class="inline-flex items-center text-olbra-blue font-medium text-sm group-hover:gap-2 gap-1 transition-all">
-              Get USDY
+              Kup USDY
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -302,12 +338,12 @@
       <div class="container-custom">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="reveal pill mb-4">The Olbra Ecosystem</span>
+          <span class="reveal pill mb-4">Ekosystem Olbra</span>
           <h2 class="reveal reveal-delay-1 heading-lg text-olbra-dark mb-4">
-            Everything You Need<br>In One Place
+            Wszystko Czego Potrzebujesz<br>W Jednym Miejscu
           </h2>
           <p class="reveal reveal-delay-2 text-lg text-olbra-muted">
-            Stablecoins, DeFi, tokenized assets, and global payments. Fully licensed in EU, US, and Poland.
+            Stablecoiny, DeFi, tokenizowane aktywa i globalne płatności. Pełna licencja w UE, USA i Polsce.
           </p>
         </div>
 
@@ -322,9 +358,9 @@
                 </svg>
               </div>
               <div class="flex-1">
-                <h3 class="heading-sm text-olbra-dark mb-3">Mint & Redeem Instantly</h3>
+                <h3 class="heading-sm text-olbra-dark mb-3">Wybij i Wykup Natychmiast</h3>
                 <p class="text-olbra-muted mb-4">
-                  PLNY, EURY, USDY. Deposit fiat, receive stablecoins in seconds. Redeem anytime with 1:1 backing.
+                  PLNY, EURY, USDY. Wpłać fiat, otrzymaj stablecoiny w sekundach. Wykup w każdej chwili z zabezpieczeniem 1:1.
                 </p>
                 <div class="flex items-center gap-4 text-sm">
                   <span class="flex items-center gap-2 text-olbra-gray-800">
@@ -357,9 +393,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
               </svg>
             </div>
-            <h3 class="heading-sm text-olbra-dark mb-3">Earn on Your Stables</h3>
+            <h3 class="heading-sm text-olbra-dark mb-3">Zarabiaj na Stablecoinach</h3>
             <p class="text-olbra-muted">
-              Lend, borrow, provide liquidity. Generate yield 24/7.
+              Pożyczaj, zapewniaj płynność. Generuj zysk 24/7.
             </p>
           </div>
 
@@ -370,9 +406,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
               </svg>
             </div>
-            <h3 class="heading-sm text-olbra-dark mb-3">Tokenized Assets</h3>
+            <h3 class="heading-sm text-olbra-dark mb-3">Tokenizowane Aktywa</h3>
             <p class="text-olbra-muted">
-              Treasury bonds, equities, real estate on-chain.
+              Obligacje skarbowe, akcje, nieruchomości on-chain.
             </p>
           </div>
 
@@ -383,9 +419,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
-            <h3 class="heading-sm text-olbra-dark mb-3">Pay Anywhere</h3>
+            <h3 class="heading-sm text-olbra-dark mb-3">Płać Wszędzie</h3>
             <p class="text-olbra-muted">
-              Global transfers in seconds, not days.
+              Globalne przelewy w sekundach, nie dniach.
             </p>
           </div>
 
@@ -398,7 +434,7 @@
             </div>
             <h3 class="heading-sm text-olbra-dark mb-3">Non-Custodial</h3>
             <p class="text-olbra-muted">
-              Your keys, your coins. Always.
+              Twoje klucze, Twoje monety. Zawsze.
             </p>
           </div>
 
@@ -411,12 +447,12 @@
                 </svg>
               </div>
               <div class="flex-1">
-                <h3 class="heading-sm text-olbra-dark mb-3">Own the Ecosystem</h3>
+                <h3 class="heading-sm text-olbra-dark mb-3">Zostań Właścicielem Ekosystemu</h3>
                 <p class="text-olbra-muted mb-4">
-                  Govern the protocol. Capture ecosystem fees. Stake for rewards and participate in decisions.
+                  Zarządzaj protokołem. Otrzymuj część opłat ekosystemu. Stakuj dla nagród i uczestniczy w decyzjach.
                 </p>
                 <a href="/pl/token.html" class="inline-flex items-center text-olbra-blue font-medium hover:gap-3 gap-2 transition-all">
-                  Learn about $OLBRA
+                  Dowiedz się więcej o $OLBRA
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                   </svg>
@@ -437,26 +473,26 @@
             <svg class="w-5 h-5 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
-            MiCA (EU)
+            MiCA (UE)
           </div>
           <div class="reveal reveal-delay-1 flex items-center gap-2 text-sm font-medium text-olbra-gray-800">
             <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
-            Genius Act (US)
+            Genius Act (USA)
           </div>
           <div class="reveal reveal-delay-2 flex items-center gap-2 text-sm font-medium text-olbra-gray-800">
             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
-            EMI (Poland)
+            EMI (Polska)
           </div>
           <!-- Other Trust Signals -->
           <div class="reveal reveal-delay-3 flex items-center gap-2 text-sm font-medium text-olbra-gray-800">
             <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            100% Backed
+            100% Zabezpieczone
           </div>
           <div class="reveal reveal-delay-4 flex items-center gap-2 text-sm font-medium text-olbra-gray-800">
             <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -477,19 +513,19 @@
         <div class="grid md:grid-cols-4 gap-8 lg:gap-12">
           <div class="reveal text-center">
             <div class="stat-number">&lt;1s</div>
-            <div class="stat-label">Settlement Time</div>
+            <div class="stat-label">Czas Rozliczenia</div>
           </div>
           <div class="reveal reveal-delay-1 text-center">
             <div class="stat-number" data-counter="3" data-suffix="">0</div>
-            <div class="stat-label">Stablecoins</div>
+            <div class="stat-label">Stablecoiny</div>
           </div>
           <div class="reveal reveal-delay-2 text-center">
             <div class="stat-number" data-counter="27" data-suffix="">0</div>
-            <div class="stat-label">EU Countries</div>
+            <div class="stat-label">Krajów UE</div>
           </div>
           <div class="reveal reveal-delay-3 text-center">
             <div class="stat-number">24/7</div>
-            <div class="stat-label">Always On</div>
+            <div class="stat-label">Zawsze Aktywne</div>
           </div>
         </div>
       </div>
@@ -500,12 +536,12 @@
       <div class="container-custom">
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="reveal pill mb-4">How It Works</span>
+          <span class="reveal pill mb-4">Jak to działa</span>
           <h2 class="reveal reveal-delay-1 heading-lg text-olbra-dark mb-4">
-            Live in 60 Seconds
+            Aktywny w 60 Sekund
           </h2>
           <p class="reveal reveal-delay-2 text-lg text-olbra-muted">
-            Fiat in, stablecoins out. No delays, no friction.
+            Fiat wpłacasz, stablecoiny otrzymujesz. Bez opóźnień, bez tarcia.
           </p>
         </div>
 
@@ -519,9 +555,9 @@
             <div class="w-14 h-14 rounded-full bg-olbra-blue text-white font-display font-bold text-xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-blue">
               1
             </div>
-            <h3 class="heading-sm text-olbra-dark mb-3">Sign Up Instantly</h3>
+            <h3 class="heading-sm text-olbra-dark mb-3">Zarejestruj się Natychmiast</h3>
             <p class="text-olbra-muted">
-              Email or Web3 wallet. KYC in under 2 minutes.
+              E-mail lub portfel Web3. KYC w mniej niż 2 minuty.
             </p>
           </div>
 
@@ -530,9 +566,9 @@
             <div class="w-14 h-14 rounded-full bg-olbra-accent text-white font-display font-bold text-xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg">
               2
             </div>
-            <h3 class="heading-sm text-olbra-dark mb-3">Instant On-Ramp</h3>
+            <h3 class="heading-sm text-olbra-dark mb-3">Błyskawiczna Wpłata</h3>
             <p class="text-olbra-muted">
-              Bank transfer arrives, stablecoins appear. That simple.
+              Przelew bankowy dociera, stablecoiny się pojawiają. To takie proste.
             </p>
           </div>
 
@@ -541,10 +577,65 @@
             <div class="w-14 h-14 rounded-full bg-olbra-blue-bright text-white font-display font-bold text-xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-blue">
               3
             </div>
-            <h3 class="heading-sm text-olbra-dark mb-3">Move Money Now</h3>
+            <h3 class="heading-sm text-olbra-dark mb-3">Przesyłaj Pieniądze Teraz</h3>
             <p class="text-olbra-muted">
-              Pay, trade, earn, send. Your money, your rules.
+              Płać, handluj, zarabiaj, wysyłaj. Twoje pieniądze, Twoje zasady.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding bg-white relative">
+      <div class="container-custom">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="reveal pill mb-4">Nasz Zespół</span>
+          <h2 class="reveal reveal-delay-1 heading-lg text-olbra-dark mb-4">
+            Zespół Stojący za Olbra
+          </h2>
+          <p class="reveal reveal-delay-2 text-lg text-olbra-muted">
+            Dekady doświadczenia w finansach, technologii i blockchain.
+          </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+          <!-- Patryk Gajda -->
+          <div class="reveal reveal-delay-3 team-card group">
+            <img src="/assets/team/patrick.png" alt="Patryk Gajda" class="team-card-image" loading="lazy">
+            <div class="team-card-overlay">
+              <h3 class="team-card-name">Patryk Gajda</h3>
+              <p class="team-card-role">Dyrektor Generalny</p>
+              <p class="team-card-bio">
+                Przedsiębiorca i inwestor z ponad 15-letnim doświadczeniem w modernizacji firm poprzez zaawansowane technologie. Założyciel SC Space & Data Inc., rozwijającego księżycowe centrum danych z komunikacją laserową. Od 2014 roku aktywny inwestor w sektorach kosmicznym, AI, fintech, IT i blockchain. Członek European Business Angel Network (EBAN).
+              </p>
+            </div>
+          </div>
+
+          <!-- Wojciech Sobczuk -->
+          <div class="reveal reveal-delay-4 team-card group">
+            <img src="/assets/team/wojtek.png" alt="Wojciech Sobczuk" class="team-card-image" loading="lazy">
+            <div class="team-card-overlay">
+              <h3 class="team-card-name">Wojciech Sobczuk</h3>
+              <p class="team-card-role">Dyrektor Techniczny</p>
+              <p class="team-card-bio">
+                Innowator technologiczny z 30-letnim doświadczeniem w budowaniu i skalowaniu globalnych platform cyfrowych. Uruchomił jedną z pierwszych dużych sieci społecznościowych w Europie (ponad 2M użytkowników, wspieraną przez Intel Capital), zbudował zaszyfrowaną komunikację dla izraelskiego wojska. Strategiczny doradca Egnyte (wspieranego przez Google) i członek Forbes Technology Council.
+              </p>
+            </div>
+          </div>
+
+          <!-- Maciej Zientara -->
+          <div class="reveal reveal-delay-5 team-card group">
+            <img src="/assets/team/maciej.png" alt="Maciej Zientara" class="team-card-image" loading="lazy">
+            <div class="team-card-overlay">
+              <h3 class="team-card-name">Maciej Zientara</h3>
+              <p class="team-card-role">Inwestor i Członek Zarządu</p>
+              <p class="team-card-bio">
+                Inżynier finansowy i inwestor z ponad 25-letnim doświadczeniem na rynkach kapitałowych, specjalizujący się w M&A i zaawansowanym strukturyzowaniu. Założyciel Supernova Group, zarządzającego aktywami o wartości ponad 250 mln € w 40 aktywnych projektach. Partner w JRH ASI SA i większościowy udziałowiec Soho Development SA (notowanej na GPW). Absolwent Stanford University.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -561,17 +652,17 @@
       <div class="container-custom relative z-10">
         <div class="max-w-3xl mx-auto text-center">
           <h2 class="reveal heading-lg text-white mb-6">
-            Start Moving Money Faster
+            Zacznij Przesyłać Pieniądze Szybciej
           </h2>
           <p class="reveal reveal-delay-1 text-lg text-white/70 mb-8">
-            Three regulatory licenses. 100% backed. Sub-second settlement.
+            Trzy licencje regulacyjne. 100% zabezpieczone. Rozliczenie w ułamku sekundy.
           </p>
           <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="#" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-              Get Started Free
+              Rozpocznij Za Darmo
             </a>
             <a href="/pl/docs.html" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
-              See How It Works
+              Zobacz Jak to Działa
             </a>
           </div>
         </div>
@@ -589,7 +680,7 @@
             <img src="/olbra-logo-horizontal.svg" alt="Olbra" class="h-8">
           </a>
           <p class="text-olbra-muted mb-6 max-w-sm">
-            Building Poland's digital currency infrastructure. The first exclusive issuer of Polish złoty stablecoins.
+            Budujemy polską infrastrukturę cyfrowej waluty. Pierwszy wyłączny emitent polskich stablecoinów złotówkowych.
           </p>
           <!-- Social Links -->
           <div class="flex items-center gap-4">
@@ -610,34 +701,34 @@
 
         <!-- Products -->
         <div>
-          <h4 class="font-display font-semibold text-olbra-dark mb-4">Products</h4>
+          <h4 class="font-display font-semibold text-olbra-dark mb-4">Produkty</h4>
           <ul class="space-y-3">
-            <li><a href="/pl/stablecoins.html" class="footer-link">Stablecoins</a></li>
-            <li><a href="/pl/token.html" class="footer-link">$OLBRA Token</a></li>
-            <li><a href="/pl/services.html" class="footer-link">Services</a></li>
-            <li><a href="/pl/payments.html" class="footer-link">Payments</a></li>
+            <li><a href="/pl/stablecoins.html" class="footer-link">Stablecoiny</a></li>
+            <li><a href="/pl/token.html" class="footer-link">Token $OLBRA</a></li>
+            <li><a href="/pl/services.html" class="footer-link">Usługi</a></li>
+            <li><a href="/pl/payments.html" class="footer-link">Płatności</a></li>
           </ul>
         </div>
 
         <!-- Resources -->
         <div>
-          <h4 class="font-display font-semibold text-olbra-dark mb-4">Resources</h4>
+          <h4 class="font-display font-semibold text-olbra-dark mb-4">Zasoby</h4>
           <ul class="space-y-3">
-            <li><a href="/pl/docs.html" class="footer-link">Documentation</a></li>
+            <li><a href="/pl/docs.html" class="footer-link">Dokumentacja</a></li>
             <li><a href="/pl/blog.html" class="footer-link">Blog</a></li>
             <li><a href="/pl/faq.html" class="footer-link">FAQ</a></li>
-            <li><a href="/pl/brand-assets.html" class="footer-link">Brand Assets</a></li>
+            <li><a href="/pl/brand-assets.html" class="footer-link">Zasoby Marki</a></li>
           </ul>
         </div>
 
         <!-- Legal -->
         <div>
-          <h4 class="font-display font-semibold text-olbra-dark mb-4">Legal</h4>
+          <h4 class="font-display font-semibold text-olbra-dark mb-4">Prawne</h4>
           <ul class="space-y-3">
-            <li><a href="/pl/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/pl/terms-of-service.html" class="footer-link">Terms of Service</a></li>
-            <li><a href="/pl/cookie-policy.html" class="footer-link">Cookie Policy</a></li>
-            <li><a href="/pl/compliance.html" class="footer-link">Compliance</a></li>
+            <li><a href="/pl/privacy-policy.html" class="footer-link">Polityka Prywatności</a></li>
+            <li><a href="/pl/terms-of-service.html" class="footer-link">Regulamin</a></li>
+            <li><a href="/pl/cookie-policy.html" class="footer-link">Polityka Cookies</a></li>
+            <li><a href="/pl/compliance.html" class="footer-link">Zgodność</a></li>
           </ul>
         </div>
       </div>
@@ -645,10 +736,10 @@
       <!-- Bottom Bar -->
       <div class="mt-16 pt-8 border-t border-olbra-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-olbra-muted text-sm">
-          &copy; 2024 Olbra Finance. All rights reserved.
+          &copy; 2024 Olbra Finance. Wszelkie prawa zastrzeżone.
         </p>
         <p class="text-olbra-muted text-sm">
-          Building European Financial Sovereignty
+          Budujemy Europejską Suwerenność Finansową
         </p>
       </div>
     </div>
@@ -656,3 +747,4 @@
 
   <script type="module" src="/src/main.js"></script>
 </body>
+</html>
