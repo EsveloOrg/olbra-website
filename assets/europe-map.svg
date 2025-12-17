@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" class="europe-map">
+  <defs>
+    <style>
+      .country-path {
+        fill: transparent;
+        stroke: #e5e7eb;
+        stroke-width: 0.5;
+        transition: fill 0.3s ease, stroke 0.3s ease;
+      }
+      .country-path.highlighted {
+        fill: #c9deff;
+        stroke: #a3c4ff;
+        stroke-width: 1;
+        cursor: pointer;
+      }
+      .country-path.highlighted:hover,
+      .country-path.highlighted.active {
+        fill: #4d93ff;
+        stroke: #3b7de6;
+      }
+    </style>
+  </defs>
+
+  <!-- Background countries (not interactive) -->
+  <!-- Iceland -->
+  <path class="country-path" d="M95,45 L115,40 L130,45 L140,55 L135,70 L120,80 L100,75 L85,65 L90,50 Z"/>
+
+  <!-- Norway -->
+  <path class="country-path" d="M340,20 L355,15 L375,20 L390,35 L400,60 L395,90 L385,120 L370,150 L355,170 L340,160 L330,140 L335,110 L345,80 L350,50 L345,30 Z"/>
+
+  <!-- Sweden -->
+  <path class="country-path" d="M370,150 L385,145 L400,155 L410,180 L415,210 L410,240 L400,260 L385,270 L370,265 L360,245 L355,215 L360,185 L365,165 Z"/>
+
+  <!-- Finland -->
+  <path class="country-path" d="M420,100 L445,95 L465,105 L480,130 L485,165 L475,200 L455,225 L430,235 L415,220 L410,190 L415,155 L420,125 Z"/>
+
+  <!-- Russia (partial - western) -->
+  <path class="country-path" d="M485,165 L520,150 L560,160 L600,180 L640,210 L660,250 L650,300 L620,340 L580,360 L540,350 L500,320 L480,280 L475,240 L480,200 Z"/>
+
+  <!-- Ireland -->
+  <path class="country-path" d="M180,220 L200,215 L215,225 L220,245 L215,265 L200,275 L180,270 L170,255 L175,235 Z"/>
+
+  <!-- France -->
+  <path class="country-path" d="M240,290 L270,280 L300,285 L325,300 L340,330 L335,365 L315,395 L280,410 L245,400 L220,375 L215,340 L225,310 Z"/>
+
+  <!-- Spain -->
+  <path class="country-path" d="M180,380 L220,370 L260,375 L285,395 L280,430 L255,460 L215,470 L175,455 L160,425 L165,395 Z"/>
+
+  <!-- Portugal -->
+  <path class="country-path" d="M155,395 L170,390 L175,420 L170,450 L155,460 L140,445 L145,415 Z"/>
+
+  <!-- Germany -->
+  <path class="country-path" d="M330,240 L360,235 L385,245 L400,270 L395,300 L375,320 L345,325 L320,310 L315,280 L320,255 Z"/>
+
+  <!-- Italy -->
+  <path class="country-path" d="M355,340 L375,335 L390,350 L400,380 L395,415 L380,445 L360,465 L345,455 L340,420 L345,385 L350,355 Z"/>
+
+  <!-- Switzerland -->
+  <path class="country-path" d="M315,320 L335,315 L350,325 L345,340 L330,350 L315,345 L310,330 Z"/>
+
+  <!-- Austria -->
+  <path class="country-path" d="M360,305 L390,300 L415,310 L420,325 L410,340 L385,345 L360,340 L355,320 Z"/>
+
+  <!-- Netherlands -->
+  <path class="country-path" d="M295,230 L315,225 L325,235 L320,250 L305,255 L290,245 Z"/>
+
+  <!-- Belgium -->
+  <path class="country-path" d="M285,255 L305,250 L315,260 L310,275 L295,280 L280,270 Z"/>
+
+  <!-- Denmark -->
+  <path class="country-path" d="M340,195 L360,190 L375,200 L370,220 L355,230 L340,225 L335,210 Z"/>
+
+  <!-- Lithuania -->
+  <path class="country-path" d="M440,230 L465,225 L480,235 L478,255 L460,265 L440,260 L435,245 Z"/>
+
+  <!-- Latvia -->
+  <path class="country-path" d="M445,205 L470,200 L485,210 L482,230 L465,240 L445,235 L440,220 Z"/>
+
+  <!-- Belarus -->
+  <path class="country-path" d="M480,255 L515,250 L540,265 L545,295 L525,315 L495,320 L470,305 L468,275 Z"/>
+
+  <!-- Moldova -->
+  <path class="country-path" d="M510,330 L530,325 L540,340 L535,360 L520,370 L505,360 L505,345 Z"/>
+
+  <!-- Hungary -->
+  <path class="country-path" d="M415,330 L445,325 L465,340 L462,365 L440,380 L415,375 L405,355 L408,340 Z"/>
+
+  <!-- Slovakia -->
+  <path class="country-path" d="M405,305 L435,300 L455,310 L452,328 L430,338 L405,332 L400,318 Z"/>
+
+  <!-- Slovenia -->
+  <path class="country-path" d="M375,345 L395,340 L405,350 L400,365 L385,370 L372,360 Z"/>
+
+  <!-- Croatia -->
+  <path class="country-path" d="M385,365 L410,360 L430,375 L425,400 L405,415 L380,410 L375,390 L378,375 Z"/>
+
+  <!-- Bosnia -->
+  <path class="country-path" d="M400,390 L420,385 L435,400 L430,420 L415,430 L398,420 L395,405 Z"/>
+
+  <!-- Serbia -->
+  <path class="country-path" d="M430,395 L455,390 L470,410 L465,440 L445,455 L425,445 L420,420 L425,405 Z"/>
+
+  <!-- Montenegro -->
+  <path class="country-path" d="M418,440 L432,435 L440,450 L435,465 L420,470 L412,458 Z"/>
+
+  <!-- Kosovo -->
+  <path class="country-path" d="M440,450 L455,445 L462,460 L458,475 L445,480 L438,468 Z"/>
+
+  <!-- North Macedonia -->
+  <path class="country-path" d="M455,465 L475,460 L485,475 L480,495 L462,502 L450,490 L452,475 Z"/>
+
+  <!-- Greece -->
+  <path class="country-path" d="M445,495 L475,485 L500,500 L510,535 L495,565 L465,575 L440,560 L435,525 L440,505 Z"/>
+
+  <!-- Turkey (European part) -->
+  <path class="country-path" d="M520,470 L555,460 L585,475 L590,505 L570,525 L540,530 L515,515 L515,490 Z"/>
+
+  <!-- Cyprus -->
+  <path class="country-path" d="M575,545 L595,540 L605,550 L600,565 L585,570 L575,560 Z"/>
+
+  <!-- Luxembourg -->
+  <path class="country-path" d="M298,272 L308,270 L312,280 L305,288 L295,285 Z"/>
+
+  <!-- Malta -->
+  <path class="country-path" d="M375,520 L385,518 L388,528 L382,535 L373,532 Z"/>
+
+  <!-- Highlighted/Interactive countries -->
+
+  <!-- United Kingdom (combined: England, Scotland, Wales, Northern Ireland) -->
+  <path id="GB" class="country-path highlighted" data-country="GB" d="M220,175 L245,165 L265,175 L275,200 L280,230 L275,260 L260,285 L240,295 L220,290 L205,270 L200,240 L195,210 L200,185 Z M195,220 L205,215 L210,230 L205,245 L190,250 L185,235 Z"/>
+
+  <!-- Poland -->
+  <path id="PL" class="country-path highlighted" data-country="PL" d="M400,255 L435,248 L465,258 L478,280 L475,310 L455,335 L420,342 L395,330 L385,305 L390,275 Z"/>
+
+  <!-- Ukraine -->
+  <path id="UA" class="country-path highlighted" data-country="UA" d="M490,290 L540,280 L585,295 L615,325 L620,365 L595,400 L550,415 L505,405 L475,375 L470,335 L478,310 Z"/>
+
+  <!-- Czech Republic -->
+  <path id="CZ" class="country-path highlighted" data-country="CZ" d="M365,280 L395,275 L415,288 L412,310 L390,322 L365,318 L355,300 L358,285 Z"/>
+
+  <!-- Estonia -->
+  <path id="EE" class="country-path highlighted" data-country="EE" d="M430,175 L460,170 L478,182 L475,202 L455,212 L432,208 L425,192 Z"/>
+
+  <!-- Romania -->
+  <path id="RO" class="country-path highlighted" data-country="RO" d="M465,355 L510,345 L545,360 L555,395 L540,425 L500,440 L465,430 L455,400 L458,375 Z"/>
+
+  <!-- Bulgaria -->
+  <path id="BG" class="country-path highlighted" data-country="BG" d="M480,435 L520,425 L550,440 L555,470 L535,495 L500,502 L475,490 L470,460 Z"/>
+
+  <!-- Albania -->
+  <path id="AL" class="country-path highlighted" data-country="AL" d="M425,465 L445,458 L455,475 L452,505 L438,520 L420,515 L415,490 L418,475 Z"/>
+</svg>

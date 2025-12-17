@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="olbra">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olbra Finance Documentation - Learn about PLNY, EURY, USDY stablecoins, the $OLBRA token, and the complete ecosystem.">
+  <title>Documentation - Olbra Finance</title>
+  <link rel="icon" type="image/png" href="/fav.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="antialiased">
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-olbra-gray-200">
+    <div class="container-custom">
+      <nav class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="/olbra-logo-horizontal.svg" alt="Olbra" class="h-7">
+          
+          <span class="text-olbra-muted text-sm ml-2 hidden sm:inline">Documentation</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="/stablecoins.html" class="nav-link text-sm">Stablecoins</a>
+          <a href="/token.html" class="nav-link text-sm">Token</a>
+          <a href="/services.html" class="nav-link text-sm">Services</a>
+          <a href="/payments.html" class="nav-link text-sm">Payments</a>
+          <a href="/faq.html" class="nav-link text-sm">FAQ</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="#" class="btn-primary text-sm py-2 px-4">Get Started</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 -mr-2" aria-label="Open menu">
+          <svg class="w-6 h-6 text-olbra-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden">
+    <div class="flex flex-col h-full">
+      <div class="flex items-center justify-between h-16 px-4 border-b border-olbra-gray-100">
+        <a href="/" class="flex items-center">
+          <img src="/olbra-logo-horizontal.svg" alt="Olbra" class="h-7">
+          
+        </a>
+        <button id="mobile-menu-close" class="p-2 -mr-2" aria-label="Close menu">
+          <svg class="w-6 h-6 text-olbra-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-2 p-6">
+        <a href="/stablecoins.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Stablecoins</a>
+        <a href="/token.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Token</a>
+        <a href="/services.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Services</a>
+        <a href="/payments.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Payments</a>
+        <a href="/faq.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">FAQ</a>
+        <a href="/blog.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Blog</a>
+      </nav>
+      <div class="mt-auto p-6">
+        <a href="#" class="btn-primary w-full text-center block">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Documentation Layout -->
+  <div class="pt-16 min-h-screen flex">
+    <!-- Sidebar -->
+    <aside id="docs-sidebar" class="hidden lg:block w-72 border-r border-olbra-gray-200 bg-olbra-gray-50 fixed left-0 top-16 bottom-0 overflow-y-auto">
+      <nav class="p-6">
+        <!-- Getting Started -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">Getting Started</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#introduction" class="docs-nav-link active">Introduction</a>
+            </li>
+            <li>
+              <a href="#mission" class="docs-nav-link">Mission & Vision</a>
+            </li>
+            <li>
+              <a href="#quick-start" class="docs-nav-link">Quick Start</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stablecoin Triangle -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">The Stablecoin Triangle</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#stablecoin-overview" class="docs-nav-link">Overview</a>
+            </li>
+            <li>
+              <a href="#plny" class="docs-nav-link">PLNY - Polish Zloty</a>
+            </li>
+            <li>
+              <a href="#eury" class="docs-nav-link">EURY - Euro</a>
+            </li>
+            <li>
+              <a href="#usdy" class="docs-nav-link">USDY - US Dollar</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Six Pillars -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">Six Pillars</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#pillar-stablecoin" class="docs-nav-link">Stablecoin Infrastructure</a>
+            </li>
+            <li>
+              <a href="#pillar-defi" class="docs-nav-link">DeFi Finance</a>
+            </li>
+            <li>
+              <a href="#pillar-rwa" class="docs-nav-link">Real-World Assets</a>
+            </li>
+            <li>
+              <a href="#pillar-payments" class="docs-nav-link">Global Payments</a>
+            </li>
+            <li>
+              <a href="#pillar-security" class="docs-nav-link">Security & UX</a>
+            </li>
+            <li>
+              <a href="#pillar-token" class="docs-nav-link">$OLBRA Token</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Token -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">$OLBRA Token</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#token-overview" class="docs-nav-link">Token Overview</a>
+            </li>
+            <li>
+              <a href="#tokenomics" class="docs-nav-link">Tokenomics</a>
+            </li>
+            <li>
+              <a href="#governance" class="docs-nav-link">Governance</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Technical -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">Technical</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#architecture" class="docs-nav-link">Architecture</a>
+            </li>
+            <li>
+              <a href="#compliance" class="docs-nav-link">Regulatory Compliance</a>
+            </li>
+            <li>
+              <a href="#security" class="docs-nav-link">Security</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button id="docs-sidebar-toggle" class="lg:hidden fixed bottom-6 left-6 z-40 w-12 h-12 bg-olbra-blue text-white rounded-full shadow-lg flex items-center justify-center">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
+      </svg>
+    </button>
+
+    <!-- Main Content -->
+    <main class="flex-1 lg:ml-72">
+      <div class="max-w-4xl mx-auto px-6 py-12">
+
+        <!-- Introduction -->
+        <section id="introduction" class="mb-16">
+          <div class="mb-8">
+            <span class="inline-block px-3 py-1 bg-olbra-blue-pale text-olbra-blue text-xs font-semibold rounded-full mb-4">Documentation</span>
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-olbra-dark mb-4">
+              Olbra Finance
+            </h1>
+            <p class="text-xl text-olbra-muted">
+              Digitising Poland. Connecting Europe. Leading globally.
+            </p>
+          </div>
+
+          <div class="prose prose-lg max-w-none">
+            <p class="text-olbra-gray-800 leading-relaxed">
+              OLBRA Finance is establishing itself as <strong>the first exclusive issuer of a Polish zloty (PLNY) stablecoin</strong>, alongside euro (EURY) and US dollar (USDY) stablecoins. The organization aims to position Poland as a leader in digital finance through what we describe as a "triangle of stability" linking local, regional, and global monetary systems.
+            </p>
+
+            <div class="bg-gradient-to-r from-olbra-blue-pale to-olbra-accent/10 rounded-2xl p-6 my-8 border border-olbra-blue/10">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-olbra-blue flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-olbra-dark mb-1">Key Insight</h4>
+                  <p class="text-olbra-gray-800 text-sm">
+                    The Olbra ecosystem functions as a self-reinforcing financial loop where stablecoins provide liquidity, DeFi protocols generate yield, tokenized assets bring real-world value onchain, and payments infrastructure drives adoption.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mission -->
+        <section id="mission" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Mission & Vision</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl p-6 border border-olbra-gray-200">
+              <div class="w-12 h-12 rounded-xl bg-olbra-blue-pale flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-olbra-dark mb-2">European Financial Sovereignty</h3>
+              <p class="text-olbra-muted text-sm">
+                Building infrastructure that enables Europe to maintain financial autonomy in an increasingly digital world.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-olbra-gray-200">
+              <div class="w-12 h-12 rounded-xl bg-olbra-accent/10 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-olbra-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-olbra-dark mb-2">Three Regulatory Licenses</h3>
+              <p class="text-olbra-muted text-sm">
+                MiCA (EU), Genius Act (US), and EMI (Poland) compliance for full transatlantic market access.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Start -->
+        <section id="quick-start" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Quick Start</h2>
+
+          <div class="space-y-4">
+            <div class="flex gap-4 p-4 bg-white rounded-xl border border-olbra-gray-200">
+              <div class="w-8 h-8 rounded-full bg-olbra-blue text-white font-semibold flex items-center justify-center flex-shrink-0">1</div>
+              <div>
+                <h4 class="font-semibold text-olbra-dark mb-1">Create Your Account</h4>
+                <p class="text-olbra-muted text-sm">Sign up with email or connect your existing Web3 wallet. Complete KYC verification.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-4 bg-white rounded-xl border border-olbra-gray-200">
+              <div class="w-8 h-8 rounded-full bg-olbra-accent text-white font-semibold flex items-center justify-center flex-shrink-0">2</div>
+              <div>
+                <h4 class="font-semibold text-olbra-dark mb-1">Fund Your Wallet</h4>
+                <p class="text-olbra-muted text-sm">Deposit PLN, EUR, or USD via bank transfer. Receive stablecoins instantly in your wallet.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-4 bg-white rounded-xl border border-olbra-gray-200">
+              <div class="w-8 h-8 rounded-full bg-olbra-blue-bright text-white font-semibold flex items-center justify-center flex-shrink-0">3</div>
+              <div>
+                <h4 class="font-semibold text-olbra-dark mb-1">Start Using Olbra</h4>
+                <p class="text-olbra-muted text-sm">Trade between currencies, lend for yield, send to anyone, or pay merchants worldwide.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stablecoin Triangle -->
+        <section id="stablecoin-overview" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <span class="inline-block px-3 py-1 bg-olbra-blue-pale text-olbra-blue text-xs font-semibold rounded-full mb-4">The Stablecoin Triangle</span>
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Overview</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-8">
+            The Stablecoin Triangle is Olbra's foundational architecture - three fully-backed stablecoins that create a "triangle of stability" connecting the Polish, European, and global financial systems.
+          </p>
+
+          <div class="bg-gradient-to-br from-olbra-gray-50 to-white rounded-2xl p-8 border border-olbra-gray-200">
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center mb-4 shadow-lg">
+                  <span class="text-white font-display font-bold text-xl">PLN</span>
+                </div>
+                <h4 class="font-display font-semibold text-olbra-dark">PLNY</h4>
+                <p class="text-olbra-muted text-sm">Polish Anchor</p>
+              </div>
+
+              <div>
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-olbra-blue to-olbra-blue-dim flex items-center justify-center mb-4 shadow-lg">
+                  <span class="text-white font-display font-bold text-xl">EUR</span>
+                </div>
+                <h4 class="font-display font-semibold text-olbra-dark">EURY</h4>
+                <p class="text-olbra-muted text-sm">European Hub</p>
+              </div>
+
+              <div>
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-4 shadow-lg">
+                  <span class="text-white font-display font-bold text-xl">USD</span>
+                </div>
+                <h4 class="font-display font-semibold text-olbra-dark">USDY</h4>
+                <p class="text-olbra-muted text-sm">Global Liquidity</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PLNY -->
+        <section id="plny" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg">
+              <span class="text-white font-display font-bold">PLN</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-display font-bold text-olbra-dark">PLNY - Polish Zloty Stablecoin</h2>
+              <p class="text-olbra-muted">Poland's Digital Anchor</p>
+            </div>
+          </div>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            PLNY is positioned as foundational to Polish digital sovereignty. Designed for use across fintech platforms, payment service providers, and exchanges, it strengthens connections between the Polish zloty and global financial infrastructure.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-green-50 rounded-xl">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <div>
+                <span class="font-medium text-olbra-dark">1:1 PLN Backing</span>
+                <p class="text-olbra-muted text-sm">Every PLNY is backed by one Polish zloty in reserve</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-green-50 rounded-xl">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <div>
+                <span class="font-medium text-olbra-dark">Audited Reserves</span>
+                <p class="text-olbra-muted text-sm">Regular third-party audits ensure transparency</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-green-50 rounded-xl">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <div>
+                <span class="font-medium text-olbra-dark">MiCA Compliant</span>
+                <p class="text-olbra-muted text-sm">Full compliance with EU crypto-asset regulations</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-green-50 rounded-xl">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <div>
+                <span class="font-medium text-olbra-dark">Instant Settlement</span>
+                <p class="text-olbra-muted text-sm">Near-instant transactions on blockchain networks</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EURY -->
+        <section id="eury" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-olbra-blue to-olbra-blue-dim flex items-center justify-center shadow-lg">
+              <span class="text-white font-display font-bold">EUR</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-display font-bold text-olbra-dark">EURY - Euro Stablecoin</h2>
+              <p class="text-olbra-muted">Europe's Safe Haven</p>
+            </div>
+          </div>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            EURY functions as a "digital safe euro asset" with worldwide accessibility. It aims to enhance EU financial autonomy and strategic independence, serving as a compliant tokenized alternative pending an official digital euro.
+          </p>
+
+          <div class="bg-olbra-blue-pale/30 rounded-2xl p-6 border border-olbra-blue/10">
+            <h4 class="font-semibold text-olbra-dark mb-3">Strategic Value</h4>
+            <ul class="space-y-2 text-olbra-gray-800 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-olbra-blue">&#8226;</span>
+                Enables frictionless cross-border value transfer within the EU
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-olbra-blue">&#8226;</span>
+                Provides digital euro exposure before official CBDC launch
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-olbra-blue">&#8226;</span>
+                Bridges traditional European banking with DeFi ecosystems
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- USDY -->
+        <section id="usdy" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg">
+              <span class="text-white font-display font-bold">USD</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-display font-bold text-olbra-dark">USDY - US Dollar Stablecoin</h2>
+              <p class="text-olbra-muted">The Dollar in Europe</p>
+            </div>
+          </div>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            USDY represents a geopolitical initiative - a dollar stablecoin produced in Poland. It anchors US financial interests through a trusted European ally's jurisdiction while balancing emerging euro-based alternatives and reinforcing strategic partnerships.
+          </p>
+
+          <div class="bg-green-50 rounded-2xl p-6 border border-green-200">
+            <h4 class="font-semibold text-olbra-dark mb-3">Global Connectivity</h4>
+            <p class="text-olbra-gray-800 text-sm">
+              USDY connects the Olbra ecosystem to worldwide financial markets, enabling users to access dollar liquidity while maintaining their base in European-regulated infrastructure.
+            </p>
+          </div>
+        </section>
+
+        <!-- Six Pillars -->
+        <section id="pillar-stablecoin" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <span class="inline-block px-3 py-1 bg-olbra-accent/10 text-olbra-accent text-xs font-semibold rounded-full mb-4">Six Pillars</span>
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">1. Stablecoin Infrastructure</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            The liquidity foundation with transparent, audited reserves and EU payment system integration. All three stablecoins (PLNY, EURY, USDY) are fully backed and regularly audited.
+          </p>
+
+          <div class="bg-white rounded-xl p-6 border border-olbra-gray-200">
+            <h4 class="font-semibold text-olbra-dark mb-4">Key Features</h4>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                100% reserve backing
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Third-party audits
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                EU payment integration
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Transparent reserves
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pillar-defi" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">2. DeFi Finance Suite</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Lending/borrowing mechanisms, decentralized exchange trading across currency pairs, and liquidity pools. Generate yield on your digital assets through battle-tested DeFi protocols.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200 text-center">
+              <div class="w-10 h-10 mx-auto rounded-lg bg-olbra-blue-pale flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h4 class="font-semibold text-olbra-dark mb-1">Lending</h4>
+              <p class="text-olbra-muted text-xs">Earn yield on deposits</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200 text-center">
+              <div class="w-10 h-10 mx-auto rounded-lg bg-olbra-accent/10 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-olbra-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+              </div>
+              <h4 class="font-semibold text-olbra-dark mb-1">Trading</h4>
+              <p class="text-olbra-muted text-xs">Swap between pairs</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200 text-center">
+              <div class="w-10 h-10 mx-auto rounded-lg bg-olbra-blue-bright/10 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5 text-olbra-blue-bright" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <h4 class="font-semibold text-olbra-dark mb-1">Liquidity</h4>
+              <p class="text-olbra-muted text-xs">Provide LP & earn fees</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pillar-rwa" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">3. Real-World Asset Tokenization</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Bringing traditional finance on-chain through tokenized assets. Starting with Polish government bonds, expanding into equities, real estate, and commodities.
+          </p>
+
+          <div class="bg-gradient-to-br from-olbra-gray-50 to-white rounded-xl p-6 border border-olbra-gray-200">
+            <h4 class="font-semibold text-olbra-dark mb-4">Asset Categories</h4>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                <span class="text-olbra-gray-800">Government Bonds</span>
+                <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Live</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                <span class="text-olbra-gray-800">Equities</span>
+                <span class="text-xs px-2 py-1 bg-olbra-blue-pale text-olbra-blue rounded-full">Coming Soon</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                <span class="text-olbra-gray-800">Real Estate</span>
+                <span class="text-xs px-2 py-1 bg-olbra-blue-pale text-olbra-blue rounded-full">Coming Soon</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-white rounded-lg">
+                <span class="text-olbra-gray-800">Commodities</span>
+                <span class="text-xs px-2 py-1 bg-olbra-gray-200 text-olbra-muted rounded-full">Planned</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pillar-payments" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">4. Global Payments & Access</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Fiat conversion, peer-to-peer transfers, and merchant settlement capabilities. Move money anywhere, instantly, with minimal fees.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">On/Off Ramps</h4>
+              <p class="text-olbra-muted text-sm">Convert between fiat (PLN, EUR, USD) and stablecoins seamlessly through integrated banking rails.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">P2P Transfers</h4>
+              <p class="text-olbra-muted text-sm">Send value to anyone, anywhere, using just a phone number or wallet address.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">Card Payments</h4>
+              <p class="text-olbra-muted text-sm">Virtual and physical cards for spending stablecoins at any merchant accepting card payments.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">Merchant Settlement</h4>
+              <p class="text-olbra-muted text-sm">Accept stablecoin payments and settle in your preferred currency automatically.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pillar-security" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">5. User Experience & Security</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Non-custodial wallets with regulatory compliance and AML/KYC frameworks. Bank-grade security meets Web3 simplicity.
+          </p>
+
+          <div class="bg-olbra-gray-50 rounded-xl p-6 border border-olbra-gray-200">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-olbra-dark mb-3">Security Features</h4>
+                <ul class="space-y-2 text-sm text-olbra-gray-800">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Non-custodial architecture
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Social recovery options
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Multi-sig support
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-olbra-dark mb-3">Compliance</h4>
+                <ul class="space-y-2 text-sm text-olbra-gray-800">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    AML/KYC frameworks
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Travel Rule compliant
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    GDPR data protection
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pillar-token" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">6. $OLBRA Token</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Governance rights, value capture from protocol fees, and deflationary mechanisms. The $OLBRA token aligns incentives across the entire ecosystem.
+          </p>
+
+          <a href="/token.html" class="inline-flex items-center gap-2 text-olbra-blue font-medium hover:gap-3 transition-all">
+            Learn more about $OLBRA tokenomics
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </section>
+
+        <!-- Token Section -->
+        <section id="token-overview" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <span class="inline-block px-3 py-1 bg-olbra-accent/10 text-olbra-accent text-xs font-semibold rounded-full mb-4">$OLBRA Token</span>
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Token Overview</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            The $OLBRA token is the native governance and utility token of the Olbra Finance ecosystem. It captures value from all protocol activities and enables community governance.
+          </p>
+        </section>
+
+        <section id="tokenomics" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Tokenomics</h2>
+
+          <div class="bg-white rounded-xl p-6 border border-olbra-gray-200 mb-6">
+            <h4 class="font-semibold text-olbra-dark mb-4">Token Distribution</h4>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-olbra-gray-800">Community & Ecosystem</span>
+                <span class="font-semibold text-olbra-dark">40%</span>
+              </div>
+              <div class="w-full bg-olbra-gray-100 rounded-full h-2">
+                <div class="bg-olbra-blue h-2 rounded-full" style="width: 40%"></div>
+              </div>
+
+              <div class="flex items-center justify-between mt-4">
+                <span class="text-olbra-gray-800">Team & Advisors</span>
+                <span class="font-semibold text-olbra-dark">20%</span>
+              </div>
+              <div class="w-full bg-olbra-gray-100 rounded-full h-2">
+                <div class="bg-olbra-accent h-2 rounded-full" style="width: 20%"></div>
+              </div>
+
+              <div class="flex items-center justify-between mt-4">
+                <span class="text-olbra-gray-800">Treasury</span>
+                <span class="font-semibold text-olbra-dark">25%</span>
+              </div>
+              <div class="w-full bg-olbra-gray-100 rounded-full h-2">
+                <div class="bg-olbra-blue-bright h-2 rounded-full" style="width: 25%"></div>
+              </div>
+
+              <div class="flex items-center justify-between mt-4">
+                <span class="text-olbra-gray-800">Liquidity & Listings</span>
+                <span class="font-semibold text-olbra-dark">15%</span>
+              </div>
+              <div class="w-full bg-olbra-gray-100 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 15%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="governance" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Governance</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            $OLBRA token holders can participate in protocol governance, voting on key decisions including protocol parameters, treasury allocation, and ecosystem development.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-olbra-blue-pale/30 rounded-xl p-5 text-center">
+              <div class="text-2xl font-display font-bold text-olbra-blue mb-1">Vote</div>
+              <p class="text-olbra-muted text-sm">On protocol proposals</p>
+            </div>
+            <div class="bg-olbra-accent/10 rounded-xl p-5 text-center">
+              <div class="text-2xl font-display font-bold text-olbra-accent mb-1">Propose</div>
+              <p class="text-olbra-muted text-sm">New initiatives</p>
+            </div>
+            <div class="bg-green-50 rounded-xl p-5 text-center">
+              <div class="text-2xl font-display font-bold text-green-600 mb-1">Delegate</div>
+              <p class="text-olbra-muted text-sm">Voting power</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical -->
+        <section id="architecture" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <span class="inline-block px-3 py-1 bg-olbra-gray-200 text-olbra-muted text-xs font-semibold rounded-full mb-4">Technical</span>
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Architecture</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Olbra is built on a modern, scalable architecture designed for security, performance, and regulatory compliance.
+          </p>
+
+          <div class="bg-olbra-gray-50 rounded-xl p-6 border border-olbra-gray-200">
+            <div class="space-y-4 text-sm">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded bg-olbra-blue text-white flex items-center justify-center flex-shrink-0 text-xs font-semibold">1</div>
+                <div>
+                  <span class="font-medium text-olbra-dark">Multi-chain Support</span>
+                  <p class="text-olbra-muted">Deployed across multiple EVM-compatible chains for maximum accessibility</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded bg-olbra-accent text-white flex items-center justify-center flex-shrink-0 text-xs font-semibold">2</div>
+                <div>
+                  <span class="font-medium text-olbra-dark">Audited Smart Contracts</span>
+                  <p class="text-olbra-muted">All contracts undergo rigorous security audits before deployment</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded bg-olbra-blue-bright text-white flex items-center justify-center flex-shrink-0 text-xs font-semibold">3</div>
+                <div>
+                  <span class="font-medium text-olbra-dark">Oracle Integration</span>
+                  <p class="text-olbra-muted">Real-time price feeds from trusted oracle networks</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="compliance" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Regulatory Compliance</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-8">
+            Olbra Finance operates under a robust regulatory framework with three key licenses enabling operations across Europe and alignment with U.S. standards.
+          </p>
+
+          <!-- Three Licenses -->
+          <div class="flex justify-center gap-4 mb-8">
+            <div class="w-20 h-14 rounded-xl bg-olbra-blue-pale border border-olbra-blue/20 flex items-center justify-center">
+              <span class="text-2xl">🇪🇺</span>
+            </div>
+            <div class="w-20 h-14 rounded-xl bg-olbra-blue-pale border border-olbra-blue/20 flex items-center justify-center">
+              <span class="text-2xl">🇺🇸</span>
+            </div>
+            <div class="w-20 h-14 rounded-xl bg-olbra-blue-pale border border-olbra-blue/20 flex items-center justify-center">
+              <span class="text-2xl">🇵🇱</span>
+            </div>
+          </div>
+
+          <!-- MiCA -->
+          <div class="bg-gradient-to-r from-olbra-blue-pale to-olbra-accent/10 rounded-2xl p-6 border border-olbra-blue/10 mb-6">
+            <h4 class="font-semibold text-olbra-dark mb-2 text-lg">MiCA Alignment (EU)</h4>
+            <p class="text-olbra-gray-800 text-sm mb-4">
+              Olbra's PLNY, EURY, USDY stablecoins and $OLBRA fully comply with EU MiCA regulations. Full reserves, audits, and transparency ensure user protection and institutional trust.
+            </p>
+            <div class="grid md:grid-cols-2 gap-3 text-sm">
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Transparent reserve management
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Regular third-party audits
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Consumer protection measures
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-olbra-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                27 EU member states coverage
+              </div>
+            </div>
+          </div>
+
+          <!-- Genius Act -->
+          <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200 mb-6">
+            <h4 class="font-semibold text-olbra-dark mb-2 text-lg">Genius Act Alignment (US)</h4>
+            <p class="text-olbra-gray-800 text-sm mb-4">
+              Stablecoins and $OLBRA meet U.S. Genius Act standards for legal adoption and trading. This bridges EU-U.S. markets, enabling transatlantic institutional access.
+            </p>
+            <div class="grid md:grid-cols-2 gap-3 text-sm">
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                U.S. regulatory alignment
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Transatlantic market access
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Institutional-grade compliance
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Dollar stablecoin framework
+              </div>
+            </div>
+          </div>
+
+          <!-- EMI License -->
+          <div class="bg-gradient-to-r from-red-50 to-rose-50 rounded-2xl p-6 border border-red-200">
+            <h4 class="font-semibold text-olbra-dark mb-2 text-lg">EMI Licence (Poland)</h4>
+            <p class="text-olbra-gray-800 text-sm mb-4">
+              Olbra holds Poland's exclusive EMI licence, authorizing the first PLNY stablecoin. PLNY establishes the official digital złoty, strengthening Poland's global digital economy role.
+            </p>
+            <div class="grid md:grid-cols-2 gap-3 text-sm">
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Exclusive PLNY issuance rights
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Polish banking integration
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                E-money institution status
+              </div>
+              <div class="flex items-center gap-2 text-olbra-gray-800">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                KNF supervision
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="security" class="mb-16 pt-8 border-t border-olbra-gray-200">
+          <h2 class="text-2xl font-display font-bold text-olbra-dark mb-6">Security</h2>
+
+          <p class="text-olbra-gray-800 leading-relaxed mb-6">
+            Security is paramount at Olbra. Multiple layers of protection ensure your assets remain safe.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">Smart Contract Security</h4>
+              <p class="text-olbra-muted text-sm">All contracts audited by leading security firms with bug bounty programs.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">Reserve Protection</h4>
+              <p class="text-olbra-muted text-sm">Reserves held in regulated financial institutions with insurance coverage.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">Access Controls</h4>
+              <p class="text-olbra-muted text-sm">Multi-signature requirements and timelocks on critical operations.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olbra-gray-200">
+              <h4 class="font-semibold text-olbra-dark mb-2">Monitoring</h4>
+              <p class="text-olbra-muted text-sm">24/7 monitoring systems with automatic threat detection and response.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section class="mt-16 pt-8 border-t border-olbra-gray-200">
+          <div class="bg-gradient-to-br from-olbra-dark to-olbra-gray-800 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-display font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p class="text-white/70 mb-6">Join the future of European digital finance.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="#" class="bg-white text-olbra-dark font-semibold px-6 py-3 rounded-xl hover:shadow-lg transition-all">
+                Launch App
+              </a>
+              <a href="/faq.html" class="text-white font-semibold px-6 py-3 rounded-xl border border-white/30 hover:bg-white/10 transition-all">
+                View FAQ
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile Sidebar Drawer -->
+  <div id="docs-sidebar-mobile" class="fixed inset-0 z-50 lg:hidden hidden">
+    <div class="absolute inset-0 bg-black/50" id="docs-sidebar-overlay"></div>
+    <aside class="absolute left-0 top-0 bottom-0 w-72 bg-white overflow-y-auto">
+      <div class="p-4 border-b border-olbra-gray-200 flex items-center justify-between">
+        <span class="font-display font-semibold text-olbra-dark">Documentation</span>
+        <button id="docs-sidebar-close" class="p-2 -mr-2">
+          <svg class="w-5 h-5 text-olbra-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="p-6">
+        <!-- Same nav content as desktop sidebar -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">Getting Started</h3>
+          <ul class="space-y-1">
+            <li><a href="#introduction" class="docs-nav-link-mobile">Introduction</a></li>
+            <li><a href="#mission" class="docs-nav-link-mobile">Mission & Vision</a></li>
+            <li><a href="#quick-start" class="docs-nav-link-mobile">Quick Start</a></li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">The Stablecoin Triangle</h3>
+          <ul class="space-y-1">
+            <li><a href="#stablecoin-overview" class="docs-nav-link-mobile">Overview</a></li>
+            <li><a href="#plny" class="docs-nav-link-mobile">PLNY - Polish Zloty</a></li>
+            <li><a href="#eury" class="docs-nav-link-mobile">EURY - Euro</a></li>
+            <li><a href="#usdy" class="docs-nav-link-mobile">USDY - US Dollar</a></li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">Six Pillars</h3>
+          <ul class="space-y-1">
+            <li><a href="#pillar-stablecoin" class="docs-nav-link-mobile">Stablecoin Infrastructure</a></li>
+            <li><a href="#pillar-defi" class="docs-nav-link-mobile">DeFi Finance</a></li>
+            <li><a href="#pillar-rwa" class="docs-nav-link-mobile">Real-World Assets</a></li>
+            <li><a href="#pillar-payments" class="docs-nav-link-mobile">Global Payments</a></li>
+            <li><a href="#pillar-security" class="docs-nav-link-mobile">Security & UX</a></li>
+            <li><a href="#pillar-token" class="docs-nav-link-mobile">$OLBRA Token</a></li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">$OLBRA Token</h3>
+          <ul class="space-y-1">
+            <li><a href="#token-overview" class="docs-nav-link-mobile">Token Overview</a></li>
+            <li><a href="#tokenomics" class="docs-nav-link-mobile">Tokenomics</a></li>
+            <li><a href="#governance" class="docs-nav-link-mobile">Governance</a></li>
+          </ul>
+        </div>
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold text-olbra-muted uppercase tracking-wider mb-3">Technical</h3>
+          <ul class="space-y-1">
+            <li><a href="#architecture" class="docs-nav-link-mobile">Architecture</a></li>
+            <li><a href="#compliance" class="docs-nav-link-mobile">Regulatory Compliance</a></li>
+            <li><a href="#security" class="docs-nav-link-mobile">Security</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    // Docs sidebar functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebarToggle = document.getElementById('docs-sidebar-toggle');
+      const sidebarMobile = document.getElementById('docs-sidebar-mobile');
+      const sidebarOverlay = document.getElementById('docs-sidebar-overlay');
+      const sidebarClose = document.getElementById('docs-sidebar-close');
+
+      if (sidebarToggle && sidebarMobile) {
+        sidebarToggle.addEventListener('click', () => {
+          sidebarMobile.classList.remove('hidden');
+        });
+
+        const closeSidebar = () => {
+          sidebarMobile.classList.add('hidden');
+        };
+
+        sidebarOverlay?.addEventListener('click', closeSidebar);
+        sidebarClose?.addEventListener('click', closeSidebar);
+
+        // Close on mobile nav link click
+        sidebarMobile.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', closeSidebar);
+        });
+      }
+
+      // Active nav link highlighting
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.docs-nav-link, .docs-nav-link-mobile');
+
+      const observerOptions = {
+        rootMargin: '-100px 0px -70% 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>

@@ -1,0 +1,21 @@
+{
+  "name": "olbra-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "daisyui": "^4.4.19",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "ogl": "^1.0.11",
+    "pixi.js": "^8.14.3"
+  }
+}

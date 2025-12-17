@@ -1,0 +1,888 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-olbra-gray-900 bg-white;
+    font-feature-settings: 'ss01' on, 'cv01' on;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-olbra-blue text-white;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Navigation */
+  .nav-link {
+    @apply relative text-olbra-gray-800 font-medium text-sm transition-colors duration-200 hover:text-olbra-blue;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-olbra-blue transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-olbra-blue text-white font-semibold px-6 py-3 rounded-xl
+           transition-all duration-300 ease-out
+           hover:bg-olbra-blue-dim hover:shadow-blue hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-none;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-olbra-blue font-semibold px-6 py-3 rounded-xl transition-all duration-300 ease-out;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-olbra-blue text-white shadow-blue -translate-y-0.5;
+  }
+
+  .btn-secondary:active {
+    @apply translate-y-0 shadow-none;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-olbra-gray-200 text-olbra-muted font-semibold px-6 py-3 rounded-xl transition-all duration-300 ease-out;
+  }
+
+  .btn-outline:hover {
+    @apply bg-transparent border-olbra-blue text-olbra-blue -translate-y-0.5;
+  }
+
+  .btn-outline:active {
+    @apply translate-y-0;
+  }
+
+  /* Cards */
+  .card-base {
+    @apply bg-white rounded-2xl border border-olbra-gray-200 p-6
+           transition-all duration-300 ease-out
+           hover:shadow-soft-lg hover:border-olbra-blue/20 hover:-translate-y-1;
+  }
+
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-xl rounded-2xl border border-white/50 p-6
+           shadow-soft transition-all duration-300;
+  }
+
+  .card-highlight {
+    @apply bg-gradient-to-br from-olbra-blue-pale to-olbra-accent-light
+           rounded-2xl p-6 transition-all duration-300
+           hover:shadow-blue hover:-translate-y-1;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Bento Grid Layout */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+  }
+
+  .bento-item {
+    @apply bg-white rounded-2xl border border-olbra-gray-200 p-6
+           transition-all duration-300 ease-out
+           hover:shadow-soft-lg hover:border-olbra-blue/20 hover:-translate-y-1;
+  }
+
+  .bento-large {
+    grid-column: span 2;
+    @apply p-8;
+  }
+
+  .bento-featured {
+    grid-column: span 2;
+    @apply bg-gradient-to-br from-olbra-blue-pale via-white to-olbra-accent-light
+           border-olbra-blue/20 p-8;
+  }
+
+  .bento-featured:hover {
+    @apply shadow-blue border-olbra-blue/40;
+  }
+
+  /* Bento grid responsive */
+  @media (max-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-large,
+    .bento-featured {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+    .bento-large,
+    .bento-featured {
+      grid-column: span 1;
+    }
+  }
+
+  /* Text Styles */
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-olbra-blue via-olbra-accent to-olbra-blue-bright
+           bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift;
+  }
+
+  /* Pill/Badge */
+  .pill {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full
+           bg-olbra-blue-pale text-olbra-blue text-sm font-medium;
+  }
+
+  /* =========================================
+     HERO GOOEY BACKGROUND - SVG Filter Metaballs
+     ========================================= */
+
+  .hero-goo-container {
+    @apply absolute inset-0 overflow-hidden;
+    z-index: 0;
+  }
+
+  /* Base gradient layer - enhanced with glass-like depth */
+  .hero-glass-gradient {
+    @apply absolute inset-0;
+    background:
+      radial-gradient(ellipse 80% 60% at 30% 20%, rgba(77, 147, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 80% at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, #f8fafc 0%, #e8f1ff 40%, #ede9fe 100%);
+  }
+
+  .hero-goo-wrapper {
+    @apply absolute inset-0;
+    /* Removed SVG filters - they cause rendering artifacts across browsers */
+  }
+
+  .hero-goo-blob {
+    @apply absolute rounded-full pointer-events-none;
+    will-change: transform;
+    --parallax-x: 0px;
+    --parallax-y: 0px;
+
+    /* Frosted glass effect using backdrop-filter */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(40px) saturate(1.2);
+    -webkit-backdrop-filter: blur(40px) saturate(1.2);
+
+    /* Subtle border for glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    /* Soft shadow for depth */
+    box-shadow:
+      0 8px 32px rgba(77, 147, 255, 0.1),
+      inset 0 0 80px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Specular highlight on each blob */
+  .hero-goo-blob::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 60% 40% at 30% 25%,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.2) 30%,
+      transparent 60%
+    );
+  }
+
+  /* Glass distortion layer - subtle overlay effect */
+  .hero-glass-distortion {
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(
+      ellipse 100% 100% at 50% 30%,
+      rgba(255, 255, 255, 0.15) 0%,
+      transparent 70%
+    );
+    mix-blend-mode: overlay;
+  }
+
+  /* Rainbow caustic layer - simulates light refraction */
+  .hero-glass-caustics {
+    @apply absolute inset-0 pointer-events-none;
+    background:
+      /* Rainbow caustic 1 - warm colors */
+      radial-gradient(
+        ellipse 35% 25% at 30% 40%,
+        rgba(255, 120, 80, 0.12) 0%,
+        rgba(255, 180, 100, 0.1) 30%,
+        rgba(255, 220, 150, 0.08) 50%,
+        transparent 70%
+      ),
+      /* Rainbow caustic 2 - cool colors */
+      radial-gradient(
+        ellipse 30% 35% at 65% 55%,
+        rgba(100, 200, 255, 0.1) 0%,
+        rgba(150, 100, 255, 0.08) 40%,
+        rgba(200, 150, 255, 0.06) 60%,
+        transparent 80%
+      ),
+      /* Rainbow caustic 3 - green/yellow */
+      radial-gradient(
+        ellipse 25% 20% at 75% 30%,
+        rgba(150, 255, 150, 0.08) 0%,
+        rgba(255, 255, 100, 0.06) 40%,
+        transparent 70%
+      ),
+      /* Rainbow caustic 4 - magenta/pink */
+      radial-gradient(
+        ellipse 20% 30% at 20% 70%,
+        rgba(255, 100, 200, 0.08) 0%,
+        rgba(255, 150, 180, 0.06) 50%,
+        transparent 80%
+      );
+    animation: caustic-shimmer 20s ease-in-out infinite;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+  }
+
+  @keyframes caustic-shimmer {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.7;
+    }
+    25% {
+      transform: translate(15px, -10px) scale(1.02);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-10px, 15px) scale(0.98);
+      opacity: 0.8;
+    }
+    75% {
+      transform: translate(5px, 5px) scale(1.01);
+      opacity: 0.6;
+    }
+  }
+
+  /* Specular highlight layer - glass reflections */
+  .hero-glass-specular {
+    @apply absolute inset-0 pointer-events-none;
+    background:
+      /* Main specular */
+      radial-gradient(
+        ellipse 45% 35% at var(--glass-light-x, 65%) var(--glass-light-y, 25%),
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.2) 30%,
+        transparent 60%
+      ),
+      /* Secondary highlight */
+      radial-gradient(
+        ellipse 30% 25% at calc(var(--glass-light-x, 65%) - 30%) calc(var(--glass-light-y, 25%) + 40%),
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 50%
+      );
+    mix-blend-mode: soft-light;
+    opacity: 1;
+    will-change: background;
+  }
+
+  /* Mouse-responsive ambient light */
+  .hero-glass-ambient {
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(
+      circle 700px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(200, 220, 255, 0.04) 40%,
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+    will-change: background, opacity;
+  }
+
+  .hero-glass-ambient.active {
+    opacity: 1;
+  }
+
+  /* Blob 1: Large glass sphere - top right */
+  .hero-goo-blob-1 {
+    width: 600px;
+    height: 600px;
+    top: -15%;
+    right: 0%;
+    animation: goo-drift-1 18s ease-in-out infinite;
+  }
+
+  /* Blob 2: Medium glass - bottom left */
+  .hero-goo-blob-2 {
+    width: 500px;
+    height: 500px;
+    bottom: -10%;
+    left: -5%;
+    animation: goo-drift-2 22s ease-in-out infinite;
+  }
+
+  /* Blob 3: Glass sphere - center left */
+  .hero-goo-blob-3 {
+    width: 450px;
+    height: 450px;
+    top: 35%;
+    left: 15%;
+    animation: goo-drift-3 20s ease-in-out infinite;
+  }
+
+  /* Blob 4: Smaller glass - top center */
+  .hero-goo-blob-4 {
+    width: 380px;
+    height: 380px;
+    top: 10%;
+    left: 40%;
+    animation: goo-drift-4 16s ease-in-out infinite;
+  }
+
+  /* Blob 5: Glass highlight - right side */
+  .hero-goo-blob-5 {
+    width: 480px;
+    height: 480px;
+    top: 20%;
+    right: 10%;
+    animation: goo-drift-5 24s ease-in-out infinite;
+  }
+
+  /* Stats */
+  .stat-number {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold text-olbra-dark;
+  }
+
+  .stat-label {
+    @apply text-sm md:text-base text-olbra-muted font-medium uppercase tracking-wider mt-2;
+  }
+
+  /* Feature Icon */
+  .feature-icon {
+    @apply w-14 h-14 rounded-2xl bg-gradient-to-br from-olbra-blue-pale to-olbra-accent-light
+           flex items-center justify-center text-olbra-blue;
+  }
+
+  /* Marquee */
+  .marquee-container {
+    @apply overflow-hidden relative;
+  }
+
+  .marquee-container::before,
+  .marquee-container::after {
+    content: '';
+    @apply absolute top-0 bottom-0 w-32 z-10 pointer-events-none;
+  }
+
+  .marquee-container::before {
+    @apply left-0 bg-gradient-to-r from-white to-transparent;
+  }
+
+  .marquee-container::after {
+    @apply right-0 bg-gradient-to-l from-white to-transparent;
+  }
+
+  /* FAQ Accordion */
+  .faq-item {
+    @apply border-b border-olbra-gray-200 last:border-0;
+  }
+
+  .faq-question {
+    @apply w-full flex items-center justify-between py-5 text-left
+           font-semibold text-olbra-gray-900 transition-colors hover:text-olbra-blue;
+  }
+
+  .faq-answer {
+    @apply overflow-hidden transition-all duration-300 ease-out;
+  }
+
+  /* Footer */
+  .footer-link {
+    @apply text-olbra-muted hover:text-olbra-blue transition-colors duration-200;
+  }
+
+  /* Scroll Animations - Enhanced */
+  .reveal {
+    @apply opacity-0 translate-y-8;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Slide from left */
+  .reveal-left {
+    @apply opacity-0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-left.visible {
+    @apply opacity-100;
+    transform: translateX(0);
+  }
+
+  /* Slide from right */
+  .reveal-right {
+    @apply opacity-0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-right.visible {
+    @apply opacity-100;
+    transform: translateX(0);
+  }
+
+  /* Scale up */
+  .reveal-scale {
+    @apply opacity-0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .reveal-scale.visible {
+    @apply opacity-100;
+    transform: scale(1);
+  }
+
+  /* Stagger delays */
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+
+  /* Stablecoin Cards */
+  .coin-stack {
+    @apply relative flex flex-col md:flex-row items-center justify-center gap-6;
+  }
+
+  .coin-card {
+    @apply relative bg-white rounded-2xl p-6 md:p-8
+           border border-olbra-gray-200 shadow-soft
+           transition-all duration-300 ease-out cursor-pointer
+           hover:shadow-soft-lg hover:border-olbra-blue/20 hover:-translate-y-1;
+    @apply w-full md:w-80;
+  }
+
+  /* Card accent colors - top border matching icon colors */
+  .coin-card[data-coin="plny"] {
+    @apply border-t-4;
+    border-top-color: #0C53BF;
+  }
+
+  .coin-card[data-coin="eury"] {
+    @apply border-t-4 border-t-blue-500;
+  }
+
+  .coin-card[data-coin="usdy"] {
+    @apply border-t-4 border-t-blue-400;
+  }
+
+  /* Documentation Sidebar Navigation */
+  .docs-nav-link {
+    @apply block py-2 px-3 text-sm text-olbra-muted rounded-lg
+           transition-all duration-200
+           hover:text-olbra-blue hover:bg-olbra-blue-pale/50;
+  }
+
+  .docs-nav-link.active {
+    @apply text-olbra-blue bg-olbra-blue-pale font-medium;
+  }
+
+  .docs-nav-link-mobile {
+    @apply block py-2 px-3 text-sm text-olbra-muted rounded-lg
+           transition-all duration-200
+           hover:text-olbra-blue hover:bg-olbra-blue-pale/50;
+  }
+
+  .docs-nav-link-mobile.active {
+    @apply text-olbra-blue bg-olbra-blue-pale font-medium;
+  }
+
+  /* Team Cards */
+  .team-card {
+    @apply relative overflow-hidden rounded-2xl cursor-pointer;
+    transition: transform 0.3s ease-out, opacity 0.8s ease-out;
+  }
+
+  .team-card.visible {
+    transition: transform 0.3s ease-out;
+  }
+
+  .team-card:hover {
+    @apply -translate-y-2;
+  }
+
+  .team-card:hover .team-card-image {
+    transform: scale(1.05);
+  }
+
+  .team-card-image {
+    @apply w-full aspect-[4/5] object-cover object-top transition-transform duration-500 ease-out;
+  }
+
+  .team-card-overlay {
+    @apply absolute bottom-0 left-0 right-0 p-6
+           bg-gradient-to-t from-black/70 via-black/30 to-transparent
+           transition-all duration-300;
+  }
+
+  .team-card-name {
+    @apply text-white font-display font-semibold text-xl mb-1;
+  }
+
+  .team-card-role {
+    @apply text-white/80 text-sm font-medium;
+  }
+
+  /* Team card bio expansion on hover */
+  .team-card-bio {
+    @apply mt-3 text-white/70 text-sm leading-relaxed
+           max-h-0 opacity-0 overflow-hidden
+           transition-all duration-300 ease-out;
+  }
+
+  .team-card:hover .team-card-bio {
+    @apply max-h-48 opacity-100;
+  }
+
+  .team-card:hover .team-card-overlay {
+    @apply from-black/90 via-black/60;
+  }
+
+  /* Europe Map Styles */
+  .europe-map-container {
+    @apply relative;
+  }
+
+  .europe-map {
+    @apply w-full h-auto;
+  }
+
+  .country-path {
+    fill: transparent;
+    stroke: #e5e7eb;
+    stroke-width: 0.5;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+
+  .country-path.highlighted {
+    fill: #c9deff;
+    stroke: #a3c4ff;
+    stroke-width: 1;
+    cursor: pointer;
+  }
+
+  .country-path.highlighted:hover,
+  .country-path.highlighted.active {
+    fill: #4d93ff;
+    stroke: #3b7de6;
+  }
+
+  /* Map Tooltip */
+  .map-tooltip {
+    @apply absolute bg-white rounded-2xl shadow-soft-lg border border-olbra-gray-200 p-5
+           opacity-0 pointer-events-none transition-all duration-200 ease-out z-20;
+    min-width: 280px;
+    max-width: 320px;
+    transform: translateY(10px);
+  }
+
+  .map-tooltip.visible {
+    @apply opacity-100 pointer-events-auto;
+    transform: translateY(0);
+  }
+
+  .map-tooltip-title {
+    @apply text-base font-display font-semibold text-olbra-dark mb-3;
+  }
+
+  .map-tooltip-list {
+    @apply text-sm text-olbra-muted space-y-2 list-none m-0 p-0;
+  }
+
+  .map-tooltip-list li {
+    @apply relative pl-4;
+  }
+
+  .map-tooltip-list li::before {
+    content: '';
+    @apply absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-olbra-blue;
+  }
+
+  /* Mobile Map Tooltip */
+  @media (max-width: 768px) {
+    .map-tooltip {
+      @apply fixed bottom-4 left-4 right-4 max-w-none;
+      min-width: auto;
+    }
+
+    .map-tooltip.visible {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Utility Overrides */
+@layer utilities {
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Custom focus ring */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-olbra-blue focus:ring-offset-2;
+  }
+
+  /* Aspect ratios */
+  .aspect-video-custom {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Mobile Menu Animation */
+.mobile-menu {
+  @apply fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-out;
+}
+
+.mobile-menu.open {
+  @apply translate-x-0;
+}
+
+/* Language Switcher */
+.lang-switch {
+  @apply text-sm font-medium text-olbra-muted transition-colors duration-200;
+}
+
+.lang-switch:hover {
+  @apply text-olbra-blue;
+}
+
+.lang-switch.active {
+  @apply text-olbra-blue font-semibold;
+}
+
+.lang-switch-mobile {
+  @apply text-base font-medium text-olbra-muted transition-colors duration-200;
+}
+
+.lang-switch-mobile:hover {
+  @apply text-olbra-blue;
+}
+
+.lang-switch-mobile.active {
+  @apply text-olbra-blue font-semibold;
+}
+
+/* Counter Animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.count-up {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Noise texture overlay */
+.noise-overlay::after {
+  content: '';
+  @apply absolute inset-0 pointer-events-none opacity-[0.015];
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* =========================================
+   HERO GOOEY ANIMATIONS - Keyframes
+   ========================================= */
+
+/* Gooey Blob 1: Diagonal drift - larger movements for merging */
+@keyframes goo-drift-1 {
+  0%, 100% {
+    transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  }
+  25% {
+    transform: translate(calc(-120px + var(--parallax-x, 0)), calc(80px + var(--parallax-y, 0)));
+  }
+  50% {
+    transform: translate(calc(-60px + var(--parallax-x, 0)), calc(150px + var(--parallax-y, 0)));
+  }
+  75% {
+    transform: translate(calc(80px + var(--parallax-x, 0)), calc(60px + var(--parallax-y, 0)));
+  }
+}
+
+/* Gooey Blob 2: Upward drift */
+@keyframes goo-drift-2 {
+  0%, 100% {
+    transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  }
+  30% {
+    transform: translate(calc(150px + var(--parallax-x, 0)), calc(-100px + var(--parallax-y, 0)));
+  }
+  60% {
+    transform: translate(calc(100px + var(--parallax-x, 0)), calc(-180px + var(--parallax-y, 0)));
+  }
+  80% {
+    transform: translate(calc(-50px + var(--parallax-x, 0)), calc(-80px + var(--parallax-y, 0)));
+  }
+}
+
+/* Gooey Blob 3: Circular drift */
+@keyframes goo-drift-3 {
+  0%, 100% {
+    transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  }
+  20% {
+    transform: translate(calc(100px + var(--parallax-x, 0)), calc(60px + var(--parallax-y, 0)));
+  }
+  40% {
+    transform: translate(calc(140px + var(--parallax-x, 0)), calc(-50px + var(--parallax-y, 0)));
+  }
+  60% {
+    transform: translate(calc(40px + var(--parallax-x, 0)), calc(-120px + var(--parallax-y, 0)));
+  }
+  80% {
+    transform: translate(calc(-80px + var(--parallax-x, 0)), calc(-40px + var(--parallax-y, 0)));
+  }
+}
+
+/* Gooey Blob 4: Vertical emphasis */
+@keyframes goo-drift-4 {
+  0%, 100% {
+    transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  }
+  33% {
+    transform: translate(calc(-60px + var(--parallax-x, 0)), calc(120px + var(--parallax-y, 0)));
+  }
+  66% {
+    transform: translate(calc(80px + var(--parallax-x, 0)), calc(60px + var(--parallax-y, 0)));
+  }
+}
+
+/* Gooey Blob 5: Horizontal sweep */
+@keyframes goo-drift-5 {
+  0%, 100% {
+    transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  }
+  25% {
+    transform: translate(calc(-140px + var(--parallax-x, 0)), calc(50px + var(--parallax-y, 0)));
+  }
+  50% {
+    transform: translate(calc(-80px + var(--parallax-x, 0)), calc(100px + var(--parallax-y, 0)));
+  }
+  75% {
+    transform: translate(calc(60px + var(--parallax-x, 0)), calc(70px + var(--parallax-y, 0)));
+  }
+}
+
+/* =========================================
+   HERO GOOEY - Responsive Adjustments
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .hero-goo-blob-1 { width: 400px; height: 400px; }
+  .hero-goo-blob-2 { width: 320px; height: 320px; }
+  .hero-goo-blob-3 { width: 280px; height: 280px; }
+  .hero-goo-blob-4 { width: 240px; height: 240px; }
+  .hero-goo-blob-5 { width: 300px; height: 300px; }
+  .hero-glass-distortion { opacity: 0.3; }
+  .hero-glass-specular { opacity: 0.6; }
+  .hero-glass-caustics { opacity: 0.5; }
+}
+
+@media (max-width: 640px) {
+  .hero-goo-blob { display: none; }
+  .hero-goo-wrapper {
+    filter: none;
+    background: linear-gradient(135deg, rgba(77, 147, 255, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+  }
+  .hero-glass-distortion,
+  .hero-glass-specular,
+  .hero-glass-caustics,
+  .hero-glass-ambient {
+    display: none;
+  }
+}
+
+/* =========================================
+   HERO GOOEY - Accessibility
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-goo-blob { animation: none !important; }
+  .hero-glass-distortion {
+    filter: none;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .hero-glass-caustics { animation: none !important; }
+  .hero-glass-ambient { display: none; }
+}
