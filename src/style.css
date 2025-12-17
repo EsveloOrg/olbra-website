@@ -94,6 +94,13 @@
            hover:shadow-blue hover:-translate-y-1;
   }
 
+  /* Hero Blob - Decorative background blobs for subpage hero sections */
+  .hero-blob {
+    @apply absolute rounded-full pointer-events-none;
+    filter: blur(80px);
+    opacity: 0.6;
+  }
+
   /* Section Styles */
   .section-padding {
     @apply py-20 md:py-28 lg:py-32;
