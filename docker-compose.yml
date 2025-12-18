@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    container_name: olbra-website
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    expose:
+      - "80"
+    networks:
+      - traefik-proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.olbra-website.rule=Host(`olbra.org`) || Host(`www.olbra.org`)"
+      - "traefik.http.routers.olbra-website.entrypoints=websecure"
+      - "traefik.http.routers.olbra-website.tls=true"
+      - "traefik.http.services.olbra-website.loadbalancer.server.port=80"
+
+networks:
+  traefik-proxy:
+    external: true
