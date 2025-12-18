@@ -10,6 +10,4 @@
 <rect width="500" height="500" fill="white"></rect>
 </clipPath>
 </defs>
-</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
-@media (prefers-color-scheme: dark) { :root { filter: invert(100%); } }
-</style></svg>
+</svg></svg>
