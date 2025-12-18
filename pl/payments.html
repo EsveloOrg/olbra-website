@@ -5,8 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Płatności Olbra - Globalne płatności, bramki on/off, przelewy P2P i rozliczenia kartami. Przelewaj pieniądze wszędzie, natychmiast.">
   <title>Płatności - Globalne Przelewy i Karty | Olbra Finance</title>
-  <link rel="icon" type="image/png" href="/fav.png">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/src/style.css">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://olbra.org/pl/payments.html">
+  <meta property="og:title" content="Płatności - Globalne Przelewy i Karty | Olbra Finance">
+  <meta property="og:description" content="Płatności Olbra - Globalne płatności, bramki on/off, przelewy P2P i rozliczenia kartami. Przelewaj pieniądze wszędzie, natychmiast.">
+  <meta property="og:image" content="https://olbra.org/assets/olbra-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Płatności - Globalne Przelewy i Karty | Olbra Finance">
+  <meta name="twitter:description" content="Płatności Olbra - Globalne płatności, bramki on/off, przelewy P2P i rozliczenia kartami. Przelewaj pieniądze wszędzie, natychmiast.">
+  <meta name="twitter:image" content="https://olbra.org/assets/olbra-preview.png">
 </head>
 <body class="antialiased">
   {{> navbar-pl}}
@@ -31,7 +47,7 @@
               Wysyłaj globalnie w sekundy. SWIFT zajmuje 3-5 dni. Olbra zajmuje &lt;1 sekundę. Ten sam koszt lokalnie i międzynarodowo.
             </p>
             <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
-              <a href="#" class="btn-primary">Wyślij Teraz</a>
+              <a href="javascript:void(0)" class="btn-primary btn-disabled">Wkrótce</a>
               <a href="#cards" class="btn-outline">Zamów Kartę</a>
             </div>
           </div>
@@ -268,7 +284,7 @@
               </div>
             </div>
 
-            <a href="#" class="btn-primary">Zamów Swoją Kartę</a>
+            <a href="javascript:void(0)" class="btn-primary btn-disabled">Wkrótce</a>
           </div>
 
           <div class="reveal reveal-delay-2 relative">
@@ -373,10 +389,10 @@
             SWIFT: 3-5 dni. Olbra: &lt;1 sekunda. Wypróbuj za darmo.
           </p>
           <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-              Zacznij Za Darmo
+            <a href="javascript:void(0)" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl btn-disabled">
+              Wkrótce
             </a>
-            <a href="/pl/docs.html" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
+            <a href="/pl/docs.html" target="_blank" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
               Zobacz Dokumentację API
             </a>
           </div>

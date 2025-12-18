@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Olbra Finance - pierwszy w Polsce emitent stablecoinów złotówkowych. Budujemy europejską suwerenność finansową z PLNY, EURY i USDY.">
   <title>Olbra Finance - Polska Infrastruktura Cyfrowej Waluty</title>
-  <link rel="icon" type="image/png" href="/fav.png">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- Preconnect to font services for faster loading -->
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -15,6 +18,19 @@
   <link rel="alternate" hreflang="en" href="https://olbra.org/">
   <link rel="alternate" hreflang="pl" href="https://olbra.org/pl/">
   <link rel="alternate" hreflang="x-default" href="https://olbra.org/">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://olbra.org/pl/">
+  <meta property="og:title" content="Olbra Finance - Polska Infrastruktura Cyfrowej Waluty">
+  <meta property="og:description" content="Olbra Finance - pierwszy w Polsce emitent stablecoinów złotówkowych. Budujemy europejską suwerenność finansową z PLNY, EURY i USDY.">
+  <meta property="og:image" content="https://olbra.org/assets/olbra-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Olbra Finance - Polska Infrastruktura Cyfrowej Waluty">
+  <meta name="twitter:description" content="Olbra Finance - pierwszy w Polsce emitent stablecoinów złotówkowych. Budujemy europejską suwerenność finansową z PLNY, EURY i USDY.">
+  <meta name="twitter:image" content="https://olbra.org/assets/olbra-preview.png">
 </head>
 <body class="antialiased">
   <!-- Header -->
@@ -38,14 +54,14 @@
 
         <!-- CTA -->
         <div class="hidden lg:flex items-center gap-4">
-          <a href="/pl/docs.html" class="nav-link">Dokumentacja</a>
+          <a href="/pl/docs.html" target="_blank" class="nav-link">Dokumentacja</a>
           <!-- Language Switcher -->
           <div class="flex items-center gap-1 border-l border-olbra-gray-200 pl-4">
             <a href="/" class="lang-switch" data-lang="en" aria-label="English">EN</a>
             <span class="text-olbra-gray-300">|</span>
             <a href="/pl/" class="lang-switch active" data-lang="pl" aria-label="Polski">PL</a>
           </div>
-          <a href="#" class="btn-primary">Rozpocznij</a>
+          <a href="javascript:void(0)" class="btn-primary btn-disabled">Wkrótce</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -78,7 +94,7 @@
         <a href="/pl/payments.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Płatności</a>
         <a href="/pl/faq.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">FAQ</a>
         <a href="/pl/blog.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Blog</a>
-        <a href="/pl/docs.html" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Dokumentacja</a>
+        <a href="/pl/docs.html" target="_blank" class="mobile-menu-link text-lg font-medium py-3 border-b border-olbra-gray-100">Dokumentacja</a>
       </nav>
       <!-- Language Switcher Mobile -->
       <div class="flex items-center justify-center gap-4 py-4 border-t border-olbra-gray-100 mx-6">
@@ -87,7 +103,7 @@
         <a href="/pl/" class="lang-switch-mobile active" data-lang="pl">Polski</a>
       </div>
       <div class="mt-auto p-6">
-        <a href="#" class="btn-primary w-full text-center block">Rozpocznij</a>
+        <a href="javascript:void(0)" class="btn-primary btn-disabled w-full text-center block">Wkrótce</a>
       </div>
     </div>
   </div>
@@ -157,13 +173,10 @@
 
           <!-- CTAs -->
           <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" class="btn-primary">
-              Uruchom Aplikację
-              <svg class="inline-block w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-              </svg>
+            <a href="javascript:void(0)" class="btn-primary btn-disabled">
+              Wkrótce
             </a>
-            <a href="/pl/docs.html" class="btn-outline">
+            <a href="/pl/docs.html" target="_blank" class="btn-outline">
               Przeczytaj Dokumentację
             </a>
           </div>
@@ -213,7 +226,7 @@
           <!-- PLNY -->
           <div class="coin-card group" data-coin="plny">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/plny-svg-color.svg" alt="PLNY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
+              <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
               <div>
                 <h3 class="font-display font-bold text-2xl text-olbra-dark">PLNY</h3>
                 <p class="text-olbra-muted text-sm">Cyfrowy Złoty</p>
@@ -253,7 +266,7 @@
           <!-- EURY -->
           <div class="coin-card group" data-coin="eury">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/eury-svg-color.svg" alt="EURY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
+              <img src="/assets/coins2/eury.svg" alt="EURY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
               <div>
                 <h3 class="font-display font-bold text-2xl text-olbra-dark">EURY</h3>
                 <p class="text-olbra-muted text-sm">Cyfrowe Euro</p>
@@ -293,7 +306,7 @@
           <!-- USDY -->
           <div class="coin-card group" data-coin="usdy">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/usdy-svg-color.svg" alt="USDY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
+              <img src="/assets/coins2/usdy.svg" alt="USDY" class="w-14 h-14 group-hover:scale-110 transition-transform duration-500">
               <div>
                 <h3 class="font-display font-bold text-2xl text-olbra-dark">USDY</h3>
                 <p class="text-olbra-muted text-sm">Cyfrowy Dolar</p>
@@ -658,10 +671,10 @@
             Trzy licencje regulacyjne. 100% zabezpieczone. Rozliczenie w ułamku sekundy.
           </p>
           <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-              Rozpocznij Za Darmo
+            <a href="javascript:void(0)" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl btn-disabled">
+              Wkrótce
             </a>
-            <a href="/pl/docs.html" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
+            <a href="/pl/docs.html" target="_blank" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
               Zobacz Jak to Działa
             </a>
           </div>

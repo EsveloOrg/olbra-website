@@ -690,6 +690,15 @@ const initEuropeMap = async () => {
     // Add class to SVG element
     svgElement.classList.add('europe-map');
 
+    // Adjust viewBox to focus on Central Europe - keep wider area for mask fade
+    // Original: 0 0 1000 684, new center on highlighted countries with extra padding for fade
+    svgElement.setAttribute('viewBox', '100 200 800 500');
+
+    // Apply elliptical vignette mask for smooth fade effect on all edges
+    const maskGradient = 'radial-gradient(ellipse 70% 65% at 50% 50%, black 40%, rgba(0,0,0,0.8) 55%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.2) 85%, transparent 100%)';
+    svgElement.style.maskImage = maskGradient;
+    svgElement.style.webkitMaskImage = maskGradient;
+
     // Get all path elements
     const allPaths = svgElement.querySelectorAll('path');
     const highlightedCountries = [];
@@ -715,6 +724,185 @@ const initEuropeMap = async () => {
   } catch (e) {
     console.warn('Could not initialize Europe map:', e);
   }
+};
+
+// Interactive Swap Widget
+const initSwapWidget = () => {
+  const fromInput = document.getElementById('swap-from-input');
+  const toOutput = document.getElementById('swap-to-output');
+  const switchBtn = document.getElementById('swap-switch-btn');
+  const rateDisplay = document.getElementById('swap-rate-display');
+  const fromSelector = document.getElementById('swap-from-selector');
+  const toSelector = document.getElementById('swap-to-selector');
+  const fromDropdown = document.getElementById('swap-from-dropdown');
+  const toDropdown = document.getElementById('swap-to-dropdown');
+  const fromIcon = document.getElementById('swap-from-icon');
+  const fromLabel = document.getElementById('swap-from-label');
+  const toIcon = document.getElementById('swap-to-icon');
+  const toLabel = document.getElementById('swap-to-label');
+
+  if (!fromInput) return; // Only run on pages with swap widget
+
+  // State
+  let fromToken = 'PLNY';
+  let toToken = 'EURY';
+
+  // Currency data
+  const currencies = {
+    PLNY: { icon: '/assets/coins2/plny.svg', label: 'PLNY' },
+    EURY: { icon: '/assets/coins2/eury.svg', label: 'EURY' },
+    USDY: { icon: '/assets/coins2/usdy.svg', label: 'USDY' }
+  };
+
+  // Exchange rates (approximate real rates)
+  const rates = {
+    'PLNY-EURY': 0.2315,
+    'EURY-PLNY': 4.32,
+    'PLNY-USDY': 0.25,
+    'USDY-PLNY': 4.00,
+    'EURY-USDY': 1.08,
+    'USDY-EURY': 0.93
+  };
+
+  // Parse input value (handle both comma and period as decimal separators)
+  const parseInput = (str) => {
+    if (!str) return 0;
+    // Remove spaces and replace comma with period
+    const cleaned = str.replace(/\s/g, '').replace(',', '.');
+    const num = parseFloat(cleaned);
+    return isNaN(num) ? 0 : num;
+  };
+
+  // Format output number
+  const formatOutput = (num) => {
+    if (num === 0) return '~0.00';
+    return '~' + num.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  };
+
+  // Get exchange rate for current pair
+  const getRate = () => {
+    const key = `${fromToken}-${toToken}`;
+    return rates[key] || 1;
+  };
+
+  // Calculate output based on input and rate
+  const calculateOutput = () => {
+    const inputValue = parseInput(fromInput.value);
+    const rate = getRate();
+    const outputValue = inputValue * rate;
+    toOutput.textContent = formatOutput(outputValue);
+  };
+
+  // Update rate display
+  const updateRateDisplay = () => {
+    const rate = getRate();
+    rateDisplay.textContent = `1 ${fromToken} = ${rate.toFixed(4)} ${toToken}`;
+  };
+
+  // Update currency display (icon and label)
+  const updateCurrencyDisplay = (type, token) => {
+    const icon = type === 'from' ? fromIcon : toIcon;
+    const label = type === 'from' ? fromLabel : toLabel;
+    const currency = currencies[token];
+
+    if (icon && currency) {
+      icon.src = currency.icon;
+      icon.alt = currency.label;
+    }
+    if (label && currency) {
+      label.textContent = currency.label;
+    }
+  };
+
+  // Close all dropdowns
+  const closeAllDropdowns = () => {
+    fromDropdown?.classList.add('hidden');
+    toDropdown?.classList.add('hidden');
+  };
+
+  // Toggle dropdown
+  const toggleDropdown = (dropdown, otherDropdown) => {
+    otherDropdown?.classList.add('hidden');
+    dropdown?.classList.toggle('hidden');
+  };
+
+  // Handle currency selection
+  const selectCurrency = (type, token) => {
+    if (type === 'from') {
+      // If selecting same as "to", swap them
+      if (token === toToken) {
+        toToken = fromToken;
+        updateCurrencyDisplay('to', toToken);
+      }
+      fromToken = token;
+      updateCurrencyDisplay('from', fromToken);
+    } else {
+      // If selecting same as "from", swap them
+      if (token === fromToken) {
+        fromToken = toToken;
+        updateCurrencyDisplay('from', fromToken);
+      }
+      toToken = token;
+      updateCurrencyDisplay('to', toToken);
+    }
+
+    closeAllDropdowns();
+    updateRateDisplay();
+    calculateOutput();
+  };
+
+  // Switch currencies
+  const switchCurrencies = () => {
+    const temp = fromToken;
+    fromToken = toToken;
+    toToken = temp;
+
+    updateCurrencyDisplay('from', fromToken);
+    updateCurrencyDisplay('to', toToken);
+    updateRateDisplay();
+    calculateOutput();
+  };
+
+  // Event listeners
+  fromInput?.addEventListener('input', calculateOutput);
+
+  switchBtn?.addEventListener('click', switchCurrencies);
+
+  fromSelector?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDropdown(fromDropdown, toDropdown);
+  });
+
+  toSelector?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDropdown(toDropdown, fromDropdown);
+  });
+
+  // Currency option clicks
+  fromDropdown?.querySelectorAll('.swap-currency-option').forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const token = option.dataset.currency;
+      selectCurrency('from', token);
+    });
+  });
+
+  toDropdown?.querySelectorAll('.swap-currency-option').forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const token = option.dataset.currency;
+      selectCurrency('to', token);
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', closeAllDropdowns);
+
+  // Initialize output calculation
+  calculateOutput();
 };
 
 // 3D Tilt Effect on Cards
@@ -766,6 +954,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiquidGlassBubbles(); // WebGL liquid glass bubbles effect
   initCardTilt();
   initEuropeMap();
+  initSwapWidget();
 });
 
 // Export for potential module use
@@ -782,5 +971,6 @@ export {
   initVideoLazyLoad,
   initLiquidGlassBubbles,
   initCardTilt,
-  initEuropeMap
+  initEuropeMap,
+  initSwapWidget
 };

@@ -76,6 +76,10 @@
     @apply translate-y-0;
   }
 
+  .btn-disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+  }
+
   /* Cards */
   .card-base {
     @apply bg-white rounded-2xl border border-olbra-gray-200 p-6
@@ -519,14 +523,15 @@
 
   /* Stablecoin Cards */
   .coin-stack {
-    @apply relative flex flex-col md:flex-row items-center justify-center gap-6;
+    @apply relative flex flex-col md:flex-row items-stretch justify-center gap-6;
   }
 
   .coin-card {
     @apply relative bg-white rounded-2xl p-6 md:p-8
            border border-olbra-gray-200 shadow-soft
            transition-all duration-300 ease-out cursor-pointer
-           hover:shadow-soft-lg hover:border-olbra-blue/20 hover:-translate-y-1;
+           hover:shadow-soft-lg hover:border-olbra-blue/20 hover:-translate-y-1
+           flex flex-col;
     @apply w-full md:w-80;
   }
 
@@ -542,6 +547,192 @@
 
   .coin-card[data-coin="usdy"] {
     @apply border-t-4 border-t-blue-400;
+  }
+
+  /* Ethereal Coin Components - Liquid Glass Style */
+  .ethereal-coin {
+    @apply relative rounded-full flex items-center justify-center;
+    animation: coin-float 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .ethereal-coin-lg {
+    @apply w-64 h-64;
+  }
+
+  /* Soft glow underneath for depth/shadow */
+  .ethereal-coin-glow {
+    @apply absolute rounded-full;
+    width: 90%;
+    height: 90%;
+    top: 15%;
+    left: 5%;
+    filter: blur(40px);
+    opacity: 0.4;
+    z-index: -1;
+  }
+
+  /* Main liquid glass coin surface */
+  .ethereal-coin-glass {
+    @apply w-full h-full rounded-full flex items-center justify-center;
+    /* Frosted glass effect matching hero blobs */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    backdrop-filter: blur(40px) saturate(1.2);
+    -webkit-backdrop-filter: blur(40px) saturate(1.2);
+    /* Subtle border for glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    /* 3D depth shadows */
+    box-shadow:
+      0 20px 60px rgba(77, 147, 255, 0.2),
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 -8px 30px rgba(0, 0, 0, 0.05),
+      inset 0 8px 30px rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+  }
+
+  /* Specular highlight - top light reflection */
+  .ethereal-coin-glass::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 45%;
+    border-radius: 50%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.3) 40%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Rainbow caustic / refraction effect */
+  .ethereal-coin-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      radial-gradient(
+        ellipse 50% 30% at 70% 70%,
+        rgba(139, 92, 246, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse 40% 25% at 30% 60%,
+        rgba(77, 147, 255, 0.1) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  /* Logo styling inside the glass - frosted/etched look */
+  .ethereal-coin-glass img {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    mix-blend-mode: soft-light;
+    transition: all 0.3s ease;
+  }
+
+  /* PLNY coin - subtle blue tint */
+  .ethereal-coin-plny .ethereal-coin-glow {
+    background: radial-gradient(circle, rgba(12, 83, 191, 0.6) 0%, rgba(59, 130, 246, 0.3) 100%);
+  }
+
+  .ethereal-coin-plny .ethereal-coin-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(200, 220, 255, 0.25) 50%,
+      rgba(180, 200, 255, 0.15) 100%
+    );
+  }
+
+  /* EURY coin - subtle blue tint */
+  .ethereal-coin-eury .ethereal-coin-glow {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(96, 165, 250, 0.3) 100%);
+  }
+
+  .ethereal-coin-eury .ethereal-coin-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(210, 230, 255, 0.25) 50%,
+      rgba(190, 215, 255, 0.15) 100%
+    );
+  }
+
+  /* USDY coin - subtle blue tint */
+  .ethereal-coin-usdy .ethereal-coin-glow {
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.6) 0%, rgba(147, 197, 253, 0.3) 100%);
+  }
+
+  .ethereal-coin-usdy .ethereal-coin-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(220, 235, 255, 0.25) 50%,
+      rgba(200, 225, 255, 0.15) 100%
+    );
+  }
+
+  /* Floating animation */
+  @keyframes coin-float {
+    0%, 100% {
+      transform: translateY(0) rotateX(5deg) rotateY(-5deg);
+    }
+    50% {
+      transform: translateY(-15px) rotateX(8deg) rotateY(5deg);
+    }
+  }
+
+  /* Staggered animation delays for multiple coins */
+  .ethereal-coin-plny {
+    animation-delay: 0s;
+  }
+
+  .ethereal-coin-eury {
+    animation-delay: -2s;
+  }
+
+  .ethereal-coin-usdy {
+    animation-delay: -4s;
+  }
+
+  /* Hover effect */
+  .ethereal-coin:hover .ethereal-coin-glass {
+    box-shadow:
+      0 25px 70px rgba(77, 147, 255, 0.3),
+      0 12px 40px rgba(0, 0, 0, 0.12),
+      inset 0 -8px 30px rgba(0, 0, 0, 0.05),
+      inset 0 8px 30px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+  }
+
+  .ethereal-coin:hover .ethereal-coin-glow {
+    opacity: 0.6;
+  }
+
+  .ethereal-coin:hover .ethereal-coin-glass img {
+    opacity: 0.95;
+  }
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .ethereal-coin {
+      animation: none;
+    }
   }
 
   /* Documentation Sidebar Navigation */
@@ -609,40 +800,60 @@
   }
 
   .team-card:hover .team-card-bio {
-    @apply max-h-48 opacity-100;
+    @apply max-h-64 opacity-100;
   }
 
   .team-card:hover .team-card-overlay {
     @apply from-black/90 via-black/60;
   }
 
-  /* Europe Map Styles */
+  /* Europe Map Styles - Enhanced */
   .europe-map-container {
     @apply relative;
+    max-width: 1000px;
   }
 
   .europe-map {
     @apply w-full h-auto;
   }
 
+  /* Elliptical vignette fade using CSS mask */
+  #europe-map-wrapper {
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 70% at 50% 50%,
+      black 50%,
+      rgba(0, 0, 0, 0.7) 65%,
+      rgba(0, 0, 0, 0.3) 80%,
+      transparent 95%
+    );
+    mask-image: radial-gradient(
+      ellipse 80% 70% at 50% 50%,
+      black 50%,
+      rgba(0, 0, 0, 0.7) 65%,
+      rgba(0, 0, 0, 0.3) 80%,
+      transparent 95%
+    );
+  }
+
   .country-path {
     fill: transparent;
-    stroke: #e5e7eb;
-    stroke-width: 0.5;
+    stroke: #cbd5e1;
+    stroke-width: 0.8;
     transition: fill 0.3s ease, stroke 0.3s ease;
   }
 
   .country-path.highlighted {
     fill: #c9deff;
-    stroke: #a3c4ff;
-    stroke-width: 1;
+    stroke: #4d93ff;
+    stroke-width: 1.5;
     cursor: pointer;
   }
 
   .country-path.highlighted:hover,
   .country-path.highlighted.active {
     fill: #4d93ff;
-    stroke: #3b7de6;
+    stroke: #2563eb;
+    stroke-width: 2;
   }
 
   /* Map Tooltip */

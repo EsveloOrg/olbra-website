@@ -5,8 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Usługi Olbra - DeFi, tokenizacja aktywów rzeczywistych, pożyczki i więcej. Kompletna infrastruktura finansowa dla ery cyfrowej.">
   <title>Usługi - DeFi i Tokenizacja RWA | Olbra Finance</title>
-  <link rel="icon" type="image/png" href="/fav.png">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/src/style.css">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://olbra.org/pl/services.html">
+  <meta property="og:title" content="Usługi - DeFi i Tokenizacja RWA | Olbra Finance">
+  <meta property="og:description" content="Usługi Olbra - DeFi, tokenizacja aktywów rzeczywistych, pożyczki i więcej. Kompletna infrastruktura finansowa dla ery cyfrowej.">
+  <meta property="og:image" content="https://olbra.org/assets/olbra-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Usługi - DeFi i Tokenizacja RWA | Olbra Finance">
+  <meta name="twitter:description" content="Usługi Olbra - DeFi, tokenizacja aktywów rzeczywistych, pożyczki i więcej. Kompletna infrastruktura finansowa dla ery cyfrowej.">
+  <meta name="twitter:image" content="https://olbra.org/assets/olbra-preview.png">
 </head>
 <body class="antialiased">
   {{> navbar-pl}}
@@ -91,8 +107,8 @@
 
           <div class="reveal reveal-delay-2">
             <div class="relative p-8 rounded-3xl bg-gradient-to-br from-olbra-blue-pale to-olbra-accent-light">
-              <!-- Mock DeFi Interface -->
-              <div class="bg-white rounded-2xl shadow-soft-lg p-6">
+              <!-- Interactive DeFi Swap Widget -->
+              <div id="swap-widget" class="bg-white rounded-2xl shadow-soft-lg p-6">
                 <div class="flex items-center justify-between mb-6">
                   <span class="font-semibold text-olbra-dark">Wymień</span>
                   <button class="text-olbra-muted hover:text-olbra-dark">
@@ -110,17 +126,36 @@
                     <span class="text-sm text-olbra-muted">Saldo: 10 000</span>
                   </div>
                   <div class="flex items-center justify-between">
-                    <input type="text" value="1 000" class="text-2xl font-semibold text-olbra-dark bg-transparent w-1/2 outline-none">
-                    <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-olbra-gray-200">
-                      <img src="/assets/coins/plny.svg" alt="PLNY" class="w-6 h-6">
-                      <span class="font-medium text-olbra-dark">PLNY</span>
+                    <input id="swap-from-input" type="text" value="1000" inputmode="decimal" class="text-2xl font-semibold text-olbra-dark bg-transparent w-1/2 outline-none">
+                    <div class="relative">
+                      <button id="swap-from-selector" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-olbra-gray-200 hover:border-olbra-blue transition-colors cursor-pointer">
+                        <img id="swap-from-icon" src="/assets/coins2/plny.svg" alt="PLNY" class="w-6 h-6">
+                        <span id="swap-from-label" class="font-medium text-olbra-dark">PLNY</span>
+                        <svg class="w-4 h-4 text-olbra-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                      </button>
+                      <div id="swap-from-dropdown" class="absolute top-full right-0 mt-1 bg-white rounded-lg shadow-lg border border-olbra-gray-100 py-1 hidden z-20 min-w-[120px]">
+                        <button data-currency="PLNY" class="swap-currency-option w-full flex items-center gap-2 px-3 py-2 hover:bg-olbra-gray-50 transition-colors">
+                          <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-5 h-5">
+                          <span class="font-medium text-olbra-dark">PLNY</span>
+                        </button>
+                        <button data-currency="EURY" class="swap-currency-option w-full flex items-center gap-2 px-3 py-2 hover:bg-olbra-gray-50 transition-colors">
+                          <img src="/assets/coins2/eury.svg" alt="EURY" class="w-5 h-5">
+                          <span class="font-medium text-olbra-dark">EURY</span>
+                        </button>
+                        <button data-currency="USDY" class="swap-currency-option w-full flex items-center gap-2 px-3 py-2 hover:bg-olbra-gray-50 transition-colors">
+                          <img src="/assets/coins2/usdy.svg" alt="USDY" class="w-5 h-5">
+                          <span class="font-medium text-olbra-dark">USDY</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Switch button -->
                 <div class="flex justify-center -my-3 relative z-10">
-                  <button class="w-10 h-10 rounded-xl bg-olbra-blue text-white shadow-blue flex items-center justify-center hover:scale-110 transition-transform">
+                  <button id="swap-switch-btn" class="w-10 h-10 rounded-xl bg-olbra-blue text-white shadow-blue flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
                     </svg>
@@ -134,10 +169,29 @@
                     <span class="text-sm text-olbra-muted">Saldo: 0</span>
                   </div>
                   <div class="flex items-center justify-between">
-                    <span class="text-2xl font-semibold text-olbra-dark">~231,50</span>
-                    <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-olbra-gray-200">
-                      <img src="/assets/coins/eury.svg" alt="EURY" class="w-6 h-6">
-                      <span class="font-medium text-olbra-dark">EURY</span>
+                    <span id="swap-to-output" class="text-2xl font-semibold text-olbra-dark">~231,50</span>
+                    <div class="relative">
+                      <button id="swap-to-selector" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-olbra-gray-200 hover:border-olbra-blue transition-colors cursor-pointer">
+                        <img id="swap-to-icon" src="/assets/coins2/eury.svg" alt="EURY" class="w-6 h-6">
+                        <span id="swap-to-label" class="font-medium text-olbra-dark">EURY</span>
+                        <svg class="w-4 h-4 text-olbra-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                      </button>
+                      <div id="swap-to-dropdown" class="absolute top-full right-0 mt-1 bg-white rounded-lg shadow-lg border border-olbra-gray-100 py-1 hidden z-20 min-w-[120px]">
+                        <button data-currency="PLNY" class="swap-currency-option w-full flex items-center gap-2 px-3 py-2 hover:bg-olbra-gray-50 transition-colors">
+                          <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-5 h-5">
+                          <span class="font-medium text-olbra-dark">PLNY</span>
+                        </button>
+                        <button data-currency="EURY" class="swap-currency-option w-full flex items-center gap-2 px-3 py-2 hover:bg-olbra-gray-50 transition-colors">
+                          <img src="/assets/coins2/eury.svg" alt="EURY" class="w-5 h-5">
+                          <span class="font-medium text-olbra-dark">EURY</span>
+                        </button>
+                        <button data-currency="USDY" class="swap-currency-option w-full flex items-center gap-2 px-3 py-2 hover:bg-olbra-gray-50 transition-colors">
+                          <img src="/assets/coins2/usdy.svg" alt="USDY" class="w-5 h-5">
+                          <span class="font-medium text-olbra-dark">USDY</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -146,7 +200,7 @@
                 <div class="mt-4 p-3 rounded-lg bg-olbra-blue-pale/50">
                   <div class="flex items-center justify-between text-sm">
                     <span class="text-olbra-muted">Kurs</span>
-                    <span class="text-olbra-dark font-medium">1 PLNY = 0,2315 EURY</span>
+                    <span id="swap-rate-display" class="text-olbra-dark font-medium">1 PLNY = 0,2315 EURY</span>
                   </div>
                 </div>
 
@@ -240,8 +294,6 @@
                 </div>
               </div>
             </div>
-
-            <a href="#" class="btn-primary mt-8">Odkryj Rynki RWA</a>
           </div>
         </div>
       </div>
@@ -274,7 +326,7 @@
             <div class="space-y-4 mb-8">
               <div class="flex items-center justify-between p-4 rounded-xl bg-olbra-gray-50">
                 <div class="flex items-center gap-3">
-                  <img src="/assets/coins/plny.svg" alt="PLNY" class="w-10 h-10">
+                  <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-10 h-10">
                   <span class="font-medium text-olbra-dark">PLNY</span>
                 </div>
                 <div class="text-right">
@@ -285,7 +337,7 @@
 
               <div class="flex items-center justify-between p-4 rounded-xl bg-olbra-gray-50">
                 <div class="flex items-center gap-3">
-                  <img src="/assets/coins/eury.svg" alt="EURY" class="w-10 h-10">
+                  <img src="/assets/coins2/eury.svg" alt="EURY" class="w-10 h-10">
                   <span class="font-medium text-olbra-dark">EURY</span>
                 </div>
                 <div class="text-right">
@@ -296,7 +348,7 @@
 
               <div class="flex items-center justify-between p-4 rounded-xl bg-olbra-gray-50">
                 <div class="flex items-center gap-3">
-                  <img src="/assets/coins/usdy.svg" alt="USDY" class="w-10 h-10">
+                  <img src="/assets/coins2/usdy.svg" alt="USDY" class="w-10 h-10">
                   <span class="font-medium text-olbra-dark">USDY</span>
                 </div>
                 <div class="text-right">
@@ -305,8 +357,6 @@
                 </div>
               </div>
             </div>
-
-            <a href="#" class="btn-primary w-full text-center">Zacznij Pożyczać</a>
           </div>
 
           <!-- Borrowing Card -->
@@ -348,7 +398,7 @@
                   <span class="text-sm text-olbra-blue font-medium">9,5% APR</span>
                 </div>
                 <div class="flex items-center gap-3">
-                  <img src="/assets/coins/plny.svg" alt="PLNY" class="w-10 h-10">
+                  <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-10 h-10">
                   <div>
                     <div class="font-medium text-olbra-dark">PLNY</div>
                     <div class="text-xs text-olbra-muted">Otrzymaj stablecoiny</div>
@@ -356,8 +406,6 @@
                 </div>
               </div>
             </div>
-
-            <a href="#" class="btn-secondary w-full text-center">Zacznij Pożyczać</a>
           </div>
         </div>
       </div>
@@ -379,10 +427,10 @@
             Zacznij korzystać z usług DeFi i rynków RWA Olbra już dziś. Bez minimów, bez barier.
           </p>
           <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-              Uruchom Aplikację
+            <a href="javascript:void(0)" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl btn-disabled">
+              Wkrótce
             </a>
-            <a href="/pl/docs.html" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
+            <a href="/pl/docs.html" target="_blank" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
               Przeczytaj Dokumentację
             </a>
           </div>

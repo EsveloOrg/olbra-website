@@ -5,12 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="PLNY, EURY, USDY - trójkąt stablecoinów Olbra. W pełni zabezpieczone, audytowane i zgodne z MiCA cyfrowe waluty dla europejskich finansów.">
   <title>Stablecoiny - PLNY, EURY, USDY | Olbra Finance</title>
-  <link rel="icon" type="image/png" href="/fav.png">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/src/style.css">
   <!-- Hreflang for language versions -->
   <link rel="alternate" hreflang="en" href="https://olbra.org/stablecoins.html">
   <link rel="alternate" hreflang="pl" href="https://olbra.org/pl/stablecoins.html">
   <link rel="alternate" hreflang="x-default" href="https://olbra.org/stablecoins.html">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://olbra.org/pl/stablecoins.html">
+  <meta property="og:title" content="Stablecoiny - PLNY, EURY, USDY | Olbra Finance">
+  <meta property="og:description" content="PLNY, EURY, USDY - trójkąt stablecoinów Olbra. W pełni zabezpieczone, audytowane i zgodne z MiCA cyfrowe waluty dla europejskich finansów.">
+  <meta property="og:image" content="https://olbra.org/assets/olbra-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stablecoiny - PLNY, EURY, USDY | Olbra Finance">
+  <meta name="twitter:description" content="PLNY, EURY, USDY - trójkąt stablecoinów Olbra. W pełni zabezpieczone, audytowane i zgodne z MiCA cyfrowe waluty dla europejskich finansów.">
+  <meta name="twitter:image" content="https://olbra.org/assets/olbra-preview.png">
 </head>
 <body class="antialiased">
   {{> navbar-pl}}
@@ -34,8 +50,8 @@
             100% zabezpieczone rezerwami. Miesięczne audyty. Rozliczenie w ułamku sekundy. Zgodność z MiCA.
           </p>
           <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
-            <a href="#" class="btn-primary">Kup Stablecoiny</a>
-            <a href="/pl/docs.html" class="btn-outline">Zobacz Dowód Rezerw</a>
+            <a href="javascript:void(0)" class="btn-primary btn-disabled">Wkrótce</a>
+            <a href="/pl/docs.html" target="_blank" class="btn-outline">Zobacz Dowód Rezerw</a>
           </div>
         </div>
       </div>
@@ -47,7 +63,7 @@
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div class="reveal">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/plny-svg-color.svg" alt="PLNY" class="w-20 h-20">
+              <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-20 h-20">
               <div>
                 <h2 class="heading-lg text-olbra-dark">PLNY</h2>
                 <p class="text-olbra-muted">Stablecoin Polski Złoty</p>
@@ -74,16 +90,16 @@
                 <div class="text-sm text-olbra-muted">Zgodność</div>
               </div>
             </div>
-            <a href="#" class="btn-secondary">Kup PLNY</a>
+            <a href="javascript:void(0)" class="btn-secondary btn-disabled">Wkrótce</a>
           </div>
           <div class="reveal reveal-delay-2 relative">
             <div class="aspect-square max-w-md mx-auto relative flex items-center justify-center">
-              <!-- Decorative rings -->
-              <div class="absolute inset-0 rounded-full border-2 border-red-500/10 animate-spin-slow"></div>
-              <div class="absolute inset-4 rounded-full border-2 border-red-500/20 animate-spin-slow" style="animation-direction: reverse;"></div>
-              <div class="absolute inset-8 rounded-full border-2 border-red-500/10 animate-spin-slow"></div>
-              <!-- Center content - PLNY SVG -->
-              <img src="/plny-svg-color.svg" alt="PLNY" class="w-64 h-64 relative z-10 drop-shadow-2xl">
+              <div class="ethereal-coin ethereal-coin-lg ethereal-coin-plny">
+                <div class="ethereal-coin-glow"></div>
+                <div class="ethereal-coin-glass">
+                  <img src="/assets/coins2/plny.svg" alt="PLNY" class="w-3/4 h-3/4">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -96,16 +112,17 @@
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div class="reveal order-2 lg:order-1 relative">
             <div class="aspect-square max-w-md mx-auto relative flex items-center justify-center">
-              <div class="absolute inset-0 rounded-full border-2 border-olbra-blue/10 animate-spin-slow"></div>
-              <div class="absolute inset-4 rounded-full border-2 border-olbra-blue/20 animate-spin-slow" style="animation-direction: reverse;"></div>
-              <div class="absolute inset-8 rounded-full border-2 border-olbra-blue/10 animate-spin-slow"></div>
-              <!-- Center content - EURY SVG -->
-              <img src="/eury-svg-color.svg" alt="EURY" class="w-64 h-64 relative z-10 drop-shadow-2xl">
+              <div class="ethereal-coin ethereal-coin-lg ethereal-coin-eury">
+                <div class="ethereal-coin-glow"></div>
+                <div class="ethereal-coin-glass">
+                  <img src="/assets/coins2/eury.svg" alt="EURY" class="w-3/4 h-3/4">
+                </div>
+              </div>
             </div>
           </div>
           <div class="reveal reveal-delay-1 order-1 lg:order-2">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/eury-svg-color.svg" alt="EURY" class="w-20 h-20">
+              <img src="/assets/coins2/eury.svg" alt="EURY" class="w-20 h-20">
               <div>
                 <h2 class="heading-lg text-olbra-dark">EURY</h2>
                 <p class="text-olbra-muted">Stablecoin Euro</p>
@@ -132,7 +149,7 @@
                 <div class="text-sm text-olbra-muted">Regulowany</div>
               </div>
             </div>
-            <a href="#" class="btn-primary">Kup EURY</a>
+            <a href="javascript:void(0)" class="btn-primary btn-disabled">Wkrótce</a>
           </div>
         </div>
       </div>
@@ -144,7 +161,7 @@
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div class="reveal">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/usdy-svg-color.svg" alt="USDY" class="w-20 h-20">
+              <img src="/assets/coins2/usdy.svg" alt="USDY" class="w-20 h-20">
               <div>
                 <h2 class="heading-lg text-olbra-dark">USDY</h2>
                 <p class="text-olbra-muted">Stablecoin Dolar Amerykański</p>
@@ -171,15 +188,16 @@
                 <div class="text-sm text-olbra-muted">Chain</div>
               </div>
             </div>
-            <a href="#" class="btn-secondary">Kup USDY</a>
+            <a href="javascript:void(0)" class="btn-secondary btn-disabled">Wkrótce</a>
           </div>
           <div class="reveal reveal-delay-2 relative">
             <div class="aspect-square max-w-md mx-auto relative flex items-center justify-center">
-              <div class="absolute inset-0 rounded-full border-2 border-green-500/10 animate-spin-slow"></div>
-              <div class="absolute inset-4 rounded-full border-2 border-green-500/20 animate-spin-slow" style="animation-direction: reverse;"></div>
-              <div class="absolute inset-8 rounded-full border-2 border-green-500/10 animate-spin-slow"></div>
-              <!-- Center content - USDY SVG -->
-              <img src="/usdy-svg-color.svg" alt="USDY" class="w-64 h-64 relative z-10 drop-shadow-2xl">
+              <div class="ethereal-coin ethereal-coin-lg ethereal-coin-usdy">
+                <div class="ethereal-coin-glow"></div>
+                <div class="ethereal-coin-glass">
+                  <img src="/assets/coins2/usdy.svg" alt="USDY" class="w-3/4 h-3/4">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -255,7 +273,7 @@
           </p>
         </div>
 
-        <div class="reveal reveal-delay-3 europe-map-container relative max-w-4xl mx-auto">
+        <div class="reveal reveal-delay-3 europe-map-container mx-auto">
           <!-- Europe Map will be loaded here via fetch -->
           <div id="europe-map-wrapper" class="europe-map w-full h-auto"></div>
 
@@ -359,10 +377,10 @@
             Wpłać fiat, otrzymaj stablecoiny w sekundach. 100% zabezpieczone. Natychmiastowy wykup.
           </p>
           <div class="reveal reveal-delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-              Rozpocznij Za Darmo
+            <a href="javascript:void(0)" class="bg-white text-olbra-dark font-semibold px-8 py-4 rounded-xl btn-disabled">
+              Wkrótce
             </a>
-            <a href="/pl/docs.html" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
+            <a href="/pl/docs.html" target="_blank" class="text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 transition-all duration-300 hover:bg-white/10">
               Zobacz Dowód Rezerw
             </a>
           </div>
