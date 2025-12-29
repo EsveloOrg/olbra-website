@@ -1104,3 +1104,108 @@
   .hero-glass-caustics { animation: none !important; }
   .hero-glass-ambient { display: none; }
 }
+
+/* ==========================================
+   Token Hero Image Animations
+   ========================================== */
+
+/* Container for the token with floating animation */
+.token-image-container {
+  position: relative;
+}
+
+/* Inner wrapper for floating - separates from reveal transform */
+.token-float-wrapper {
+  will-change: transform;
+}
+
+/* Only start floating after reveal is visible */
+.reveal.visible .token-float-wrapper {
+  animation: token-float 5s ease-in-out infinite;
+  animation-delay: 0.8s; /* Wait for reveal transition to complete */
+  animation-fill-mode: backwards; /* Stay at 0% keyframe during delay */
+}
+
+/* Floating animation with subtle rotation */
+@keyframes token-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+/* Main token image */
+.token-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Light swipe wrapper - masked to coin shape */
+.token-light-swipe-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  /* Circular mask - adjusted to match coin size */
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 42%, transparent 43%);
+  mask-image: radial-gradient(circle at 50% 50%, black 42%, transparent 43%);
+}
+
+/* Periodic light swipe shimmer - slower animation */
+@keyframes token-light-swipe {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.token-light-swipe {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 40%;
+  height: 140%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 35%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.4) 65%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  /* Start completely off-screen and invisible */
+  transform: translateX(-150%) skewX(-20deg);
+  opacity: 0;
+}
+
+/* Only animate after reveal is visible */
+.reveal.visible .token-light-swipe {
+  animation: token-light-swipe 8s ease-in-out infinite;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .reveal.visible .token-float-wrapper {
+    animation: none;
+  }
+  .reveal.visible .token-light-swipe {
+    animation: none;
+  }
+}
