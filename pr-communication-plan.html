@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PR & Communication Plan Q1-Q2 2026 | Olbra Finance</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables */
+    :root {
+      --olbra-blue: #4d93ff;
+      --olbra-blue-dim: #3a7ae6;
+      --olbra-blue-pale: #e8f1ff;
+      --olbra-accent: #8b5cf6;
+      --olbra-accent-light: #ede9fe;
+      --olbra-dark: #070019;
+      --olbra-muted: #64748b;
+      --olbra-gray-50: #f8fafc;
+      --olbra-gray-100: #f1f5f9;
+      --olbra-gray-200: #e2e8f0;
+      --olbra-gray-800: #1e293b;
+      --olbra-gray-900: #0f172a;
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--olbra-gray-900);
+      background: #fff;
+      padding: 40px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--olbra-dark);
+    }
+
+    /* Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Document Header */
+    .doc-header {
+      text-align: center;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--olbra-gray-200);
+    }
+
+    .doc-logo {
+      height: 40px;
+      margin-bottom: 32px;
+    }
+
+    .doc-company {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--olbra-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .doc-subtitle {
+      font-size: 13px;
+      color: var(--olbra-muted);
+      margin-bottom: 24px;
+    }
+
+    .doc-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--olbra-dark);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .doc-description {
+      font-size: 16px;
+      color: var(--olbra-muted);
+      margin-bottom: 24px;
+    }
+
+    .doc-tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--olbra-blue);
+      margin-bottom: 4px;
+    }
+
+    .doc-tagline-sub {
+      font-size: 12px;
+      color: var(--olbra-muted);
+      margin-bottom: 24px;
+    }
+
+    .doc-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .doc-version {
+      font-size: 12px;
+      color: var(--olbra-muted);
+    }
+
+    .doc-confidential {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #fef2f2;
+      color: #dc2626;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 20px;
+      border: 1px solid #fecaca;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 48px;
+      page-break-inside: avoid;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--olbra-dark);
+      margin-bottom: 20px;
+      padding-left: 16px;
+      border-left: 4px solid var(--olbra-blue);
+    }
+
+    .section-number {
+      color: var(--olbra-blue);
+      margin-right: 8px;
+    }
+
+    .subsection-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--olbra-dark);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    /* Text Styles */
+    p {
+      color: var(--olbra-muted);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    strong {
+      color: var(--olbra-dark);
+      font-weight: 600;
+    }
+
+    /* Tables */
+    .table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead {
+      background: var(--olbra-gray-50);
+    }
+
+    th {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--olbra-muted);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--olbra-gray-200);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--olbra-gray-200);
+      color: var(--olbra-gray-800);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: var(--olbra-gray-50);
+    }
+
+    /* Priority Stars */
+    .priority {
+      color: var(--olbra-blue);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .priority-dim {
+      opacity: 0.3;
+    }
+
+    /* Channel Cards */
+    .channel-grid {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .channel-card {
+      background: var(--olbra-gray-50);
+      border: 1px solid var(--olbra-gray-200);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .channel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .channel-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--olbra-dark);
+    }
+
+    .channel-description {
+      font-size: 13px;
+      color: var(--olbra-muted);
+      line-height: 1.6;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--olbra-blue-pale) 0%, var(--olbra-accent-light) 100%);
+      border: 1px solid rgba(77, 147, 255, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .highlight-box p {
+      color: var(--olbra-gray-800);
+      margin-bottom: 0;
+    }
+
+    /* Tone Section */
+    .tone-card {
+      background: #fff;
+      border: 1px solid var(--olbra-gray-200);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .tone-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .tone-platform {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--olbra-dark);
+    }
+
+    .tone-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--olbra-muted);
+      margin-bottom: 4px;
+    }
+
+    .tone-value {
+      font-size: 13px;
+      color: var(--olbra-gray-800);
+      margin-bottom: 12px;
+    }
+
+    .tone-example {
+      background: var(--olbra-gray-50);
+      border-left: 3px solid var(--olbra-blue);
+      padding: 12px 16px;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--olbra-gray-800);
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Timeline */
+    .timeline-phase {
+      margin-bottom: 32px;
+    }
+
+    .timeline-phase-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--olbra-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--olbra-blue-pale);
+    }
+
+    /* Milestone Box */
+    .milestone-box {
+      background: #fff;
+      border: 1px solid var(--olbra-gray-200);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--olbra-blue);
+    }
+
+    .milestone-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .milestone-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--olbra-dark);
+    }
+
+    .milestone-date {
+      font-size: 12px;
+      color: var(--olbra-blue);
+      font-weight: 500;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: var(--olbra-gray-50);
+      border: 1px solid var(--olbra-gray-200);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .kpi-label {
+      font-size: 12px;
+      color: var(--olbra-muted);
+      margin-bottom: 4px;
+    }
+
+    .kpi-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--olbra-blue);
+    }
+
+    .kpi-target {
+      font-size: 11px;
+      color: var(--olbra-muted);
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--olbra-gray-200);
+      color: var(--olbra-gray-800);
+      font-size: 13px;
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist-box {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--olbra-gray-200);
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Strategy Box */
+    .strategy-box {
+      background: linear-gradient(135deg, var(--olbra-dark) 0%, #1a0a3e 100%);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .strategy-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--olbra-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .strategy-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* Document Footer */
+    .doc-footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--olbra-gray-200);
+      text-align: center;
+    }
+
+    .footer-logo {
+      height: 32px;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .footer-tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--olbra-blue);
+      margin-bottom: 8px;
+    }
+
+    .footer-meta {
+      font-size: 12px;
+      color: var(--olbra-muted);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        padding: 20px;
+        font-size: 11px;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        page-break-after: avoid;
+      }
+
+      table {
+        page-break-inside: avoid;
+      }
+
+      .milestone-box {
+        page-break-inside: avoid;
+      }
+
+      .strategy-box {
+        page-break-inside: avoid;
+      }
+
+      .doc-header {
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .doc-meta {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Document Header -->
+    <header class="doc-header">
+      <img src="/assets/olbra-logo-horizontal.svg" alt="Olbra Finance" class="doc-logo">
+
+      <div class="doc-company">Olbra Finance</div>
+      <div class="doc-subtitle">Jedyny licencjonowany emitent stablecoinow w Polsce</div>
+
+      <h1 class="doc-title">Kompleksowy Plan PR & Komunikacji</h1>
+      <p class="doc-description">Strategia Mediow Spolecznosciowych i Tradycyjnych Q1-Q2 2026</p>
+
+      <div class="doc-tagline">Fast. Stable. Sovereign.</div>
+      <div class="doc-tagline-sub">Building European Financial Sovereignty</div>
+
+      <div class="doc-meta">
+        <span class="doc-version">Wersja 2.0 | Grudzien 2025</span>
+        <span class="doc-confidential">Strictly Confidential</span>
+      </div>
+    </header>
+
+    <!-- 1. Executive Summary -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">1.</span> Podsumowanie Wykonawcze</h2>
+
+      <p>Niniejszy dokument przedstawia kompleksowa strategie PR i komunikacji dla Olbra Finance na rok 2026, oparta na analizie rynku, pozycjonowania konkurencyjnego oraz najlepszych praktyk komunikacyjnych. Plan uwzglednia specyfike polskiego rynku finansowego, wymogi regulacyjne MiCA oraz unikalna pozycje Olbry jako jedynego licencjonowanego emitenta stablecoinow w Polsce.</p>
+
+      <h3 class="subsection-title">Kluczowe Kamienie Milowe Q1-Q2 2026</h3>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Wydarzenie</th>
+              <th>Znaczenie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>7 stycznia 2026</strong></td>
+              <td>Maciej Zientara dolacza do Olbra Finance</td>
+              <td>Dream Team kompletny</td>
+            </tr>
+            <tr>
+              <td><strong>Polowa stycznia</strong></td>
+              <td>Zakup pierwszych akcji Stabillon</td>
+              <td>Krok do licencji EMI</td>
+            </tr>
+            <tr>
+              <td><strong>Koniec stycznia</strong></td>
+              <td>Odwrotne przejecie Soho przez Olbre</td>
+              <td>Wejscie na GPW</td>
+            </tr>
+            <tr>
+              <td><strong>Luty/Marzec</strong></td>
+              <td>Minting i wypuszczenie PLNY</td>
+              <td>Pierwszy polski stablecoin</td>
+            </tr>
+            <tr>
+              <td><strong>Q2 2026</strong></td>
+              <td>Launch aplikacji Olbra</td>
+              <td>Pelny dostep dla uzytkownikow</td>
+            </tr>
+            <tr>
+              <td><strong>Q2 2026</strong></td>
+              <td>Potencjalna emisja cyfrowego zlota</td>
+              <td>Tokenizacja zlota z Mennica Polska</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Channel Analysis -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">2.</span> Analiza Kanalow Komunikacji</h2>
+
+      <p>Kanaly komunikacji sa podzielone na trzy fazy wdrozenia, zgodnie z grupami docelowymi i priorytetami strategicznymi Olbra Finance.</p>
+
+      <h3 class="subsection-title">2.1 Faza 1: Fundusze & Crypto (Styczen-Marzec)</h3>
+      <p>Priorytetowe kanaly dla inwestorow instytucjonalnych, funduszy i spolecznosci crypto.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Kanal</th>
+              <th>Priorytet</th>
+              <th>Uzasadnienie & Grupa Docelowa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>X (Twitter)</strong></td>
+              <td><span class="priority">★★★★★</span></td>
+              <td>Glowna platforma crypto-native. Crypto founders, VCs, global fintech community. Wiralowy potencjal threads. Niezbedny dla globalnego zasiegu i budowania reputacji w swiecie DeFi.</td>
+            </tr>
+            <tr>
+              <td><strong>LinkedIn</strong></td>
+              <td><span class="priority">★★★★★</span></td>
+              <td>Kluczowy dla komunikacji B2B. Fundusze inwestycyjne, inwestorzy instytucjonalni, TradFi executives. Maciej Zientara ma silne followership - leverage dla 7.01. Profesjonalny wizerunek.</td>
+            </tr>
+            <tr>
+              <td><strong>Telegram</strong></td>
+              <td><span class="priority">★★★★★</span></td>
+              <td>Community building i bezposredni kontakt. Early adopters, traderzy, DeFi enthusiasts. AMA sessions, announcement channel. Budowanie lojalnej spolecznosci przed launch PLNY.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title">2.2 Faza 2: Edukacja & Thought Leadership (Marzec-Maj)</h3>
+      <p>Kanal budujacy dlugoterminowa wartosc poprzez edukacje i pozycjonowanie ekspertow.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Kanal</th>
+              <th>Priorytet</th>
+              <th>Uzasadnienie & Grupa Docelowa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>YouTube</strong></td>
+              <td><span class="priority">★★★★<span class="priority-dim">★</span></span></td>
+              <td>Edukacja i long-form content. Inwestorzy poszukujacy wiedzy, mainstream curious. Explainer videos, wywiady z founderami, serie edukacyjne. SEO + evergreen content. Buduje trust przed launch aplikacji.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title">2.3 Faza 3: Mainstream & Retail (Q2 i pozniej)</h3>
+      <p>Kanaly dotarcia do masowego odbiorcy po uruchomieniu aplikacji.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Kanal</th>
+              <th>Priorytet</th>
+              <th>Uzasadnienie & Grupa Docelowa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TikTok</strong></td>
+              <td><span class="priority">★★★<span class="priority-dim">★★</span></span></td>
+              <td>Gen Z i crypto-curious retail. Krotkie, dynamiczne tresci. Odczarowanie blockchain dla mainstream. Viral potential. Aktywacja po launch aplikacji.</td>
+            </tr>
+            <tr>
+              <td><strong>Instagram</strong></td>
+              <td><span class="priority">★★★<span class="priority-dim">★★</span></span></td>
+              <td>Brand awareness i lifestyle content. Millennials i retail investors. Stories, Reels, wizualne przedstawienie produktu. Budowanie wizerunku nowoczesnej marki finansowej.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title">2.4 Media Tradycyjne - Ranking Efektywnosci</h3>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Medium</th>
+              <th>Priorytet</th>
+              <th>Format</th>
+              <th>Uzasadnienie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Puls Biznesu</strong></td>
+              <td><span class="priority">★★★★★</span></td>
+              <td>Wywiad CEO, News</td>
+              <td>Glowne medium finansowe PL. Kluczowe dla GPW.</td>
+            </tr>
+            <tr>
+              <td><strong>Forbes Polska</strong></td>
+              <td><span class="priority">★★★★★</span></td>
+              <td>Profil zalozycie li</td>
+              <td>Prestiz, narracja Dream Team.</td>
+            </tr>
+            <tr>
+              <td><strong>MyCompany Polska</strong></td>
+              <td><span class="priority">★★★★<span class="priority-dim">★</span></span></td>
+              <td>Wywiad, Podcast</td>
+              <td>Startup/biznes audience. Founder story.</td>
+            </tr>
+            <tr>
+              <td><strong>PAP</strong></td>
+              <td><span class="priority">★★★★★</span></td>
+              <td>Komunikaty prasowe</td>
+              <td>Oficjalny kanal dystrybucji. Multiplikacja.</td>
+            </tr>
+            <tr>
+              <td><strong>Rzeczpospolita</strong></td>
+              <td><span class="priority">★★★★<span class="priority-dim">★</span></span></td>
+              <td>Regulacje, MiCA</td>
+              <td>Wiarygodnosc prawna. Narracja EMI.</td>
+            </tr>
+            <tr>
+              <td><strong>Parkiet</strong></td>
+              <td><span class="priority">★★★★<span class="priority-dim">★</span></span></td>
+              <td>GPW, analiza</td>
+              <td>Specjalistyczne medium GPW.</td>
+            </tr>
+            <tr>
+              <td><strong>CoinDesk/The Block</strong></td>
+              <td><span class="priority">★★★★<span class="priority-dim">★</span></span></td>
+              <td>Feature, Deep Dive</td>
+              <td>Global crypto audience. EU vs US.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. Tone of Communication -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">3.</span> Ton Komunikacji wedlug Kanalu</h2>
+
+      <p>Kazdy kanal wymaga dostosowanego tonu i stylu komunikacji. Ponizej szczegolowe wytyczne dla kazdego medium.</p>
+
+      <div class="tone-card">
+        <div class="tone-header">
+          <span class="tone-platform">X (Twitter)</span>
+        </div>
+        <div class="tone-label">Ton</div>
+        <div class="tone-value">Bezposredni, pewny siebie, techniczny ale przystepny. Lekko prowokacyjny w kontekscie wyzwania dla USDT/USDC. Uzywaj crypto-native jezyka.</div>
+        <div class="tone-label">Styl</div>
+        <div class="tone-value">Krotkie, punchy statements. Threads dla glebszych tematow. Emoji sparingly. 2-3 posty dziennie minimum.</div>
+        <div class="tone-example">"Poland just entered the stablecoin game. PLNY is not just a token - it's European financial sovereignty. Thread"</div>
+      </div>
+
+      <div class="tone-card">
+        <div class="tone-header">
+          <span class="tone-platform">LinkedIn</span>
+        </div>
+        <div class="tone-label">Ton</div>
+        <div class="tone-value">Profesjonalny, ekspercki, budujacy zaufanie. Podkreslanie kompetencji zespolu i regulacyjnej zgodnosci. Biznesowy jezyk.</div>
+        <div class="tone-label">Styl</div>
+        <div class="tone-value">Dluzsze posty (1000-1500 znakow), artykuly, case studies. Profesjonalne grafiki. Bez emoji lub bardzo oszczednie. 3-4 razy w tygodniu.</div>
+        <div class="tone-example">"Z przyjemnoscia oglaszam, ze dolaczam do Olbra Finance jako [stanowisko]. Trzy pokolenia doswiadczen w finansach lacza sily, aby zbudowac przyszlosc polskiego rynku kapitalowego..."</div>
+      </div>
+
+      <div class="tone-card">
+        <div class="tone-header">
+          <span class="tone-platform">Telegram</span>
+        </div>
+        <div class="tone-label">Ton</div>
+        <div class="tone-value">Bezposredni, community-first, transparentny. Przyjacielski ale kompetentny. Budowanie relacji z early adopters.</div>
+        <div class="tone-label">Styl</div>
+        <div class="tone-value">Conversational, Q&A, behind-the-scenes updates. Emoji OK. Szybkie odpowiedzi na pytania community. AMA sessions co 2 tygodnie.</div>
+        <div class="tone-example">"gm fam! BIG NEWS! Our Dream Team is now complete! Stay tuned for the announcement! Any guesses who's joining?"</div>
+      </div>
+
+      <div class="tone-card">
+        <div class="tone-header">
+          <span class="tone-platform">YouTube</span>
+        </div>
+        <div class="tone-label">Ton</div>
+        <div class="tone-value">Edukacyjny, autorytatywny, przystepny. Budowanie pozycji thought leadera. Wyjasnianie zlozonych koncepcji prostym jezykiem.</div>
+        <div class="tone-label">Styl</div>
+        <div class="tone-value">Profesjonalna produkcja. Explainer videos (5-10 min), wywiady z founderami (15-30 min), serie edukacyjne. 1 video tygodniowo.</div>
+        <div class="tone-example">"W dzisiejszym odcinku wyjasniamy, czym jest licencja EMI i dlaczego Olbra jako jedyna firma w Polsce moze legalnie emitowac stablecoiny..."</div>
+      </div>
+
+      <div class="tone-card">
+        <div class="tone-header">
+          <span class="tone-platform">TikTok & Instagram (Faza 3)</span>
+        </div>
+        <div class="tone-label">Ton</div>
+        <div class="tone-value">Lekki, entertaining, edutainment. Demistyfikacja crypto dla mainstream. Relatable, young energy.</div>
+        <div class="tone-label">Styl</div>
+        <div class="tone-value">Krotkie video (15-60 sek), trendy formats, behind-the-scenes, team content. Reels, Stories. 3-5 razy w tygodniu po uruchomieniu w Q2.</div>
+        <div class="tone-example">"POV: Wlasnie odkryles, ze mozesz miec cyfrowa zlotowke na telefonie #fintech #crypto #PLNY"</div>
+      </div>
+    </section>
+
+    <!-- 4. Messaging Matrix -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">4.</span> Matryca Przekazow wedlug Kanalu i Milestone'u</h2>
+
+      <p>Kazdy kamien milowy wymaga dostosowanego przekazu dla kazdego kanalu.</p>
+
+      <div class="milestone-box">
+        <div class="milestone-header">
+          <span class="milestone-title">Milestone #1: Maciej Zientara</span>
+          <span class="milestone-date">7 stycznia</span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kanal</th>
+                <th>Przekaz i Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PAP</strong></td>
+                <td>Komunikat prasowy: "Maciej Zientara dolacza do Olbra Finance. Dream Team polskiego fintechu kompletny." Ton oficjalny, fakty, biogram, cytat foundera.</td>
+              </tr>
+              <tr>
+                <td><strong>X/Twitter</strong></td>
+                <td>Thread (10+ postow): "Who is Maciej Zientara?" Historia kariery, achievements, dlaczego Olbra, wizja. Koncowka: "This is just the beginning. PLNY is coming."</td>
+              </tr>
+              <tr>
+                <td><strong>LinkedIn</strong></td>
+                <td>Artykul: "Trzy pokolenia, jedna misja" - Sobczuk + Gajda + Zientara. Profesjonalny ton, wizja Finance 2.0, zaproszenie do obserwowania. Post osobisty Zientary na jego profilu.</td>
+              </tr>
+              <tr>
+                <td><strong>Telegram</strong></td>
+                <td>Announcement: "BIG NEWS! Our Dream Team is now complete!" + link do komunikatu + "AMA z nowym czlonkiem zespolu coming soon!"</td>
+              </tr>
+              <tr>
+                <td><strong>Media PL</strong></td>
+                <td>Puls Biznesu, Forbes: Wywiady z Zientara, profil zalozycie li. Narracja: "Trzy pokolenia finansow buduja Finance 2.0"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="milestone-box">
+        <div class="milestone-header">
+          <span class="milestone-title">Milestone #2: Akcje Stabillon</span>
+          <span class="milestone-date">Polowa stycznia</span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kanal</th>
+                <th>Przekaz i Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PAP/GPW</strong></td>
+                <td>Komunikat: "Olbra Finance nabywa akcje Stabillon - krok do wylacznej licencji EMI w Polsce." Ton regulacyjny, fakty transakcji.</td>
+              </tr>
+              <tr>
+                <td><strong>X/Twitter</strong></td>
+                <td>Thread: "Why EMI license matters in MiCA era" Edukacja o regulacjach, USP Olbry, co to oznacza dla PLNY. Hashtagi: #MiCA #EMI #Stablecoin</td>
+              </tr>
+              <tr>
+                <td><strong>LinkedIn</strong></td>
+                <td>Post CEO: "Strategiczny krok w budowie Finance 2.0" - wyjasnienie znaczenia dla inwestorow instytucjonalnych. Profesjonalny, biznesowy ton.</td>
+              </tr>
+              <tr>
+                <td><strong>Telegram</strong></td>
+                <td>"Regulatory milestone achieved! We now have a clear path to EMI license." + ELI5 wyjasnienie dla community.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="milestone-box">
+        <div class="milestone-header">
+          <span class="milestone-title">Milestone #3: Przejecie Soho/GPW</span>
+          <span class="milestone-date">Koniec stycznia</span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kanal</th>
+                <th>Przekaz i Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PAP/GPW</strong></td>
+                <td>Komunikat oficjalny: "Pierwsza crypto-native spolka na GPW. Olbra Finance poprzez odwrotne przejecie Soho Development." Raport biezacy.</td>
+              </tr>
+              <tr>
+                <td><strong>X/Twitter</strong></td>
+                <td>"BREAKING: Olbra is now publicly traded on Warsaw Stock Exchange. The first crypto-native company on GPW. This is just the beginning." + thread o znaczeniu.</td>
+              </tr>
+              <tr>
+                <td><strong>LinkedIn</strong></td>
+                <td>"Historyczny moment dla polskiego fintechu" - artykul CEO. Narracja: TradFi meets DeFi. Zaproszenie dla inwestorow instytucjonalnych.</td>
+              </tr>
+              <tr>
+                <td><strong>Telegram</strong></td>
+                <td>"WE'RE ON GPW! You can now invest in Olbra through traditional stock market!" + AMA announcement + celebracja z community.</td>
+              </tr>
+              <tr>
+                <td><strong>Media PL</strong></td>
+                <td>CEO Media Tour: Puls Biznesu, Parkiet, Rzeczpospolita. Narracja: "Byly NFI (Soho) znowu bedzie narodowy - teraz cyfrowo."</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="milestone-box">
+        <div class="milestone-header">
+          <span class="milestone-title">Milestone #4: Launch PLNY</span>
+          <span class="milestone-date">Luty/Marzec</span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kanal</th>
+                <th>Przekaz i Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PAP</strong></td>
+                <td>"Pierwsza cyfrowa zlotowka PLNY wchodzi na rynek. Olbra Finance uruchamia stablecoin zgodny z MiCA." Oficjalny ton.</td>
+              </tr>
+              <tr>
+                <td><strong>X/Twitter</strong></td>
+                <td>"PLNY IS LIVE. The first Polish zloty stablecoin. European financial sovereignty starts now." Mega-thread o technologii, bezpieczenstwie, use cases.</td>
+              </tr>
+              <tr>
+                <td><strong>LinkedIn</strong></td>
+                <td>"Rewolucja w polskich finansach" - artykul o znaczeniu dla gospodarki. Case studies, potencjal dla B2B. Ton wizjonerski ale oparty na faktach.</td>
+              </tr>
+              <tr>
+                <td><strong>Telegram</strong></td>
+                <td>"IT'S HAPPENING! PLNY is officially LIVE!" Launch party, how-to guides, early adopter benefits, AMA z zespolem tech.</td>
+              </tr>
+              <tr>
+                <td><strong>YouTube</strong></td>
+                <td>Video: "PLNY - Pierwszy polski stablecoin" (10 min explainer). Seria: "Jak korzystac z PLNY" - tutorials krok po kroku.</td>
+              </tr>
+              <tr>
+                <td><strong>Global Crypto</strong></td>
+                <td>CoinDesk, The Block: "Poland Challenges Tether & Circle with MiCA-Compliant Stablecoin". Bankless/Unchained podcast: EU vs US stablecoin narrative.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="milestone-box">
+        <div class="milestone-header">
+          <span class="milestone-title">Milestone #5: Launch Aplikacji + Cyfrowe Zloto</span>
+          <span class="milestone-date">Q2 2026</span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kanal</th>
+                <th>Przekaz i Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PAP</strong></td>
+                <td>"Aplikacja Olbra dostepna dla wszystkich: platnosci, transfery, wymiana walut i karty platnicze w jednym miejscu." Drugi komunikat: emisja cyfrowego zlota z Mennica Polska.</td>
+              </tr>
+              <tr>
+                <td><strong>X/Twitter</strong></td>
+                <td>"The future of finance is in your pocket. Olbra app is LIVE! Payments, transfers, FX, cards - all in one." Thread o features. Dla zlota: "Digital gold backed by Mennica Polska. The safest way to own gold."</td>
+              </tr>
+              <tr>
+                <td><strong>TikTok/IG</strong></td>
+                <td>AKTYWACJA FAZY 3! "POV: Twoj bank wlasnie stal sie przestarzaly" App showcase reels, user testimonials, behind-the-scenes z team.</td>
+              </tr>
+              <tr>
+                <td><strong>YouTube</strong></td>
+                <td>Seria tutoriali: "Jak placic PLNY", "Jak wymieniac waluty", "Jak zamowic karte Olbra". Video o cyfrowym zlocie: "Dlaczego warto miec zloto w telefonie".</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Detailed Timeline -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">5.</span> Szczegolowy Harmonogram Komunikacji</h2>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Pre-launch: 27 grudnia - 6 stycznia</div>
+        <p>Cel: Przygotowanie infrastruktury i budowanie anticipation.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Dzialanie</th>
+                <th>Kanaly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>27-30.12</td>
+                <td>Setup profili social media, branding</td>
+                <td>X, LinkedIn, Telegram</td>
+              </tr>
+              <tr>
+                <td>02.01</td>
+                <td>"Coming soon" teaser - Finance 2.0</td>
+                <td>X, LinkedIn</td>
+              </tr>
+              <tr>
+                <td>03-05.01</td>
+                <td>Countdown posts, team hints, FOMO</td>
+                <td>X, LinkedIn, Telegram</td>
+              </tr>
+              <tr>
+                <td>06.01</td>
+                <td>Media briefing (embargo)</td>
+                <td>Puls Biznesu, Forbes, Rzeczpospolita</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Kamien Milowy #1: 7 stycznia - Maciej Zientara</div>
+        <p>Narracja: Dream Team kompletny. Sobczuk + Gajda + Zientara = mieszanka wybuchowa.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Dzialanie</th>
+                <th>Co to daje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07.01</td>
+                <td>KOMUNIKAT PRASOWY: Dream Team</td>
+                <td>PAP, LinkedIn, X - wiarygodnosc</td>
+              </tr>
+              <tr>
+                <td>07.01</td>
+                <td>X Thread: Kim jest Maciej Zientara? (10+ postow)</td>
+                <td>Storytelling, wiralow osc</td>
+              </tr>
+              <tr>
+                <td>07.01</td>
+                <td>LinkedIn: Trzy pokolenia, jedna misja (artykul)</td>
+                <td>B2B reach, Zientara followers</td>
+              </tr>
+              <tr>
+                <td>07.01</td>
+                <td>Post Macieja Zientary na jego LinkedIn</td>
+                <td>Osobista siec, autentycznosc</td>
+              </tr>
+              <tr>
+                <td>08-10.01</td>
+                <td>Wywiady: Puls Biznesu, Forbes, Rzeczpospolita</td>
+                <td>Third-party credibility</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Styczen-Luty: Wywiady i Podcasty z Founderami</div>
+        <p>Cel: Budowanie personal branding founderow i thought leadership.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Timing</th>
+                <th>Medium</th>
+                <th>Founder</th>
+                <th>Temat Kluczowy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2 tydzien stycznia</td>
+                <td>MyCompany Polska</td>
+                <td>CEO / Founder</td>
+                <td>Wizja Finance 2.0, EMI</td>
+              </tr>
+              <tr>
+                <td>3 tydzien stycznia</td>
+                <td>Podcast biznesowy PL</td>
+                <td>Maciej Zientara</td>
+                <td>Dream Team, GPW story</td>
+              </tr>
+              <tr>
+                <td>Koniec stycznia</td>
+                <td>Forbes / Puls Biznesu</td>
+                <td>CEO + Gajda</td>
+                <td>GPW, reverse takeover</td>
+              </tr>
+              <tr>
+                <td>1 tydzien lutego</td>
+                <td>Podcast / YouTube PL</td>
+                <td>CTO / Tech Lead</td>
+                <td>Technologia PLNY, security</td>
+              </tr>
+              <tr>
+                <td>2 tydzien lutego</td>
+                <td>MyCompany / Startup</td>
+                <td>Founder story</td>
+                <td>Pre-PLNY launch hype</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Polowa stycznia - Akcje Stabillon</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Dzialanie</th>
+                <th>Co to daje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>~15.01</td>
+                <td>KOMUNIKAT: Olbra nabywa akcje Stabillon</td>
+                <td>PAP, GPW - regulatory signal</td>
+              </tr>
+              <tr>
+                <td>~15.01</td>
+                <td>X Thread: Dlaczego licencja EMI jest kluczowa</td>
+                <td>Edukacja rynku, USP Olbry</td>
+              </tr>
+              <tr>
+                <td>16-19.01</td>
+                <td>Seria MiCA: Co oznacza dla finansow</td>
+                <td>Blog, X, YouTube - thought leadership</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Koniec stycznia - Przejecie Soho/GPW</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Dzialanie</th>
+                <th>Co to daje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>~20.01</td>
+                <td>NWZA Soho - emisja odwrotnego przejecia</td>
+                <td>GPW legitimacy, investor access</td>
+              </tr>
+              <tr>
+                <td>~20.01</td>
+                <td>KOMUNIKAT: Pierwsza crypto-native spolka na GPW</td>
+                <td>PAP, GPW, wszystkie kanaly</td>
+              </tr>
+              <tr>
+                <td>21-24.01</td>
+                <td>CEO Media Tour: wywiady, TV</td>
+                <td>Third-party credibility, mainstream</td>
+              </tr>
+              <tr>
+                <td>25-31.01</td>
+                <td>X Spaces / AMA: Pytaj o GPW</td>
+                <td>Community engagement, FOMO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Luty-Marzec: Minting i Launch PLNY</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Dzialanie</th>
+                <th>Co to daje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Luty 1 tydz.</td>
+                <td>TEASER: PLNY nadchodzi - countdown</td>
+                <td>Build anticipation, wszystkie SM</td>
+              </tr>
+              <tr>
+                <td>Luty 2-3 tydz.</td>
+                <td>Seria edukacyjna: Co to jest stablecoin?</td>
+                <td>YouTube, Blog, X - edukacja</td>
+              </tr>
+              <tr>
+                <td>Luty/Marzec</td>
+                <td>LAUNCH PLNY - Minting i wypuszczenie</td>
+                <td>Full press, CoinDesk, The Block</td>
+              </tr>
+              <tr>
+                <td>Launch +1 dzien</td>
+                <td>Global: Poland Challenges Tether/Circle</td>
+                <td>CoinDesk, The Block, Decrypt</td>
+              </tr>
+              <tr>
+                <td>Launch +3 dni</td>
+                <td>Podcast: Bankless / Unchained (English)</td>
+                <td>DeFi community, international</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="timeline-phase">
+        <div class="timeline-phase-title">Q2 2026: Launch Aplikacji + Cyfrowe Zloto</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Dzialanie</th>
+                <th>Co to daje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Q2 Kwiecien</td>
+                <td>App beta teaser, early access waitlist</td>
+                <td>Build demand, collect leads</td>
+              </tr>
+              <tr>
+                <td>Q2 Maj/Czerwiec</td>
+                <td>PUBLIC APP LAUNCH: platnosci, transfery, wymiana walut, karty platnicze</td>
+                <td>Full launch, retail focus</td>
+              </tr>
+              <tr>
+                <td>Q2 2026</td>
+                <td>POTENCJALNIE: Emisja cyfrowego zlota z Mennica Polska</td>
+                <td>Tokenizacja zlota, nowy produkt</td>
+              </tr>
+              <tr>
+                <td>Q2 ongoing</td>
+                <td>Aktywacja TikTok & Instagram (Faza 3)</td>
+                <td>Mainstream reach, retail users</td>
+              </tr>
+              <tr>
+                <td>Q2 ongoing</td>
+                <td>User testimonials, case studies, metrics</td>
+                <td>Social proof, cascade effect</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. KPIs -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">6.</span> Wskazniki Sukcesu (KPIs)</h2>
+
+      <h3 class="subsection-title">6.1 Metryki Social Media</h3>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Metryka</th>
+              <th>Cel Q1</th>
+              <th>Cel Q2</th>
+              <th>Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>X/Twitter Followers</strong></td>
+              <td>15,000</td>
+              <td>25,000</td>
+              <td>Weekly - Twitter Analytics</td>
+            </tr>
+            <tr>
+              <td><strong>LinkedIn Followers</strong></td>
+              <td>6,000</td>
+              <td>10,000</td>
+              <td>Weekly - LinkedIn Analytics</td>
+            </tr>
+            <tr>
+              <td><strong>Telegram Community</strong></td>
+              <td>10,000</td>
+              <td>15,000</td>
+              <td>Weekly - Telegram Admin</td>
+            </tr>
+            <tr>
+              <td><strong>YouTube Subscribers</strong></td>
+              <td>3,000</td>
+              <td>8,000</td>
+              <td>Weekly - YouTube Studio</td>
+            </tr>
+            <tr>
+              <td><strong>TikTok/IG Followers (Q2)</strong></td>
+              <td>N/A</td>
+              <td>10,000+</td>
+              <td>Weekly - Native Analytics</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title">6.2 Metryki Media & Business</h3>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Metryka</th>
+              <th>Cel Q1</th>
+              <th>Cel Q2</th>
+              <th>Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Media Mentions (Tier-1)</strong></td>
+              <td>50+</td>
+              <td>75+</td>
+              <td>Monthly - Brand24</td>
+            </tr>
+            <tr>
+              <td><strong>Investor Inquiries</strong></td>
+              <td>50+</td>
+              <td>100+</td>
+              <td>Weekly - CRM</td>
+            </tr>
+            <tr>
+              <td><strong>App Downloads (Q2)</strong></td>
+              <td>N/A</td>
+              <td>50,000+</td>
+              <td>Weekly - App Analytics</td>
+            </tr>
+            <tr>
+              <td><strong>PLNY Wallet Activations</strong></td>
+              <td>25,000</td>
+              <td>50,000</td>
+              <td>Weekly - Product Analytics</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 7. Immediate Actions -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-number">7.</span> Natychmiastowe Dzialania (27.12 - 06.01)</h2>
+
+      <p>Checklist przed pierwszym kamieniem milowym:</p>
+
+      <ul class="checklist">
+        <li>
+          <span class="checklist-box"></span>
+          <span>Setup profili social media - X, LinkedIn, Telegram z pelnym brandingiem Olbra</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Przygotowanie materialow prasowych - komunikat o Zientarze, biogramy zalozycie li (Sobczuk, Gajda, Zientara), Q&A</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Media briefing z embargo - 06.01 dla wybranych dziennikarzy (Puls Biznesu, Forbes)</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Przygotowanie X Thread - "Kim jest Maciej Zientara?" (10+ postow)</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>LinkedIn Article draft - "Trzy pokolenia, jedna misja"</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Setup media monitoring - Brand24 lub podobne</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Countdown teasers - 02-05.01 "Coming soon" campaign</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Kontakt z dziennikarzami - Puls Biznesu, Forbes na wywiady 08-10.01</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Kontakt z MyCompany Polska - umowienie wywiadu/podcastu z founderem na 2 tydzien stycznia</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Personal post Zientary - Draft posta na jego LinkedIn</span>
+        </li>
+        <li>
+          <span class="checklist-box"></span>
+          <span>Website update - Banner i sekcja zespolu zaktualizowana</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Strategy Summary -->
+    <div class="strategy-box">
+      <div class="strategy-label">Strategia w Jednym Zdaniu</div>
+      <p class="strategy-text">
+        7 stycznia: Dream Team (Zientara) → polowa stycznia: akcje Stabillon (EMI) → koniec stycznia: GPW (Soho) → luty/marzec: PLNY Launch → Q2: Aplikacja (platnosci, transfery, karty) + cyfrowe zloto → Faza 3: TikTok & Instagram → Build FOMO przez widoczny momentum → Kontroluj narracje "European Financial Sovereignty"
+      </p>
+    </div>
+
+    <!-- Document Footer -->
+    <footer class="doc-footer">
+      <img src="/assets/olbra-logo-horizontal.svg" alt="Olbra Finance" class="footer-logo">
+      <div class="footer-tagline">Fast. Stable. Sovereign.</div>
+      <div class="footer-meta">Wersja 2.0 | Grudzien 2025 | STRICTLY CONFIDENTIAL</div>
+    </footer>
+
+  </div>
+</body>
+</html>
