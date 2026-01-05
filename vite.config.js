@@ -54,11 +54,7 @@ export default defineConfig({
         'pl-terms-of-service': resolve(__dirname, 'pl/terms-of-service.html'),
         'pl-cookie-policy': resolve(__dirname, 'pl/cookie-policy.html'),
         'pl-compliance': resolve(__dirname, 'pl/compliance.html'),
-        'pl-brand-assets': resolve(__dirname, 'pl/brand-assets.html'),
-
-        // Stabillon offer pages
-        'stabillon-offer': resolve(__dirname, 'stabillon-offer/index.html'),
-        'stabillon-offer-pl': resolve(__dirname, 'stabillon-offer-pl/index.html'),
+        'pl-brand-assets': resolve(__dirname, 'pl/brand-assets.html')
       }
     }
   }
