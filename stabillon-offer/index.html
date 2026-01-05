@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olbra Finance | Strategic Partnership Proposal for Stabillon Shareholders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0C53BF;
+            --navy-dark: #082f6e;
+            --azure: #3B82F6;
+            --azure-light: #60A5FA;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            --gold: #D4AF37;
+            --gold-light: #F4D03F;
+            --green: #10B981;
+            --green-light: #34D399;
+            --red: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--white);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-alt {
+            background: var(--gray-50);
+        }
+
+        .section-dark {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            color: var(--white);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--azure) 0%, var(--navy) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .text-green {
+            color: var(--green);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--azure);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-gold {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+            color: var(--gold);
+        }
+
+        .badge-green {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: var(--green);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes rotateCircle {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #1a4a9e 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            animation: rotateCircle 60s linear infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, rgba(255,255,255,0.05), transparent);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 120px 0;
+        }
+
+        .hero-logo {
+            margin-bottom: 40px;
+        }
+
+        .hero-logo svg {
+            height: 50px;
+            width: auto;
+        }
+
+        .hero-tagline {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--azure-light);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 24px;
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin-bottom: 48px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-value {
+            font-family: 'Sora', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Circle Decorations */
+        .circle-decoration {
+            position: absolute;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            right: 5%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            right: 15%;
+            animation: float 6s ease-in-out infinite 1s;
+        }
+
+        .circle-3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 25%;
+            background: rgba(59, 130, 246, 0.1);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        /* Section Headers */
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            margin-bottom: 16px;
+            color: var(--gray-900);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray-500);
+        }
+
+        .section-dark .section-header h2 {
+            color: var(--white);
+        }
+
+        .section-dark .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(12, 83, 191, 0.15);
+            border-color: var(--azure);
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--azure) 0%, var(--navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 24px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--gray-900);
+        }
+
+        .card p {
+            color: var(--gray-500);
+            font-size: 15px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        thead {
+            background: var(--gray-50);
+        }
+
+        th {
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray-500);
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--gray-50);
+        }
+
+        .table-highlight {
+            background: linear-gradient(135deg, rgba(12, 83, 191, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+
+        .table-highlight td {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        td strong {
+            color: var(--gray-900);
+            font-weight: 600;
+        }
+
+        td.value-up {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: var(--azure);
+            transform: translateY(-2px);
+        }
+
+        .stat-value {
+            font-family: 'Sora', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        /* Team Cards */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(12, 83, 191, 0.15);
+        }
+
+        .team-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--azure) 0%, var(--navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-family: 'Sora', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .team-card h3 {
+            font-size: 20px;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 14px;
+            color: var(--azure);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .team-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .team-card li {
+            font-size: 14px;
+            color: var(--gray-600);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .team-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--azure);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--azure), var(--navy));
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 24px;
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--azure);
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+            z-index: 1;
+        }
+
+        .timeline-quarter {
+            font-family: 'Sora', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--azure);
+            margin-bottom: 8px;
+        }
+
+        .timeline-content h4 {
+            font-size: 16px;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        /* Comparison Cards */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .comparison-card {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .comparison-header {
+            padding: 24px 32px;
+            color: var(--white);
+        }
+
+        .comparison-header.current {
+            background: var(--gray-600);
+        }
+
+        .comparison-header.future {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--azure) 100%);
+        }
+
+        .comparison-header h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .comparison-header p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .comparison-body {
+            background: var(--white);
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .comparison-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-label {
+            color: var(--gray-500);
+            font-size: 14px;
+        }
+
+        .comparison-value {
+            font-weight: 600;
+            color: var(--gray-900);
+            font-size: 14px;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--green);
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text strong {
+            color: var(--gray-900);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 300%;
+            background: radial-gradient(ellipse, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: var(--white);
+            color: var(--navy);
+            font-family: 'Sora', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-contact {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-contact a {
+            color: var(--azure-light);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-400);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo svg {
+            height: 32px;
+            opacity: 0.5;
+        }
+
+        /* Divider */
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--azure), var(--navy));
+            border-radius: 2px;
+            margin: 0 auto 24px;
+        }
+
+        /* Product Sections */
+        .product-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-section.reverse {
+            direction: rtl;
+        }
+
+        .product-section.reverse > * {
+            direction: ltr;
+        }
+
+        .product-content h3 {
+            font-size: 32px;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .product-content p {
+            color: var(--gray-500);
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+
+        .product-visual {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            border-radius: 24px;
+            padding: 40px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(12, 83, 191, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(12, 83, 191, 0.05) 0%, rgba(59, 130, 246, 0.08) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            color: var(--gray-700);
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .highlight-box strong {
+            color: var(--navy);
+        }
+
+        /* Value Increase Banner */
+        .value-banner {
+            background: linear-gradient(135deg, var(--green) 0%, #059669 100%);
+            border-radius: 16px;
+            padding: 32px 40px;
+            color: var(--white);
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .value-banner h3 {
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+
+        .value-banner p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .product-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .product-section.reverse {
+                direction: ltr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(odd) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 50px;
+            }
+
+            .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content {
+                width: 100%;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="circle-decoration circle-1"></div>
+        <div class="circle-decoration circle-2"></div>
+        <div class="circle-decoration circle-3"></div>
+
+        <div class="hero-content container">
+            <div class="hero-logo animate-in">
+                <svg width="200" height="44" viewBox="0 0 1006 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M165.752 21.4866C165.752 18.9074 168.56 17.3333 170.695 18.7804C199.716 38.451 218.79 71.694 218.79 109.395C218.79 169.812 169.812 218.79 109.395 218.79C99.9283 218.79 90.7432 217.585 81.9828 215.324C80.5465 214.953 79.5624 213.645 79.5624 212.162V191.562C79.5624 189.234 81.9022 187.627 84.1195 188.337C92.0879 190.888 100.58 192.269 109.395 192.269C155.166 192.269 192.269 155.166 192.269 109.395C192.269 85.9107 182.498 64.7113 166.804 49.6315C166.139 48.9926 165.752 48.1146 165.752 47.1925V21.4866Z" fill="white"/>
+                    <path d="M109.395 0C118.863 0 128.049 1.20463 136.811 3.46607C138.247 3.83678 139.231 5.14468 139.231 6.62802V27.2238C139.231 29.5519 136.891 31.1592 134.674 30.4496C126.705 27.8992 118.211 26.5208 109.395 26.5208C63.6244 26.5208 26.5208 63.6244 26.5208 109.395C26.5208 132.88 36.2941 154.079 51.99 169.158C52.655 169.797 53.0416 170.675 53.0416 171.598V197.304C53.0416 199.883 50.2343 201.457 48.0993 200.01C19.0757 180.34 0 147.097 0 109.395C0 48.9778 48.9778 0 109.395 0Z" fill="white"/>
+                    <path d="M139.435 109.5C139.435 109.443 139.389 109.397 139.332 109.397C139.275 109.397 139.229 109.35 139.229 109.293C139.173 92.8638 125.839 79.5611 109.397 79.5602C105.795 79.5602 102.343 80.1994 99.1469 81.3696C96.7139 82.2604 93.826 80.6142 93.826 78.0233V57.7195C93.826 56.2407 94.8032 54.9308 96.2413 54.5866C100.462 53.5764 104.866 53.0394 109.397 53.0394L110.85 53.0585C140.818 53.8181 164.971 77.9716 165.731 107.939L165.75 109.397C165.749 127.32 157.382 143.29 144.34 153.611C142.293 155.231 139.435 153.683 139.435 151.072V109.5Z" fill="white"/>
+                    <path d="M107.939 165.731C77.4885 164.959 53.0403 140.033 53.0394 109.397L53.0585 107.939C53.5124 90.0382 62.3152 74.2132 75.7174 64.2086C77.7792 62.6694 80.5675 64.2286 80.5675 66.8015V101.267C80.5675 101.555 80.529 101.842 80.4589 102.121C79.8746 104.45 79.5602 106.886 79.5602 109.397C79.5611 125.873 92.9197 139.229 109.397 139.229C113.381 139.229 117.184 138.448 120.66 137.031C123.125 136.026 126.173 137.677 126.173 140.34V160.773C126.173 162.224 125.232 163.516 123.828 163.887C119.222 165.103 114.385 165.75 109.397 165.75L107.939 165.731Z" fill="white"/>
+                    <path d="M370.712 36.2372C381.353 36.2372 391.243 38.0789 400.384 41.7624C409.661 45.4459 417.71 50.63 424.531 57.3148C431.489 63.9997 436.878 71.7759 440.697 80.6435C444.654 89.3747 446.632 98.8562 446.632 109.088C446.632 119.32 444.654 128.938 440.697 137.942C436.878 146.81 431.489 154.586 424.531 161.271C417.71 167.955 409.661 173.208 400.384 177.028C391.243 180.711 381.353 182.553 370.712 182.553C360.07 182.553 350.111 180.711 340.834 177.028C331.694 173.208 323.645 167.955 316.687 161.271C309.866 154.586 304.477 146.81 300.521 137.942C296.701 128.938 294.791 119.32 294.791 109.088C294.791 98.8562 296.701 89.3065 300.521 80.4389C304.477 71.5712 309.866 63.8632 316.687 57.3148C323.645 50.63 331.694 45.4459 340.834 41.7624C350.111 38.0789 360.07 36.2372 370.712 36.2372ZM370.916 56.7009C363.822 56.7009 357.137 58.0652 350.862 60.7937C344.723 63.3857 339.266 67.0692 334.491 71.8441C329.716 76.619 325.964 82.2124 323.236 88.6244C320.644 94.8999 319.348 101.721 319.348 109.088C319.348 116.455 320.712 123.345 323.44 129.756C326.169 136.168 329.92 141.83 334.695 146.741C339.47 151.516 344.927 155.268 351.066 157.996C357.342 160.725 363.958 162.089 370.916 162.089C377.874 162.089 384.422 160.725 390.561 157.996C396.837 155.268 402.294 151.516 406.932 146.741C411.571 141.83 415.186 136.168 417.778 129.756C420.507 123.345 421.871 116.455 421.871 109.088C421.871 101.721 420.507 94.8999 417.778 88.6244C415.186 82.2124 411.571 76.619 406.932 71.8441C402.294 67.0692 396.837 63.3857 390.561 60.7937C384.422 58.0652 377.874 56.7009 370.916 56.7009Z" fill="white"/>
+                    <path d="M472.328 37.6696H496.476V160.247H558.481V180.916H472.328V37.6696Z" fill="white"/>
+                    <path d="M643.851 37.6696C653.81 37.6696 662.337 39.1021 669.431 41.967C676.661 44.8319 682.187 48.9247 686.007 54.2453C689.963 59.5658 691.941 65.9778 691.941 73.4812C691.941 81.5303 689.69 88.4197 685.188 94.1496C680.686 99.8794 674.547 103.631 666.771 105.405C676.32 107.042 683.824 111.066 689.281 117.478C694.738 123.89 697.466 131.939 697.466 141.625C697.466 149.811 695.352 156.837 691.123 162.703C686.893 168.569 680.891 173.071 673.114 176.209C665.338 179.347 656.061 180.916 645.284 180.916H581.641V37.6696H643.851ZM642.623 97.2191C650.263 97.2191 656.266 95.5138 660.632 92.1032C664.997 88.5561 667.18 83.6448 667.18 77.3693C667.18 71.2302 664.997 66.5235 660.632 63.2493C656.266 59.8387 650.263 58.2016 642.623 58.338H605.789V97.2191H642.623ZM642.623 160.247C652.037 160.384 659.404 158.61 664.724 154.927C670.045 151.107 672.705 145.718 672.705 138.761C672.705 132.212 670.045 127.096 664.724 123.413C659.404 119.593 652.037 117.751 642.623 117.888H605.789V160.247H642.623Z" fill="white"/>
+                    <path d="M784.244 37.6696C802.661 37.6696 816.849 41.967 826.808 50.5618C836.904 59.0201 841.951 70.9573 841.951 86.3733C841.951 102.471 836.904 115.023 826.808 124.027C816.849 132.894 802.661 137.328 784.244 137.328H750.274V180.916H726.127V37.6696H784.244ZM784.244 116.66C795.294 116.66 803.821 114.272 809.823 109.497C815.963 104.586 819.032 97.0827 819.032 86.9873C819.032 77.3011 815.963 70.1388 809.823 65.5003C803.821 60.7255 795.294 58.338 784.244 58.338H750.274V116.66H784.244ZM785.062 127.915H808.8L844.407 180.916H816.986L785.062 127.915Z" fill="white"/>
+                    <path d="M918.62 37.6696H943.381L1006 180.916H980.216L930.284 62.0215L880.558 180.916H855.387L918.62 37.6696ZM886.901 127.301H972.644V147.765H886.901V127.301Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="hero-tagline animate-in delay-1">Strategic Partnership Proposal</div>
+            <h1 class="animate-in delay-2">Become Part of the<br>Circle of Europe</h1>
+            <p class="hero-subtitle animate-in delay-3">Building global multi-currency stablecoin and digital asset infrastructure. The first MiCA-regulated fintech in Poland issuing the PLN-backed stablecoin: PLNY.</p>
+
+            <div class="hero-stats animate-in delay-4">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">$403M</div>
+                    <div class="hero-stat-label">Year 2 Revenue Target</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">$3.23B</div>
+                    <div class="hero-stat-label">Potential Valuation (8x)</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">29-44x</div>
+                    <div class="hero-stat-label">Your Stake Growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">The Opportunity</span>
+                <h2>The Vision: Circle of Europe</h2>
+                <p>A massive gap in the global stablecoin market creates an unprecedented opportunity</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card reveal">
+                    <div class="card-icon">💰</div>
+                    <h3>$310B Market Dominated by USD</h3>
+                    <p><strong>99%</strong> of the stablecoin market is denominated in USD, yet USD accounts for only ~50% of world's international payments.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">🇪🇺</div>
+                    <h3>Euro Gap: 0.18%</h3>
+                    <p>Euro stablecoins represent just 0.18% of the global market. A massive gap waiting to be filled.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">📈</div>
+                    <h3>Circle IPO: $8-23B</h3>
+                    <p>Circle's IPO valuation ranges from $8-23 billion with $2.4B annual revenue. The model is proven.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">⚡</div>
+                    <h3>First Mover Advantage</h3>
+                    <p>MiCA regulation is live. Euro stablecoins grew +102% in 12 months. Traditional banks won't launch until 2027.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box reveal" style="margin-top: 40px; text-align: center;">
+                <p><strong>Olbra is positioned to be the first publicly listed stablecoin company in Europe</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poland Market Position -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Unique Position</span>
+                <h2>Poland: The Crypto Gateway to Europe</h2>
+                <p>The largest non-euro EU economy with zero PLN stablecoin options—until PLNY</p>
+            </div>
+
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-value">$908B</div>
+                    <div class="stat-label">GDP</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">38M</div>
+                    <div class="stat-label">Population</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$139B</div>
+                    <div class="stat-label">Annual Digital Payments</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">23%</div>
+                    <div class="stat-label">Crypto Ownership</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2.4B</div>
+                    <div class="stat-label">BLIK Transactions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Zero</div>
+                    <div class="stat-label">PLN Stablecoin Options</div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="margin-top: 40px;">
+                <h3 style="margin-bottom: 16px;">Regulatory Moat</h3>
+                <ul class="feature-list">
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text"><strong>Only Polish entity</strong> with an acquired EMI license enabling stablecoin issuance</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">License recognized by <strong>KNF</strong> and structured for MiCA compliance</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">Competitors with foreign licenses <strong>blocked from servicing Polish financial institutions</strong></span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">Exclusive Polish bank agreements: <strong>BNP Paribas, Santander, Alior, Pekao, mBank</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Portfolio -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Revenue Streams</span>
+                <h2>Product Portfolio & Revenue Projections</h2>
+                <p>Diversified revenue streams across 5 products</p>
+            </div>
+
+            <div class="table-wrapper reveal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Year 1 Revenue</th>
+                            <th>Year 2 Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PLNY Stablecoin</strong></td>
+                            <td>$23.3M</td>
+                            <td class="value-up">$253.6M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TokenFlow Crypto Fund</strong></td>
+                            <td>$29.5M</td>
+                            <td class="value-up">$82.5M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tokenized Gold (Mennica)</strong></td>
+                            <td>$8.0M</td>
+                            <td class="value-up">$38.0M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CQURE Security</strong></td>
+                            <td>$5.6M</td>
+                            <td class="value-up">$11.2M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>$OLBRA Token Revenue</strong></td>
+                            <td>$15.0M</td>
+                            <td class="value-up">$18.0M</td>
+                        </tr>
+                        <tr class="table-highlight">
+                            <td><strong>TOTAL REVENUE</strong></td>
+                            <td><strong>$81.4M</strong></td>
+                            <td><strong>$403.3M</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="margin: 48px 0 24px; text-align: center;" class="reveal">Potential Valuations Based on Revenue Multiples</h3>
+
+            <div class="table-wrapper reveal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Multiple</th>
+                            <th>Justification</th>
+                            <th>Year 1 Valuation</th>
+                            <th>Year 2 Valuation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3x</strong></td>
+                            <td>Conservative fintech</td>
+                            <td>$244M</td>
+                            <td class="value-up">$1.21B</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5x</strong></td>
+                            <td>Circle IPO multiple</td>
+                            <td>$407M</td>
+                            <td class="value-up">$2.02B</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8x</strong></td>
+                            <td>High-growth fintech</td>
+                            <td>$651M</td>
+                            <td class="value-up">$3.23B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLNY Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">Flagship Product</span>
+                <h2>PLNY: The Digital Polish Zloty</h2>
+                <p>First Regulated PLN Stablecoin</p>
+            </div>
+
+            <div class="card-grid reveal">
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">1:1 Fiat Backing</h3>
+                    <p style="color: rgba(255,255,255,0.7);">PLN held in segregated, safeguarded accounts</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">Big Four Audited</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Reserves ensuring full transparency</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">24/7 Mint/Redeem</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Against PLN reserves anytime</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">Security Audited</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Smart contracts governed via multi-sig</p>
+                </div>
+            </div>
+
+            <h3 style="margin: 60px 0 24px; text-align: center; color: white;" class="reveal">Distribution Partners</h3>
+
+            <div class="table-wrapper reveal" style="background: rgba(255,255,255,0.05);">
+                <table>
+                    <thead style="background: rgba(255,255,255,0.05);">
+                        <tr>
+                            <th style="color: rgba(255,255,255,0.6);">Partner</th>
+                            <th style="color: rgba(255,255,255,0.6);">Reach</th>
+                            <th style="color: rgba(255,255,255,0.6);">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-color: rgba(255,255,255,0.1);">
+                            <td><strong style="color: white;">Telegram Wallet</strong></td>
+                            <td style="color: rgba(255,255,255,0.7);">1B+ global users</td>
+                            <td><span class="badge badge-green">Integration confirmed</span></td>
+                        </tr>
+                        <tr style="border-color: rgba(255,255,255,0.1);">
+                            <td><strong style="color: white;">Żabka</strong></td>
+                            <td style="color: rgba(255,255,255,0.7);">10,000 stores nationwide</td>
+                            <td><span class="badge">In negotiation</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: white;">InPost</strong></td>
+                            <td style="color: rgba(255,255,255,0.7);">20,000 parcel lockers</td>
+                            <td><span class="badge">In negotiation</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="margin: 60px 0 24px; text-align: center; color: white;" class="reveal">Revenue Model</h3>
+
+            <div class="stats-grid reveal">
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">$3.33B</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Y2 Deposits</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">$212M</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Y2 Reserve Yield</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">2M</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Y2 Consumer Wallets</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">800</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Y2 Enterprise Accounts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TokenFlow Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">DeFi Innovation</span>
+                <h2>TokenFlow: Self-Compounding Index Fund Protocol</h2>
+                <p>Revolutionary DeFi Infrastructure addressing a 22,000x market gap</p>
+            </div>
+
+            <div class="highlight-box reveal" style="text-align: center; margin-bottom: 40px;">
+                <p>Traditional finance has <strong>$11+ trillion in index funds</strong>. Crypto index products hold <strong>less than $500M</strong>.</p>
+            </div>
+
+            <div class="card-grid reveal">
+                <div class="card">
+                    <h3>The Flywheel Mechanism</h3>
+                    <div style="background: var(--gray-50); padding: 20px; border-radius: 12px; margin: 16px 0; font-family: monospace; font-size: 14px;">
+                        5% Volume Fee<br>
+                        ├── 4% → Deposited back into fund → Shares BURNED<br>
+                        └── 1% → Protocol revenue
+                    </div>
+                    <p><strong>Result:</strong> Fund tokens automatically appreciate faster than underlying assets.</p>
+                </div>
+                <div class="card">
+                    <h3>Projections (24-Month Base Case)</h3>
+                    <div class="table-wrapper" style="margin-top: 16px; border: none;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cumulative Volume</td>
+                                    <td><strong>$9.4 Billion</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Revenue</td>
+                                    <td><strong>$112 Million</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Final AUM</td>
+                                    <td><strong>$300 Million</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Funds Deployed</td>
+                                    <td><strong>35</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Chains</td>
+                                    <td><strong>4</strong> (BSC, Ethereum, Base, Arbitrum)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 40px 0 24px;" class="reveal">Comparable Success</h3>
+
+            <div class="table-wrapper reveal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Buyback Amount</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hyperliquid</strong></td>
+                            <td>$644M</td>
+                            <td class="value-up"><strong>$14B valuation</strong>, 10x in 4 days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PunkStrategy</strong></td>
+                            <td>$202M ecosystem</td>
+                            <td class="value-up">$10.7M daily volume</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Raydium</strong></td>
+                            <td>$196M</td>
+                            <td class="value-up">26.4% of supply repurchased</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenized Gold Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge badge-gold">Real World Assets</span>
+                <h2>Tokenized Gold: Mennica Polska Partnership</h2>
+                <p>First Polish Gold Token with 250+ years of institutional trust</p>
+            </div>
+
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--gold);">$3.7B</div>
+                    <div class="stat-label">Tokenized Gold Market Cap</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--gold);">$19B</div>
+                    <div class="stat-label">Q2 2025 Trading Volume</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--gold);">+173%</div>
+                    <div class="stat-label">YoY Holder Growth</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--gold);">$38M</div>
+                    <div class="stat-label">Annual Revenue at $1B AUM</div>
+                </div>
+            </div>
+
+            <div class="card-grid reveal" style="margin-top: 40px;">
+                <div class="card">
+                    <h3>Product Features</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text"><strong>1:1 physical redemption</strong> guarantee</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text"><strong>LBMA-certified gold custody</strong> in secure vaults</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text"><strong>Full blockchain transparency</strong> for reserves</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text"><strong>DeFi lending vault:</strong> Borrow up to 70% LTV</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Revenue Model (at $1B AUM)</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-icon">💰</span>
+                            <span class="feature-text">Minting (1%): <strong>$3.0M</strong></span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">💰</span>
+                            <span class="feature-text">Custody (0.3%): <strong>$3.0M</strong></span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">💰</span>
+                            <span class="feature-text">Trading spread (2%): <strong>$10.0M</strong></span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">💰</span>
+                            <span class="feature-text">CEX/DEX + DeFi: <strong>$20.0M</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CQURE Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Security Division</span>
+                <h2>CQURE: World-Class Security</h2>
+                <p>Led by Paula Januszkiewicz</p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 24px;" class="reveal">Paula Januszkiewicz — Credentials</h3>
+
+            <div class="table-wrapper reveal" style="max-width: 700px; margin: 0 auto 40px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Credential</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Education</td>
+                            <td><strong>Harvard Business School MBA</strong> (2017)</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft</td>
+                            <td>Regional Director, <strong>Enterprise Security MVP</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Speaking</td>
+                            <td><strong>#1 ranked speaker</strong> at Microsoft Ignite (1,100+ speakers)</td>
+                        </tr>
+                        <tr>
+                            <td>Black Hat</td>
+                            <td>"Best of Black Hat Asia 2019 Briefing"</td>
+                        </tr>
+                        <tr>
+                            <td>RSA Conference</td>
+                            <td>Top-rated sessions (2017, 2019, 2022)</td>
+                        </tr>
+                        <tr>
+                            <td>Special Access</td>
+                            <td><strong>Windows source code access</strong> (rare global honor)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 24px;" class="reveal">Company Profile</h3>
+
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-value">2008</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">60</div>
+                    <div class="stat-label">Security Experts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">300+</div>
+                    <div class="stat-label">Years Combined Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">200+</div>
+                    <div class="stat-label">Proprietary Tools</div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="margin-top: 40px;">
+                <h3>Financial Contribution</h3>
+                <div class="table-wrapper" style="margin-top: 20px; border: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Year 1</th>
+                                <th>Year 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Revenue</strong></td>
+                                <td>$5.6M (20M PLN)</td>
+                                <td class="value-up">$11.2M (40M PLN)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Profit margin</strong></td>
+                                <td>~25%</td>
+                                <td>~25%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Strategic value</strong></td>
+                                <td>Security for all Olbra products</td>
+                                <td>In-house audit capability</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- $OLBRA Token Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">Governance Token</span>
+                <h2>$OLBRA Token: Governance & Value Capture</h2>
+            </div>
+
+            <div class="stats-grid reveal">
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">1B</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Total Supply</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">$100M</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Presale Valuation</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">$200M</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Target Listing Cap</div>
+                </div>
+                <div class="stat-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <div class="stat-value" style="color: white;">90%</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.6);">Olbra Ownership Post-Listing</div>
+                </div>
+            </div>
+
+            <div class="card-grid reveal" style="margin-top: 40px;">
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">Token Utilities</h3>
+                    <ul class="feature-list">
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">🗳️</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Governance</strong> — Voting on collateral, listings, protocol upgrades</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">💎</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Revenue sharing</strong> — Stakers earn dividends from PLNY, EURY, USDY</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">🔥</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Buybacks & burns</strong> — Ecosystem revenues reduce supply</span>
+                        </li>
+                        <li style="border-color: transparent;">
+                            <span class="feature-icon">⭐</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Holder benefits</strong> — Higher yields, lower fees, DEX discounts</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">Revenue Streams</h3>
+                    <ul class="feature-list">
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">💵</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);">Stablecoin issuance fees (PLNY, EURY, USDY)</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">💵</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);">DeFi lending & borrowing spreads</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">💵</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);">DEX trading fees</span>
+                        </li>
+                        <li style="border-color: transparent;">
+                            <span class="feature-icon">💵</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);">24/7 Forex trading fees</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin: 60px 0 24px; text-align: center; color: white;" class="reveal">Token Revenue</h3>
+
+            <div class="table-wrapper reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                <table>
+                    <thead style="background: rgba(255,255,255,0.05);">
+                        <tr>
+                            <th style="color: rgba(255,255,255,0.6);">Source</th>
+                            <th style="color: rgba(255,255,255,0.6);">Year 1</th>
+                            <th style="color: rgba(255,255,255,0.6);">Year 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-color: rgba(255,255,255,0.1);">
+                            <td style="color: rgba(255,255,255,0.8);">Token sale (10% at $100M)</td>
+                            <td><strong style="color: white;">$10.0M</strong></td>
+                            <td style="color: rgba(255,255,255,0.5);">—</td>
+                        </tr>
+                        <tr style="border-color: rgba(255,255,255,0.1);">
+                            <td style="color: rgba(255,255,255,0.8);">Staking/trading fees</td>
+                            <td><strong style="color: white;">$5.0M</strong></td>
+                            <td><strong style="color: var(--green-light);">$18.0M</strong></td>
+                        </tr>
+                        <tr style="background: rgba(255,255,255,0.05);">
+                            <td><strong style="color: white;">Total</strong></td>
+                            <td><strong style="color: white;">$15.0M</strong></td>
+                            <td><strong style="color: var(--green-light);">$18.0M</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">World-Class Team</span>
+                <h2>Leadership</h2>
+                <p>Harvard MBA, Stanford, Microsoft MVP — proven track records</p>
+            </div>
+
+            <div class="team-grid reveal">
+                <div class="team-card">
+                    <div class="team-avatar">PG</div>
+                    <h3>Patryk Gajda</h3>
+                    <div class="team-role">Chief Executive Officer</div>
+                    <ul>
+                        <li><strong>15+ years</strong> experience modernizing companies</li>
+                        <li>Founder of <strong>SC Space & Data Inc.</strong></li>
+                        <li>Active investor since 2014 in space, AI, fintech</li>
+                        <li>Member of <strong>EBAN</strong></li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">WS</div>
+                    <h3>Wojciech Sobczuk</h3>
+                    <div class="team-role">Chief Technology Officer</div>
+                    <ul>
+                        <li><strong>30 years</strong> building global digital platforms</li>
+                        <li>Launched <strong>Europe's first large-scale social network</strong></li>
+                        <li>Built encrypted comms for Israeli military</li>
+                        <li>Strategic advisor to <strong>Egnyte</strong> (Google-backed)</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">MZ</div>
+                    <h3>Maciej Zientara</h3>
+                    <div class="team-role">Investor & Board Member</div>
+                    <ul>
+                        <li><strong>25+ years</strong> in capital markets & M&A</li>
+                        <li>Founder of <strong>Supernova Group</strong> ($275M+)</li>
+                        <li>Executed <strong>~$550M in deals</strong></li>
+                        <li><strong>Stanford University</strong> graduate</li>
+                    </ul>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">PJ</div>
+                    <h3>Paula Januszkiewicz</h3>
+                    <div class="team-role">Head of Security</div>
+                    <ul>
+                        <li><strong>Harvard Business School MBA</strong></li>
+                        <li><strong>Microsoft Regional Director & MVP</strong></li>
+                        <li><strong>#1 ranked speaker</strong> at Microsoft Ignite</li>
+                        <li>Access to <strong>Windows source code</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Roadmap</span>
+                <h2>Path to Public Markets</h2>
+                <p>Reverse Merger on Warsaw Stock Exchange (GPW)</p>
+            </div>
+
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-quarter">Q1 2026</div>
+                        <h4>PLNY mainnet live</h4>
+                        <p>$OLBRA Token Generation Event</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-quarter">Q2 2026</div>
+                        <h4>Olbra App Launch</h4>
+                        <p>Żabka rollout, Tokenized Gold</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-quarter">Q3 2026</div>
+                        <h4>GPW Listing</h4>
+                        <p>Reverse merger via SOHO Development SA</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-quarter">Q4 2026</div>
+                        <h4>European Expansion</h4>
+                        <p>Launch EURY/USDY, tokenized treasury bonds</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+
+            <div class="highlight-box reveal" style="margin-top: 60px; text-align: center;">
+                <p><strong>Second publicly listed stablecoin company globally</strong> (after Circle)<br>
+                National PR campaign • Institutional investor access • EU-wide expansion under MiCA passport</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Swap Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge badge-green">The Opportunity</span>
+                <h2>Why Swap Your Stabillon Shares?</h2>
+            </div>
+
+            <div class="comparison-grid reveal">
+                <div class="comparison-card">
+                    <div class="comparison-header current">
+                        <h3>Current State</h3>
+                        <p>Stabillon Standalone</p>
+                    </div>
+                    <div class="comparison-body">
+                        <div class="comparison-row">
+                            <span class="comparison-label">Current valuation</span>
+                            <span class="comparison-value">$8-11M</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Growth capital</span>
+                            <span class="comparison-value">Limited</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Product portfolio</span>
+                            <span class="comparison-value">EMI license only</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Market reach</span>
+                            <span class="comparison-value">Poland only</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Public market access</span>
+                            <span class="comparison-value">None</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-header future">
+                        <h3>Future State</h3>
+                        <p>Stabillon in Olbra</p>
+                    </div>
+                    <div class="comparison-body">
+                        <div class="comparison-row">
+                            <span class="comparison-label">Your stake</span>
+                            <span class="comparison-value" style="color: var(--green);">15.1%</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">SOHO market cap</span>
+                            <span class="comparison-value" style="color: var(--green);">$196M - $300M</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Value of stake</span>
+                            <span class="comparison-value" style="color: var(--green);">$29.6M - $29.7M</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Immediate increase</span>
+                            <span class="comparison-value" style="color: var(--green); font-weight: 700;">2.7-3.7x</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Public market access</span>
+                            <span class="comparison-value" style="color: var(--green);">GPW Listed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="value-banner reveal">
+                <h3>29-44x</h3>
+                <p>Potential stake growth with 8x revenue multiple (Year 2)</p>
+            </div>
+
+            <h3 style="text-align: center; margin: 48px 0 24px;" class="reveal">Revenue-Based Valuation Upside</h3>
+
+            <div class="table-wrapper reveal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Y2 Valuation</th>
+                            <th>Stabillon Stake Value</th>
+                            <th>Multiple vs Today</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3x Revenue</strong></td>
+                            <td>$1.21B</td>
+                            <td>$121-182M</td>
+                            <td class="value-up">11-17x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5x Revenue</strong></td>
+                            <td>$2.02B</td>
+                            <td>$202-303M</td>
+                            <td class="value-up">18-28x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8x Revenue</strong></td>
+                            <td>$3.23B</td>
+                            <td>$323-484M</td>
+                            <td class="value-up">29-44x</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Validation -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge">Market Validation</span>
+                <h2>Circle Comparison</h2>
+                <p>The stablecoin business model is proven and extraordinarily profitable</p>
+            </div>
+
+            <div class="table-wrapper reveal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Circle (2025)</th>
+                            <th>Olbra (Target 2027)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Revenue</strong></td>
+                            <td>$2.4B</td>
+                            <td>$403M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IPO Valuation</strong></td>
+                            <td>$8.06B</td>
+                            <td>$200M (current)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Revenue Multiple</strong></td>
+                            <td>4.8x</td>
+                            <td class="value-up">0.5x (massive upside)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stablecoin AUM</strong></td>
+                            <td>$75B (USDC)</td>
+                            <td>$3.3B (PLNY target)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Growth rate</strong></td>
+                            <td>16%</td>
+                            <td class="value-up">400%+ (early stage)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box reveal" style="margin-top: 40px; text-align: center;">
+                <p><strong>Tether (USDT) made $13 billion net profit in 2024.</strong><br>
+                Even a small market share in Europe could generate hundreds of millions in annual profit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>The Investment Thesis</h2>
+            </div>
+
+            <div class="card-grid reveal">
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">Why Now?</h3>
+                    <ul class="feature-list">
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">1</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Regulatory window</strong> — MiCA just took effect</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">2</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Market timing</strong> — Euro stablecoins up 102% YoY</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">3</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">First mover</strong> — Only Polish EMI license</span>
+                        </li>
+                        <li style="border-color: rgba(255,255,255,0.1);">
+                            <span class="feature-icon">4</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">Diversified</strong> — 5+ revenue streams</span>
+                        </li>
+                        <li style="border-color: transparent;">
+                            <span class="feature-icon">5</span>
+                            <span class="feature-text" style="color: rgba(255,255,255,0.8);"><strong style="color: white;">World-class team</strong> — Harvard, Stanford, Microsoft MVP</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: white;">The Numbers</h3>
+                    <div style="margin-top: 20px;">
+                        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <span style="color: rgba(255,255,255,0.6);">Year 1 Revenue</span>
+                            <span style="color: white; font-weight: 600;">$81M</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <span style="color: rgba(255,255,255,0.6);">Year 2 Revenue</span>
+                            <span style="color: var(--green-light); font-weight: 600;">$403M</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <span style="color: rgba(255,255,255,0.6);">Conservative valuation (3x)</span>
+                            <span style="color: var(--green-light); font-weight: 600;">$1.21B</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 16px 0;">
+                            <span style="color: rgba(255,255,255,0.6);">Your stake growth</span>
+                            <span style="color: var(--green-light); font-weight: 700; font-size: 20px;">10-43x</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); margin-top: 24px;">
+                <h3 style="color: white; margin-bottom: 20px;">What You Get</h3>
+                <div class="card-grid" style="gap: 16px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.03); border-radius: 12px;">
+                        <strong style="color: white;">Immediate liquidity</strong>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin: 8px 0 0;">via public markets (GPW listing Q3 2026)</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.03); border-radius: 12px;">
+                        <strong style="color: white;">Diversified exposure</strong>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin: 8px 0 0;">to 5 growth businesses vs single EMI license</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.03); border-radius: 12px;">
+                        <strong style="color: white;">Upside participation</strong>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin: 8px 0 0;">in Europe's stablecoin revolution</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.03); border-radius: 12px;">
+                        <strong style="color: white;">World-class execution</strong>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin: 8px 0 0;">team with proven track records</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Join the Circle of Europe</h2>
+                <p>We are scheduling due diligence sessions and detailed financial reviews now.</p>
+                <a href="mailto:contact@olbra.org" class="cta-button">
+                    Schedule a Meeting
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="cta-contact">
+                    <p style="color: rgba(255,255,255,0.6);">
+                        <a href="mailto:contact@olbra.org">contact@olbra.org</a> •
+                        <a href="https://www.olbra.org" target="_blank">www.olbra.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <svg width="120" height="26" viewBox="0 0 1006 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M165.752 21.4866C165.752 18.9074 168.56 17.3333 170.695 18.7804C199.716 38.451 218.79 71.694 218.79 109.395C218.79 169.812 169.812 218.79 109.395 218.79C99.9283 218.79 90.7432 217.585 81.9828 215.324C80.5465 214.953 79.5624 213.645 79.5624 212.162V191.562C79.5624 189.234 81.9022 187.627 84.1195 188.337C92.0879 190.888 100.58 192.269 109.395 192.269C155.166 192.269 192.269 155.166 192.269 109.395C192.269 85.9107 182.498 64.7113 166.804 49.6315C166.139 48.9926 165.752 48.1146 165.752 47.1925V21.4866Z" fill="white"/>
+                    <path d="M109.395 0C118.863 0 128.049 1.20463 136.811 3.46607C138.247 3.83678 139.231 5.14468 139.231 6.62802V27.2238C139.231 29.5519 136.891 31.1592 134.674 30.4496C126.705 27.8992 118.211 26.5208 109.395 26.5208C63.6244 26.5208 26.5208 63.6244 26.5208 109.395C26.5208 132.88 36.2941 154.079 51.99 169.158C52.655 169.797 53.0416 170.675 53.0416 171.598V197.304C53.0416 199.883 50.2343 201.457 48.0993 200.01C19.0757 180.34 0 147.097 0 109.395C0 48.9778 48.9778 0 109.395 0Z" fill="white"/>
+                    <path d="M139.435 109.5C139.435 109.443 139.389 109.397 139.332 109.397C139.275 109.397 139.229 109.35 139.229 109.293C139.173 92.8638 125.839 79.5611 109.397 79.5602C105.795 79.5602 102.343 80.1994 99.1469 81.3696C96.7139 82.2604 93.826 80.6142 93.826 78.0233V57.7195C93.826 56.2407 94.8032 54.9308 96.2413 54.5866C100.462 53.5764 104.866 53.0394 109.397 53.0394L110.85 53.0585C140.818 53.8181 164.971 77.9716 165.731 107.939L165.75 109.397C165.749 127.32 157.382 143.29 144.34 153.611C142.293 155.231 139.435 153.683 139.435 151.072V109.5Z" fill="white"/>
+                    <path d="M107.939 165.731C77.4885 164.959 53.0403 140.033 53.0394 109.397L53.0585 107.939C53.5124 90.0382 62.3152 74.2132 75.7174 64.2086C77.7792 62.6694 80.5675 64.2286 80.5675 66.8015V101.267C80.5675 101.555 80.529 101.842 80.4589 102.121C79.8746 104.45 79.5602 106.886 79.5602 109.397C79.5611 125.873 92.9197 139.229 109.397 139.229C113.381 139.229 117.184 138.448 120.66 137.031C123.125 136.026 126.173 137.677 126.173 140.34V160.773C126.173 162.224 125.232 163.516 123.828 163.887C119.222 165.103 114.385 165.75 109.397 165.75L107.939 165.731Z" fill="white"/>
+                    <path d="M370.712 36.2372C381.353 36.2372 391.243 38.0789 400.384 41.7624C409.661 45.4459 417.71 50.63 424.531 57.3148C431.489 63.9997 436.878 71.7759 440.697 80.6435C444.654 89.3747 446.632 98.8562 446.632 109.088C446.632 119.32 444.654 128.938 440.697 137.942C436.878 146.81 431.489 154.586 424.531 161.271C417.71 167.955 409.661 173.208 400.384 177.028C391.243 180.711 381.353 182.553 370.712 182.553C360.07 182.553 350.111 180.711 340.834 177.028C331.694 173.208 323.645 167.955 316.687 161.271C309.866 154.586 304.477 146.81 300.521 137.942C296.701 128.938 294.791 119.32 294.791 109.088C294.791 98.8562 296.701 89.3065 300.521 80.4389C304.477 71.5712 309.866 63.8632 316.687 57.3148C323.645 50.63 331.694 45.4459 340.834 41.7624C350.111 38.0789 360.07 36.2372 370.712 36.2372ZM370.916 56.7009C363.822 56.7009 357.137 58.0652 350.862 60.7937C344.723 63.3857 339.266 67.0692 334.491 71.8441C329.716 76.619 325.964 82.2124 323.236 88.6244C320.644 94.8999 319.348 101.721 319.348 109.088C319.348 116.455 320.712 123.345 323.44 129.756C326.169 136.168 329.92 141.83 334.695 146.741C339.47 151.516 344.927 155.268 351.066 157.996C357.342 160.725 363.958 162.089 370.916 162.089C377.874 162.089 384.422 160.725 390.561 157.996C396.837 155.268 402.294 151.516 406.932 146.741C411.571 141.83 415.186 136.168 417.778 129.756C420.507 123.345 421.871 116.455 421.871 109.088C421.871 101.721 420.507 94.8999 417.778 88.6244C415.186 82.2124 411.571 76.619 406.932 71.8441C402.294 67.0692 396.837 63.3857 390.561 60.7937C384.422 58.0652 377.874 56.7009 370.916 56.7009Z" fill="white"/>
+                    <path d="M472.328 37.6696H496.476V160.247H558.481V180.916H472.328V37.6696Z" fill="white"/>
+                    <path d="M643.851 37.6696C653.81 37.6696 662.337 39.1021 669.431 41.967C676.661 44.8319 682.187 48.9247 686.007 54.2453C689.963 59.5658 691.941 65.9778 691.941 73.4812C691.941 81.5303 689.69 88.4197 685.188 94.1496C680.686 99.8794 674.547 103.631 666.771 105.405C676.32 107.042 683.824 111.066 689.281 117.478C694.738 123.89 697.466 131.939 697.466 141.625C697.466 149.811 695.352 156.837 691.123 162.703C686.893 168.569 680.891 173.071 673.114 176.209C665.338 179.347 656.061 180.916 645.284 180.916H581.641V37.6696H643.851ZM642.623 97.2191C650.263 97.2191 656.266 95.5138 660.632 92.1032C664.997 88.5561 667.18 83.6448 667.18 77.3693C667.18 71.2302 664.997 66.5235 660.632 63.2493C656.266 59.8387 650.263 58.2016 642.623 58.338H605.789V97.2191H642.623ZM642.623 160.247C652.037 160.384 659.404 158.61 664.724 154.927C670.045 151.107 672.705 145.718 672.705 138.761C672.705 132.212 670.045 127.096 664.724 123.413C659.404 119.593 652.037 117.751 642.623 117.888H605.789V160.247H642.623Z" fill="white"/>
+                    <path d="M784.244 37.6696C802.661 37.6696 816.849 41.967 826.808 50.5618C836.904 59.0201 841.951 70.9573 841.951 86.3733C841.951 102.471 836.904 115.023 826.808 124.027C816.849 132.894 802.661 137.328 784.244 137.328H750.274V180.916H726.127V37.6696H784.244ZM784.244 116.66C795.294 116.66 803.821 114.272 809.823 109.497C815.963 104.586 819.032 97.0827 819.032 86.9873C819.032 77.3011 815.963 70.1388 809.823 65.5003C803.821 60.7255 795.294 58.338 784.244 58.338H750.274V116.66H784.244ZM785.062 127.915H808.8L844.407 180.916H816.986L785.062 127.915Z" fill="white"/>
+                    <path d="M918.62 37.6696H943.381L1006 180.916H980.216L930.284 62.0215L880.558 180.916H855.387L918.62 37.6696ZM886.901 127.301H972.644V147.765H886.901V127.301Z" fill="white"/>
+                </svg>
+            </div>
+            <p>This document is confidential and intended solely for Stabillon shareholders.<br>
+            It does not constitute financial advice or an offer to sell securities.</p>
+            <p style="margin-top: 16px;"><strong>Olbra Finance LLC | January 2026</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+    </script>
+</body>
+</html>
